@@ -1,0 +1,95 @@
+#
+#  Managed Fusion Url Rewriter
+#  http://managedfusion.com/products/url-rewriter/
+#
+#  Developed by: Nick Berardi
+#       Support: support@managedfusion.com
+#
+RewriteEngine on
+
+#
+# Place Rules Below
+#
+
+RewriteBase /
+
+# register modules
+RewriteModule PostQueryString CoderJournal.Rewriter.Rules.PostQueryStringRuleAction, CoderJournal.Rewriter.Rules
+
+# forward cron requests with out further processing
+RewriteCond %{REMOTE_ADDR}	^208.109.169.74 [OR]
+RewriteCond %{REMOTE_ADDR}	^208.109.169.62 [OR]
+RewriteCond %{REMOTE_ADDR}	^208.109.239.108
+RewriteRule ^(/wp-cron.php(.*)) http://coderjournal-backend$1 [P]
+RewriteCond %{PATH_INFO}	^/wp-cron.php(.*)
+RewriteRule ^(.*)$ http://www.coderjournal.com [R=301,L]
+
+# deny access to evil robots site rippers offline browsers and other nasty scum
+RewriteCond %{HTTP_USER_AGENT} ^Anarchie [OR]
+RewriteCond %{HTTP_USER_AGENT} ^ASPSeek [OR]
+RewriteCond %{HTTP_USER_AGENT} ^attach [OR]
+RewriteCond %{HTTP_USER_AGENT} ^autoemailspider [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Xaldon\ WebSpider [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Xenu [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Zeus.*Webster [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Zeus
+RewriteRule ^.* - [F,L]
+
+# always allow through
+RewriteRule ^/robots.txt	/robots.txt [NC,L]
+RewriteRule ^/google(.*)	/google$1 [NC,L]
+RewriteRule ^/y_key_(.*)	/y_key_$1 [NC,L]
+RewriteRule ^/noexist_(.*)	/noexist_$1 [NC,L]
+
+# set all page requests to go to coderjournal.com
+RewriteCond %{HTTP_HOST} !^www.coderjournal.com$ [NC]
+RewriteRule ^(.*)$ http://www.coderjournal.com$1 [R=301,L]
+
+# get twitter status
+RewriteRule ^/twitter-status\.(.*) http://twitter.com/users/show/nberardi.$1 [NC,P]
+
+# add a trailing slash
+RewriteRule ^([^.?]+[^.?/])$ $1/ [R=301,L]
+
+# forward esential software link to correct post
+RewriteRule ^/tools/$ /2008/02/essential-software/ [NC, R=302]
+RewriteRule ^/software/$ /2008/02/essential-software/ [NC, R=302]
+RewriteRule ^/essential-software/$ /2008/02/essential-software/ [NC, R=302]
+
+# make sure the appropriate expire headers is on all images, styles, and scripts
+#RewriteRule ^(/(.*)\.(js|css|png)$)	$1 [NC,H="Cache-Control:public,max-age=31536000"]
+
+# any file that exists just return it
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^(.*) $1 [L]
+
+#redirect for feedburner feed
+RewriteCond %{HTTP_USER_AGENT} ^FeedBurner.*$
+RewriteRule ^/feed/(feed|rdf|rss|rss2|atom)/?$ http://www.coderjournal.com/index.php?feed=$1 [QSA,P]
+RewriteCond %{HTTP_USER_AGENT} ^FeedBurner.*$
+RewriteRule ^/(feed|rdf|rss|rss2|atom)/?$ http://www.coderjournal.com/index.php?feed=$1 [QSA,P]
+
+# redirect for users not subscribed
+RewriteCond %{HTTP_USER_AGENT} !^FeedBurner.*$
+RewriteRule ^/\?feed.*$ http://feeds.feedburner.com/coderjournal/ [R=301,L]
+RewriteCond %{HTTP_USER_AGENT} !^FeedBurner.*$
+RewriteRule ^/(feed|rdf|rss|rss2|atom)/?$ http://feeds.feedburner.com/coderjournal [R=301,L]
+RewriteCond %{HTTP_USER_AGENT} !FeedBurner.*$
+RewriteRule ^/feed/(feed|rdf|rss|rss2|atom)/?$ http://feeds.feedburner.com/coderjournal [R=301,L]
+
+# coder journal conversion from previous naming conventions
+RewriteRule(,PostQueryString) ^/\?p=([0-9]+)$	"select concat('http://www.coderjournal.com/',year(post_date),'/',month(post_date),'/',post_name,'/') from wp_posts where ID = $1;" [R=301]
+RewriteRule ^(/[0-9]{4}/.*).html$	$1/ [NC,R=301]
+RewriteRule ^(/[0-9]{4}/[0-9]{1,2}/)[0-9]{1,2}/(.*) $1$2 [R=301]
+RewriteRule ^/tags/.*/([^/]+)/(page/[0-9]+)/$	/tags/$1/$2/ [NC,R=301]
+RewriteCond %{PATH_INFO}	!^.*(page/[0-9]+/)$
+RewriteRule ^/tags/.*/([^/]+)/$	/tags/$1/ [NC,R=301]
+
+# proxy all connections through to the localhost mapped in the hosts file as www.coderjournal.com
+RewriteRule ^(/[0-9]{4}/.*) http://coderjournal-backend/index.php$1 [P]
+RewriteRule ^(/tags/.*) http://coderjournal-backend/index.php$1 [NC,P]
+RewriteRule ^(/topics/.*) http://coderjournal-backend/index.php$1 [NC,P]
+RewriteRule ^(/author/.*) http://coderjournal-backend/index.php$1 [NC,P]
+RewriteRule ^(/comments/feed/.*) http://coderjournal-backend/index.php$1 [NC,P]
+RewriteRule ^(/page/.*) http://coderjournal-backend/index.php$1 [NC,P]
+RewriteRule ^(.*) http://coderjournal-backend$1 [P]

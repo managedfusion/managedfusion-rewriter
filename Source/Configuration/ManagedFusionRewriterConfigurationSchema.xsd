@@ -1,0 +1,191 @@
+﻿<?xml version="1.0"?>
+<xs:schema xmlns:tns="http://managedfusion.com/xsd/managedFusion/rewriter" elementFormDefault="qualified" targetNamespace="http://managedfusion.com/xsd/managedFusion/rewriter" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="managedFusion.rewriter" type="tns:ManagedFusion.Rewriter.Configuration.ManagedFusionRewriterSectionGroupCT" />
+	<xs:complexType name="ManagedFusion.Rewriter.Configuration.ManagedFusionRewriterSectionGroupCT">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="rules" type="tns:ManagedFusion.Rewriter.Configuration.RulesSectionCT">
+				<xs:annotation>
+					<xs:documentation>The Rules.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="rewriter" type="tns:ManagedFusion.Rewriter.Configuration.RewriterSectionCT">
+				<xs:annotation>
+					<xs:documentation>The Rewriter.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ManagedFusion.Rewriter.Configuration.RulesSectionCT">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="apache" type="tns:ManagedFusion.Rewriter.Configuration.ApacheSectionCT">
+				<xs:annotation>
+					<xs:documentation>The Apache.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="microsoft" type="tns:ManagedFusion.Rewriter.Configuration.MicrosoftSectionCT">
+				<xs:annotation>
+					<xs:documentation>The Microsoft.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="engine" use="optional">
+			<xs:annotation>
+				<xs:documentation>The Engine.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="allowOutputProcessing" use="optional" type="xs:boolean">
+			<xs:annotation>
+				<xs:documentation>The AllowOutputProcessing.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="ManagedFusion.Rewriter.Configuration.ApacheSectionCT">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="ruleSet" type="tns:ManagedFusion.Rewriter.Configuration.ApacheRuleSetItemCT">
+				<xs:annotation>
+					<xs:documentation>The ApacheRuleSetItem Configuration Element.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="defaultFileName" use="optional" type="xs:string">
+			<xs:annotation>
+				<xs:documentation>The DefaultFileName.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="defaultPhysicalApplicationPath" use="optional" type="xs:string">
+			<xs:annotation>
+				<xs:documentation>The DefaultPhysicalApplicationPath.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="ManagedFusion.Rewriter.Configuration.MicrosoftSectionCT">
+		<xs:sequence>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ManagedFusion.Rewriter.Configuration.ApacheRuleSetItemCT">
+		<xs:sequence>
+		</xs:sequence>
+		<xs:attribute name="applicationPath" use="required" type="xs:string">
+			<xs:annotation>
+				<xs:documentation>The ApplicationPath.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="configPath" use="required" type="xs:string">
+			<xs:annotation>
+				<xs:documentation>The ConfigPath.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="ManagedFusion.Rewriter.Configuration.ProxySectionCT">
+		<xs:sequence>
+		</xs:sequence>
+		<xs:attribute name="useAsyncProxy" use="optional" type="xs:boolean">
+			<xs:annotation>
+				<xs:documentation>The UseAsyncProxy.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="bufferSize" use="optional" type="xs:int">
+			<xs:annotation>
+				<xs:documentation>The BufferSize.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="responseSize" use="optional" type="xs:int">
+			<xs:annotation>
+				<xs:documentation>The ResponseSize.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="requestSize" use="optional" type="xs:int">
+			<xs:annotation>
+				<xs:documentation>The RequestSize.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="proxyType" use="optional" type="xs:string">
+			<xs:annotation>
+				<xs:documentation>The ProxyType.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="proxyAsyncType" use="optional" type="xs:string">
+			<xs:annotation>
+				<xs:documentation>The ProxyAsyncType.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="ManagedFusion.Rewriter.Configuration.RewriterSectionCT">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="proxy" type="tns:ManagedFusion.Rewriter.Configuration.ProxySectionCT">
+				<xs:annotation>
+					<xs:documentation>The Proxy.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="modules" type="tns:ManagedFusion.Rewriter.Configuration.RewriterModulesSectionCT">
+				<xs:annotation>
+					<xs:documentation>The Modules.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="traceLog" use="optional" type="xs:boolean">
+			<xs:annotation>
+				<xs:documentation>The TraceLog.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="rebaseClientPath" use="optional" type="xs:boolean">
+			<xs:annotation>
+				<xs:documentation>The RebaseClientPath.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="allowIis7TransferRequest" use="optional" type="xs:boolean">
+			<xs:annotation>
+				<xs:documentation>The AllowIis7TransferRequest.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="allowVanityHeader" use="optional" type="xs:boolean">
+			<xs:annotation>
+				<xs:documentation>The AllowVanityHeader.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="allowXRewriteUrlHeader" use="optional" type="xs:boolean">
+			<xs:annotation>
+				<xs:documentation>The AllowXRewriteUrlHeader.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="allowRequestHeaderAdding" use="optional" type="xs:boolean">
+			<xs:annotation>
+				<xs:documentation>The AllowRequestHeaderAdding.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="allowServerVariableSetting" use="optional" type="xs:boolean">
+			<xs:annotation>
+				<xs:documentation>The AllowServerVariableSetting.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="modifyIIS7WorkerRequest" use="optional" type="xs:boolean">
+			<xs:annotation>
+				<xs:documentation>The ModifyIIS7WorkerRequest.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="ManagedFusion.Rewriter.Configuration.RewriterModulesSectionCT">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="add" type="tns:ManagedFusion.Rewriter.Configuration.RewriterModuleItemCT">
+				<xs:annotation>
+					<xs:documentation>The RewriterModuleItem Configuration Element.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ManagedFusion.Rewriter.Configuration.RewriterModuleItemCT">
+		<xs:sequence>
+		</xs:sequence>
+		<xs:attribute name="name" use="required" type="xs:string">
+			<xs:annotation>
+				<xs:documentation>The Name.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="type" use="required">
+			<xs:annotation>
+				<xs:documentation>The Type.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+</xs:schema>
+
