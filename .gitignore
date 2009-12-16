@@ -1,0 +1,6 @@
+TestResults/
+*.suo
+*.sln.cache
+*.user
+[Oo]bj/
+bin/
