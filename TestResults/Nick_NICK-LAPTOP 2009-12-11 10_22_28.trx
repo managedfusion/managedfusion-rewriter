@@ -1,0 +1,809 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="8ddec758-3633-4d9d-b4f5-b893f823b31a" name="Nick@NICK-LAPTOP 2009-12-11 10:22:28" runUser="nick-laptop\Nick" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2006">
+  <TestRunConfiguration name="ManagedFusion.Rewriter" id="aceed991-3862-4fd4-8e5b-0413e19a4db9">
+    <Description>This is a default test run configuration for a local test run.</Description>
+    <CodeCoverage keyFile="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.snk">
+      <Regular>
+        <CodeCoverageItem binaryFile="Source\bin\Debug\ManagedFusion.Rewriter.dll" pdbFile="Source\bin\Debug\ManagedFusion.Rewriter.pdb" instrumentInPlace="true" />
+      </Regular>
+    </CodeCoverage>
+    <Deployment runDeploymentRoot="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\TestResults\Nick_NICK-LAPTOP 2009-12-11 10_22_28">
+      <DeploymentItem filename="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Dependencies\Moq.dll" />
+      <DeploymentItem filename="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Source\bin\Release\ManagedFusion.Rewriter.dll" />
+    </Deployment>
+    <TestTypeSpecific>
+      <WebTestRunConfiguration testTypeId="4e7599fa-5ecb-43e9-a887-cd63cf72d207">
+        <Browser name="Internet Explorer 7.0">
+          <Headers>
+            <Header name="User-Agent" value="Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)" />
+            <Header name="Accept" value="*/*" />
+            <Header name="Accept-Language" value="{{$IEAcceptLanguage}}" />
+            <Header name="Accept-Encoding" value="GZIP" />
+          </Headers>
+        </Browser>
+        <Network Name="LAN" BandwidthInKbps="0" />
+      </WebTestRunConfiguration>
+    </TestTypeSpecific>
+  </TestRunConfiguration>
+  <ResultSummary outcome="Completed">
+    <Counters total="59" executed="59" passed="59" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <Times creation="2009-12-11T10:22:28.4905500-05:00" queuing="2009-12-11T10:22:31.0576968-05:00" start="2009-12-11T10:22:31.2317068-05:00" finish="2009-12-11T10:22:33.5188376-05:00" />
+  <TestDefinitions>
+    <UnitTest name="OrNext_FinalMatched" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="596269cd-16ac-2940-48cd-6d8261408c8d">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="254aeb44-45ec-44ff-a5ba-14bc99a4cccd" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Conditions.Flags.OrNextTest, ManagedFusion.Rewriter.Test" name="OrNext_FinalMatched" />
+    </UnitTest>
+    <UnitTest name="Redirect_307" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="9f7fa01a-0f73-1f04-bb7d-8fb608341132">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="d6cd5895-b7bc-4976-9202-52768c402a12" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.RedirectFlagTest, ManagedFusion.Rewriter.Test" name="Redirect_307" />
+    </UnitTest>
+    <UnitTest name="VerifyExecuteWithOneConditionalValue" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="47702f76-7181-6260-4d97-c4d698c770af">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="bafa3967-8ec5-4066-978d-e822cdc496ba" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Rules.Test.DefaultOutputRuleActionTest, ManagedFusion.Rewriter.Test" name="VerifyExecuteWithOneConditionalValue" />
+    </UnitTest>
+    <UnitTest name="ProxyType" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="444f1f01-4e44-8161-e55d-575189cb9197">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="b4b988cf-8a6a-4039-a7e1-464c1221f436" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.ProxyTest, ManagedFusion.Rewriter.Test" name="ProxyType" />
+    </UnitTest>
+    <UnitTest name="VerifyExecuteWithServerVariable" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="03704e19-0403-4ec7-3628-376579771a2a">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="aa3525e8-3fae-4b97-90b5-8a8a02a295f9" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Rules.Test.DefaultOutputRuleActionTest, ManagedFusion.Rewriter.Test" name="VerifyExecuteWithServerVariable" />
+    </UnitTest>
+    <UnitTest name="NoCase_Enabled" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="01bf85d9-28d5-5b35-8394-74da996c2e3e">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="c9bf95d1-4b22-4c6e-bd16-3c13c01963ea" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.NoCaseTest, ManagedFusion.Rewriter.Test" name="NoCase_Enabled" />
+    </UnitTest>
+    <UnitTest name="WordPress" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="fde35d16-16e8-d555-4aae-cc8b74634137">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="25bfa297-ba38-440a-86b9-6813c13be837" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.CommonUseTest, ManagedFusion.Rewriter.Test" name="WordPress" />
+    </UnitTest>
+    <UnitTest name="VerifyExecute" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="62e42b25-71cd-fc0c-57b8-d773bfd2a38f">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="274a2b2b-323c-4bbc-9c3e-316c44b8a021" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Rules.Test.DefaultRuleActionTest, ManagedFusion.Rewriter.Test" name="VerifyExecute" />
+    </UnitTest>
+    <UnitTest name="ProxyAsyncType" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="b1b6dbce-42a8-a6ea-b84f-68a742637ef9">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="1aed203d-8df7-4d58-983d-1f0eca2b73ca" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.ProxyTest, ManagedFusion.Rewriter.Test" name="ProxyAsyncType" />
+    </UnitTest>
+    <UnitTest name="VerifyExecute" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="a49f4ecd-7238-b358-95c8-1a3be0a7e929">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="bd747fb7-abb4-4678-be84-a613c5d69283" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Rules.Test.DefaultOutputRuleActionTest, ManagedFusion.Rewriter.Test" name="VerifyExecute" />
+    </UnitTest>
+    <UnitTest name="Replace_ServerVariable" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="05b2caa2-4dc8-d7de-8ac7-f71c73024290">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="bf5605ad-750c-49c9-9134-bd97fd9ed2d6" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.PatternTest, ManagedFusion.Rewriter.Test" name="Replace_ServerVariable" />
+    </UnitTest>
+    <UnitTest name="VerifyExecuteWithOneConditionalValue" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="9620b252-c03b-9ff4-a5b0-a4854560e9d2">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="6befbed0-8e8f-4f80-85ec-bafaa2556a4c" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Rules.Test.DefaultRuleActionTest, ManagedFusion.Rewriter.Test" name="VerifyExecuteWithOneConditionalValue" />
+    </UnitTest>
+    <UnitTest name="QueryStringAppend_WithQueryString" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="12f6113d-e953-c955-331c-737fb1e2255d">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="5742f5fb-3f7c-439c-9509-6d1d3085d54f" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.QueryStringAppendFlagTest, ManagedFusion.Rewriter.Test" name="QueryStringAppend_WithQueryString" />
+    </UnitTest>
+    <UnitTest name="InvertMatch_False" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="7bbb9d14-d1bb-00cc-0021-ff5eaa8a9c30">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="1d1e3081-0a46-457c-b66f-50303cad62b3" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.PatternTest, ManagedFusion.Rewriter.Test" name="InvertMatch_False" />
+    </UnitTest>
+    <UnitTest name="RewriteCondWithHttpHeader" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="f0b957b5-43d1-82c2-c039-bed91ca85385">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="63ddc38a-8813-4105-b0c6-c7a12f7881a7" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.ApacheStyleTest, ManagedFusion.Rewriter.Test" name="RewriteCondWithHttpHeader" />
+    </UnitTest>
+    <UnitTest name="SimpleRule_WithCondition" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="de033c36-efed-744d-1db4-4ce50c4457ed">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="26633bb6-63d9-4880-b619-88c6bb2f6598" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.ApacheStyleTest, ManagedFusion.Rewriter.Test" name="SimpleRule_WithCondition" />
+    </UnitTest>
+    <UnitTest name="Redirect_Found" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="f74f8d16-6dd9-55db-6288-2005868870d8">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="1d5cb215-0426-42c4-85a9-412214f6748c" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.RedirectFlagTest, ManagedFusion.Rewriter.Test" name="Redirect_Found" />
+    </UnitTest>
+    <UnitTest name="SimpleRule" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="4242f48e-04d8-c77e-a35a-0012ccda7682">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="f4879647-381c-4f8b-83b5-dc2d30d94c20" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.ApacheStyleTest, ManagedFusion.Rewriter.Test" name="SimpleRule" />
+    </UnitTest>
+    <UnitTest name="ToString_False" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="bbd5444f-e1f6-0dee-27a1-13b925659074">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="aa98b4db-1854-4c67-8dcb-d52f728cff8d" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.PatternTest, ManagedFusion.Rewriter.Test" name="ToString_False" />
+    </UnitTest>
+    <UnitTest name="VerifyExecuteWithServerVariable" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="a2d70069-8de0-7718-8da9-2d906374fb5a">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="fed3e4fb-4bba-42a2-afc1-fb667f4d5f08" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Rules.Test.DefaultRuleActionTest, ManagedFusion.Rewriter.Test" name="VerifyExecuteWithServerVariable" />
+    </UnitTest>
+    <UnitTest name="Last_First" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="f990ae4a-0443-c18c-38fd-47da33e692ad">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="4ffeedcf-dce6-4ec4-8ba7-6c0a973b6ffa" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.LastFlagTest, ManagedFusion.Rewriter.Test" name="Last_First" />
+    </UnitTest>
+    <UnitTest name="QueryStringAppend_WithQueryString_NoQueryStringOnUrl" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="8aafa9bc-fa02-f7ef-c349-fd4b0568294c">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="7fbf5cde-5769-41ea-b961-8e05034addfb" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.QueryStringAppendFlagTest, ManagedFusion.Rewriter.Test" name="QueryStringAppend_WithQueryString_NoQueryStringOnUrl" />
+    </UnitTest>
+    <UnitTest name="ToString_True" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="0d39a281-d2d1-cc58-0cff-ad653dcd5baf">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="cc3738a1-9c60-4cf3-83e4-c88f18847f3e" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.PatternTest, ManagedFusion.Rewriter.Test" name="ToString_True" />
+    </UnitTest>
+    <UnitTest name="OrNext_NotlMatched" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="8802b187-31d4-f320-b25a-8b93f7ba72d3">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="1fd701c5-3d94-48b5-9c9c-b739fd7a3127" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Conditions.Flags.OrNextTest, ManagedFusion.Rewriter.Test" name="OrNext_NotlMatched" />
+    </UnitTest>
+    <UnitTest name="InvertMatch_True" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="dfad8bb3-a885-cd20-2adc-7fbec427ffe9">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="ded5e7a4-0a69-4db8-b76c-b998335b3f84" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.PatternTest, ManagedFusion.Rewriter.Test" name="InvertMatch_True" />
+    </UnitTest>
+    <UnitTest name="ToString" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="d1844e24-1ebd-397c-8e9f-4726701f6819">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="e29e002e-da5e-4d5d-b3ba-54ef79f867b5" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.PatternTest, ManagedFusion.Rewriter.Test" name="ToString" />
+    </UnitTest>
+    <UnitTest name="NoCase_Disabled" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="cd35395e-cf6c-f797-2fff-e5d3622418cd">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="a1fa2b6d-a6c2-4252-964c-3460eab79bbe" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.NoCaseTest, ManagedFusion.Rewriter.Test" name="NoCase_Disabled" />
+    </UnitTest>
+    <UnitTest name="NoCase_Enabled" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="6c64c205-ed6c-81e6-93bb-ef08219d4290">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="b07227b1-50a6-4534-8506-8bed273fc963" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Conditions.Flags.NoCaseTest, ManagedFusion.Rewriter.Test" name="NoCase_Enabled" />
+    </UnitTest>
+    <UnitTest name="OrNext_LastMatched" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="5de29529-1904-95d7-de17-af5d02036249">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="b01aaa6e-f21a-4e6f-9f48-a5b432a2202f" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Conditions.Flags.OrNextTest, ManagedFusion.Rewriter.Test" name="OrNext_LastMatched" />
+    </UnitTest>
+    <UnitTest name="Chain_MiddleNotMatched" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="3e890936-6857-4986-06a6-f310c3e56d41">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="096eee92-b694-4080-855f-bfd7f1479451" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.ChainFlagTest, ManagedFusion.Rewriter.Test" name="Chain_MiddleNotMatched" />
+    </UnitTest>
+    <UnitTest name="OrNext_FirstMatched" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="940e65be-acc6-b3c2-4e3c-ef703615908c">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="8325fd7b-b5a3-452e-be24-baf2e5056e9d" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Conditions.Flags.OrNextTest, ManagedFusion.Rewriter.Test" name="OrNext_FirstMatched" />
+    </UnitTest>
+    <UnitTest name="Last_Middle" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="697f3c34-8fc2-e439-3501-0e3d8086810c">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="ec218bfa-f92f-452a-939a-1df27c97112d" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.LastFlagTest, ManagedFusion.Rewriter.Test" name="Last_Middle" />
+    </UnitTest>
+    <UnitTest name="ForceHostToUseWww" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="6f8929fd-fa82-ef38-e04f-0bb0e74696ae">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="c156f2dc-2f9a-4d91-8fde-337a3f19e40c" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.CommonUseTest, ManagedFusion.Rewriter.Test" name="ForceHostToUseWww" />
+    </UnitTest>
+    <UnitTest name="Chain_Matched" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="5afd7dca-3d53-1412-c033-74f373fe308e">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="7dda056c-9e62-498b-8fb8-97d67b238a0b" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.ChainFlagTest, ManagedFusion.Rewriter.Test" name="Chain_Matched" />
+    </UnitTest>
+    <UnitTest name="Chain_LastNotMatched" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="4249aa41-497b-e4ca-f0c5-1694ed263f2e">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="9e86e5af-9034-49cd-b737-de4da2ed5863" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.ChainFlagTest, ManagedFusion.Rewriter.Test" name="Chain_LastNotMatched" />
+    </UnitTest>
+    <UnitTest name="Chain_FirstNotMatched" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="7031dde7-6a31-f061-5214-22935b5c314f">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="a0de765b-8472-473b-bc32-881bbe72bc28" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.ChainFlagTest, ManagedFusion.Rewriter.Test" name="Chain_FirstNotMatched" />
+    </UnitTest>
+    <UnitTest name="OrNext_MiddleMatched" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="1412cdb9-1f81-64d7-585d-d013c7d7527c">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="6aaf23f2-9c99-4a68-9eb1-c068a1196b2f" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Conditions.Flags.OrNextTest, ManagedFusion.Rewriter.Test" name="OrNext_MiddleMatched" />
+    </UnitTest>
+    <UnitTest name="RewriteModule_IRuleAction" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="8e1b2ab8-8ac1-5707-1174-44639a000966">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="ca54728b-3dd4-48cc-acfb-3f8bd0d6f5de" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.ApacheStyleTest, ManagedFusion.Rewriter.Test" name="RewriteModule_IRuleAction" />
+    </UnitTest>
+    <UnitTest name="AddTrailingSlash" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="c1cf6e67-8cb2-fc07-270c-dbe9e35a967a">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="034d95ca-a6ec-4266-95c2-d22d37f7d78d" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.CommonUseTest, ManagedFusion.Rewriter.Test" name="AddTrailingSlash" />
+    </UnitTest>
+    <UnitTest name="VerifyExecuteWithNineConditionalValues" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="442939cc-db83-a0a1-14e7-db3406b8c7d8">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="5fe923dc-4dcf-479b-99a6-91fce909f3d9" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Rules.Test.DefaultOutputRuleActionTest, ManagedFusion.Rewriter.Test" name="VerifyExecuteWithNineConditionalValues" />
+    </UnitTest>
+    <UnitTest name="Chain_FinalNotMatched" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="7ff8b428-89e7-f9b6-6789-df461ef64c19">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="eb51d56c-348a-4156-a412-e29553f5cd37" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.ChainFlagTest, ManagedFusion.Rewriter.Test" name="Chain_FinalNotMatched" />
+    </UnitTest>
+    <UnitTest name="RewriteCondWithServerVariable" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="61dbd89a-ae84-9d78-70cc-5b033157abba">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="31380a04-6a8f-41e2-a497-af260b6555dd" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.ApacheStyleTest, ManagedFusion.Rewriter.Test" name="RewriteCondWithServerVariable" />
+    </UnitTest>
+    <UnitTest name="Last_Final" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="1245d3e4-9e42-1c4f-7694-c5b71866b4e9">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="2afd36aa-3865-4bce-9349-092431b58dd7" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.LastFlagTest, ManagedFusion.Rewriter.Test" name="Last_Final" />
+    </UnitTest>
+    <UnitTest name="Skip" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="d41cb399-0b3b-3c40-8e66-de9df933608d">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="517a1992-5ecc-4c8f-9d04-a616f87084c4" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.SkipRuleFlagTest, ManagedFusion.Rewriter.Test" name="Skip" />
+    </UnitTest>
+    <UnitTest name="Redirect_302" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="f4c40cf9-ed16-4991-3703-23756accc5ef">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="e3a9d06a-4a87-4b04-bad1-268abc5eaef1" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.RedirectFlagTest, ManagedFusion.Rewriter.Test" name="Redirect_302" />
+    </UnitTest>
+    <UnitTest name="VerifyExecuteWithTenConditionalValues" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="6717138f-8c63-28be-57bc-8c0bdd7192a1">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="79c9c562-3eae-4a8f-9736-1618209b5b65" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Rules.Test.DefaultRuleActionTest, ManagedFusion.Rewriter.Test" name="VerifyExecuteWithTenConditionalValues" />
+    </UnitTest>
+    <UnitTest name="SimpleRule_WithComplexCondition" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="ac67d3d1-304b-dd0c-3115-d18a303c218f">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="d05d4f53-89e5-4198-b40d-83dfc21e884e" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.ApacheStyleTest, ManagedFusion.Rewriter.Test" name="SimpleRule_WithComplexCondition" />
+    </UnitTest>
+    <UnitTest name="Redirect_303" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="69b3965f-79f3-76d0-4b8e-e7df31f5ce7e">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="be85801a-e086-4d79-8241-477c32b703a4" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.RedirectFlagTest, ManagedFusion.Rewriter.Test" name="Redirect_303" />
+    </UnitTest>
+    <UnitTest name="Redirect_SeeOther" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="a6ed299b-4d36-31d8-266f-991ec84f39dd">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="ec882a3e-1eb3-400b-a295-bd5b48d8785c" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.RedirectFlagTest, ManagedFusion.Rewriter.Test" name="Redirect_SeeOther" />
+    </UnitTest>
+    <UnitTest name="QueryStringAppend_WithOutQueryString_NoQueryStringOnUrl" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="8ec321b9-df7e-5811-af28-5889b34ea126">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="2f27e4ff-cd7f-4099-a0f7-4be263c68171" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.QueryStringAppendFlagTest, ManagedFusion.Rewriter.Test" name="QueryStringAppend_WithOutQueryString_NoQueryStringOnUrl" />
+    </UnitTest>
+    <UnitTest name="Next" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="6203017b-f0f0-69a4-43de-f73bb061e892">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="a0760aa4-5651-4f51-a547-8f118d5fb865" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.NextRuleFlagTest, ManagedFusion.Rewriter.Test" name="Next" />
+    </UnitTest>
+    <UnitTest name="Redirect_Temp" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="f213e35e-ac49-ca5d-41d6-3bc6581c0b93">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="e1df99d7-2935-43e9-813a-f3f4a228adc9" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.RedirectFlagTest, ManagedFusion.Rewriter.Test" name="Redirect_Temp" />
+    </UnitTest>
+    <UnitTest name="VerifyExecuteWithTenConditionalValues" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="81ae2999-0b0a-4f34-f4de-08b6c43ba20a">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="ffa37590-a445-4680-a151-ff268b7e70c3" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Rules.Test.DefaultOutputRuleActionTest, ManagedFusion.Rewriter.Test" name="VerifyExecuteWithTenConditionalValues" />
+    </UnitTest>
+    <UnitTest name="VerifyExecuteWithNineConditionalValues" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="8aa42663-ef25-f93a-bcab-9c2f5fd2c357">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="0c1b7ea1-87e9-42c8-9651-1743f6763558" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Rules.Test.DefaultRuleActionTest, ManagedFusion.Rewriter.Test" name="VerifyExecuteWithNineConditionalValues" />
+    </UnitTest>
+    <UnitTest name="QueryStringAppend_WithOutQueryString" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="a8eca9e4-21ec-3065-30d5-5fdc0380d052">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="b8b2b0b9-cc4f-4002-86cd-d7a3a8e02f54" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.QueryStringAppendFlagTest, ManagedFusion.Rewriter.Test" name="QueryStringAppend_WithOutQueryString" />
+    </UnitTest>
+    <UnitTest name="NoCase_Disabled" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="142bb897-0ebb-0e2f-aef8-00ee924bd46c">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="dd69c61c-611a-463f-b72a-a1f1a6fe225b" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Conditions.Flags.NoCaseTest, ManagedFusion.Rewriter.Test" name="NoCase_Disabled" />
+    </UnitTest>
+    <UnitTest name="Redirect_301" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="d9bf56bc-f124-3566-be05-4cd385a8a88a">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="d4fe4e6b-6609-4376-b1d3-cb198b3849be" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.RedirectFlagTest, ManagedFusion.Rewriter.Test" name="Redirect_301" />
+    </UnitTest>
+    <UnitTest name="Redirect_Plain" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="39653641-39de-1ab9-0d50-98dca481a8f8">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="0d845c04-7165-4fb7-9312-6a767b8196d9" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.RedirectFlagTest, ManagedFusion.Rewriter.Test" name="Redirect_Plain" />
+    </UnitTest>
+    <UnitTest name="Redirect_Permanent" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="a9347108-6280-abf2-f93c-5d4174e75c37">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="7f39822c-ffcc-4a07-b2fb-d9f99292d051" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.RedirectFlagTest, ManagedFusion.Rewriter.Test" name="Redirect_Permanent" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="01bf85d9-28d5-5b35-8394-74da996c2e3e" executionId="c9bf95d1-4b22-4c6e-bd16-3c13c01963ea" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="03704e19-0403-4ec7-3628-376579771a2a" executionId="aa3525e8-3fae-4b97-90b5-8a8a02a295f9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="05b2caa2-4dc8-d7de-8ac7-f71c73024290" executionId="bf5605ad-750c-49c9-9134-bd97fd9ed2d6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0d39a281-d2d1-cc58-0cff-ad653dcd5baf" executionId="cc3738a1-9c60-4cf3-83e4-c88f18847f3e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1245d3e4-9e42-1c4f-7694-c5b71866b4e9" executionId="2afd36aa-3865-4bce-9349-092431b58dd7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="12f6113d-e953-c955-331c-737fb1e2255d" executionId="5742f5fb-3f7c-439c-9509-6d1d3085d54f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1412cdb9-1f81-64d7-585d-d013c7d7527c" executionId="6aaf23f2-9c99-4a68-9eb1-c068a1196b2f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="142bb897-0ebb-0e2f-aef8-00ee924bd46c" executionId="dd69c61c-611a-463f-b72a-a1f1a6fe225b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="39653641-39de-1ab9-0d50-98dca481a8f8" executionId="0d845c04-7165-4fb7-9312-6a767b8196d9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3e890936-6857-4986-06a6-f310c3e56d41" executionId="096eee92-b694-4080-855f-bfd7f1479451" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4242f48e-04d8-c77e-a35a-0012ccda7682" executionId="f4879647-381c-4f8b-83b5-dc2d30d94c20" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4249aa41-497b-e4ca-f0c5-1694ed263f2e" executionId="9e86e5af-9034-49cd-b737-de4da2ed5863" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="442939cc-db83-a0a1-14e7-db3406b8c7d8" executionId="5fe923dc-4dcf-479b-99a6-91fce909f3d9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="444f1f01-4e44-8161-e55d-575189cb9197" executionId="b4b988cf-8a6a-4039-a7e1-464c1221f436" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="47702f76-7181-6260-4d97-c4d698c770af" executionId="bafa3967-8ec5-4066-978d-e822cdc496ba" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="596269cd-16ac-2940-48cd-6d8261408c8d" executionId="254aeb44-45ec-44ff-a5ba-14bc99a4cccd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5afd7dca-3d53-1412-c033-74f373fe308e" executionId="7dda056c-9e62-498b-8fb8-97d67b238a0b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5de29529-1904-95d7-de17-af5d02036249" executionId="b01aaa6e-f21a-4e6f-9f48-a5b432a2202f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="61dbd89a-ae84-9d78-70cc-5b033157abba" executionId="31380a04-6a8f-41e2-a497-af260b6555dd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6203017b-f0f0-69a4-43de-f73bb061e892" executionId="a0760aa4-5651-4f51-a547-8f118d5fb865" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="62e42b25-71cd-fc0c-57b8-d773bfd2a38f" executionId="274a2b2b-323c-4bbc-9c3e-316c44b8a021" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6717138f-8c63-28be-57bc-8c0bdd7192a1" executionId="79c9c562-3eae-4a8f-9736-1618209b5b65" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="697f3c34-8fc2-e439-3501-0e3d8086810c" executionId="ec218bfa-f92f-452a-939a-1df27c97112d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="69b3965f-79f3-76d0-4b8e-e7df31f5ce7e" executionId="be85801a-e086-4d79-8241-477c32b703a4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6c64c205-ed6c-81e6-93bb-ef08219d4290" executionId="b07227b1-50a6-4534-8506-8bed273fc963" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6f8929fd-fa82-ef38-e04f-0bb0e74696ae" executionId="c156f2dc-2f9a-4d91-8fde-337a3f19e40c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7031dde7-6a31-f061-5214-22935b5c314f" executionId="a0de765b-8472-473b-bc32-881bbe72bc28" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7bbb9d14-d1bb-00cc-0021-ff5eaa8a9c30" executionId="1d1e3081-0a46-457c-b66f-50303cad62b3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7ff8b428-89e7-f9b6-6789-df461ef64c19" executionId="eb51d56c-348a-4156-a412-e29553f5cd37" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="81ae2999-0b0a-4f34-f4de-08b6c43ba20a" executionId="ffa37590-a445-4680-a151-ff268b7e70c3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8802b187-31d4-f320-b25a-8b93f7ba72d3" executionId="1fd701c5-3d94-48b5-9c9c-b739fd7a3127" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8aa42663-ef25-f93a-bcab-9c2f5fd2c357" executionId="0c1b7ea1-87e9-42c8-9651-1743f6763558" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8aafa9bc-fa02-f7ef-c349-fd4b0568294c" executionId="7fbf5cde-5769-41ea-b961-8e05034addfb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8e1b2ab8-8ac1-5707-1174-44639a000966" executionId="ca54728b-3dd4-48cc-acfb-3f8bd0d6f5de" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8ec321b9-df7e-5811-af28-5889b34ea126" executionId="2f27e4ff-cd7f-4099-a0f7-4be263c68171" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="940e65be-acc6-b3c2-4e3c-ef703615908c" executionId="8325fd7b-b5a3-452e-be24-baf2e5056e9d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9620b252-c03b-9ff4-a5b0-a4854560e9d2" executionId="6befbed0-8e8f-4f80-85ec-bafaa2556a4c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9f7fa01a-0f73-1f04-bb7d-8fb608341132" executionId="d6cd5895-b7bc-4976-9202-52768c402a12" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a2d70069-8de0-7718-8da9-2d906374fb5a" executionId="fed3e4fb-4bba-42a2-afc1-fb667f4d5f08" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a49f4ecd-7238-b358-95c8-1a3be0a7e929" executionId="bd747fb7-abb4-4678-be84-a613c5d69283" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a6ed299b-4d36-31d8-266f-991ec84f39dd" executionId="ec882a3e-1eb3-400b-a295-bd5b48d8785c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a8eca9e4-21ec-3065-30d5-5fdc0380d052" executionId="b8b2b0b9-cc4f-4002-86cd-d7a3a8e02f54" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a9347108-6280-abf2-f93c-5d4174e75c37" executionId="7f39822c-ffcc-4a07-b2fb-d9f99292d051" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ac67d3d1-304b-dd0c-3115-d18a303c218f" executionId="d05d4f53-89e5-4198-b40d-83dfc21e884e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b1b6dbce-42a8-a6ea-b84f-68a742637ef9" executionId="1aed203d-8df7-4d58-983d-1f0eca2b73ca" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bbd5444f-e1f6-0dee-27a1-13b925659074" executionId="aa98b4db-1854-4c67-8dcb-d52f728cff8d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c1cf6e67-8cb2-fc07-270c-dbe9e35a967a" executionId="034d95ca-a6ec-4266-95c2-d22d37f7d78d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cd35395e-cf6c-f797-2fff-e5d3622418cd" executionId="a1fa2b6d-a6c2-4252-964c-3460eab79bbe" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d1844e24-1ebd-397c-8e9f-4726701f6819" executionId="e29e002e-da5e-4d5d-b3ba-54ef79f867b5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d41cb399-0b3b-3c40-8e66-de9df933608d" executionId="517a1992-5ecc-4c8f-9d04-a616f87084c4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d9bf56bc-f124-3566-be05-4cd385a8a88a" executionId="d4fe4e6b-6609-4376-b1d3-cb198b3849be" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="de033c36-efed-744d-1db4-4ce50c4457ed" executionId="26633bb6-63d9-4880-b619-88c6bb2f6598" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="dfad8bb3-a885-cd20-2adc-7fbec427ffe9" executionId="ded5e7a4-0a69-4db8-b76c-b998335b3f84" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f0b957b5-43d1-82c2-c039-bed91ca85385" executionId="63ddc38a-8813-4105-b0c6-c7a12f7881a7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f213e35e-ac49-ca5d-41d6-3bc6581c0b93" executionId="e1df99d7-2935-43e9-813a-f3f4a228adc9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f4c40cf9-ed16-4991-3703-23756accc5ef" executionId="e3a9d06a-4a87-4b04-bad1-268abc5eaef1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f74f8d16-6dd9-55db-6288-2005868870d8" executionId="1d5cb215-0426-42c4-85a9-412214f6748c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f990ae4a-0443-c18c-38fd-47da33e692ad" executionId="4ffeedcf-dce6-4ec4-8ba7-6c0a973b6ffa" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fde35d16-16e8-d555-4aae-cc8b74634137" executionId="25bfa297-ba38-440a-86b9-6813c13be837" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="c9bf95d1-4b22-4c6e-bd16-3c13c01963ea" testId="01bf85d9-28d5-5b35-8394-74da996c2e3e" testName="NoCase_Enabled" computerName="NICK-LAPTOP" duration="00:00:00.1721524" startTime="2009-12-11T10:22:31.3027108-05:00" endTime="2009-12-11T10:22:32.0047510-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="aa3525e8-3fae-4b97-90b5-8a8a02a295f9" testId="03704e19-0403-4ec7-3628-376579771a2a" testName="VerifyExecuteWithServerVariable" computerName="NICK-LAPTOP" duration="00:00:00.5566408" startTime="2009-12-11T10:22:32.0117514-05:00" endTime="2009-12-11T10:22:32.5717834-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="bf5605ad-750c-49c9-9134-bd97fd9ed2d6" testId="05b2caa2-4dc8-d7de-8ac7-f71c73024290" testName="Replace_ServerVariable" computerName="NICK-LAPTOP" duration="00:00:00.1048548" startTime="2009-12-11T10:22:32.5767837-05:00" endTime="2009-12-11T10:22:32.6847899-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="cc3738a1-9c60-4cf3-83e4-c88f18847f3e" testId="0d39a281-d2d1-cc58-0cff-ad653dcd5baf" testName="ToString_True" computerName="NICK-LAPTOP" duration="00:00:00.0005668" startTime="2009-12-11T10:22:32.6947904-05:00" endTime="2009-12-11T10:22:32.6997907-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="2afd36aa-3865-4bce-9349-092431b58dd7" testId="1245d3e4-9e42-1c4f-7694-c5b71866b4e9" testName="Last_Final" computerName="NICK-LAPTOP" duration="00:00:00.0048861" startTime="2009-12-11T10:22:32.7047910-05:00" endTime="2009-12-11T10:22:32.7127915-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="5742f5fb-3f7c-439c-9509-6d1d3085d54f" testId="12f6113d-e953-c955-331c-737fb1e2255d" testName="QueryStringAppend_WithQueryString" computerName="NICK-LAPTOP" duration="00:00:00.0104586" startTime="2009-12-11T10:22:32.7187918-05:00" endTime="2009-12-11T10:22:32.7317926-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="6aaf23f2-9c99-4a68-9eb1-c068a1196b2f" testId="1412cdb9-1f81-64d7-585d-d013c7d7527c" testName="OrNext_MiddleMatched" computerName="NICK-LAPTOP" duration="00:00:00.0135091" startTime="2009-12-11T10:22:32.7367929-05:00" endTime="2009-12-11T10:22:32.7547939-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="dd69c61c-611a-463f-b72a-a1f1a6fe225b" testId="142bb897-0ebb-0e2f-aef8-00ee924bd46c" testName="NoCase_Disabled" computerName="NICK-LAPTOP" duration="00:00:00.0060215" startTime="2009-12-11T10:22:32.7617943-05:00" endTime="2009-12-11T10:22:32.7707948-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="0d845c04-7165-4fb7-9312-6a767b8196d9" testId="39653641-39de-1ab9-0d50-98dca481a8f8" testName="Redirect_Plain" computerName="NICK-LAPTOP" duration="00:00:00.0091753" startTime="2009-12-11T10:22:32.7767951-05:00" endTime="2009-12-11T10:22:32.7907959-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="096eee92-b694-4080-855f-bfd7f1479451" testId="3e890936-6857-4986-06a6-f310c3e56d41" testName="Chain_MiddleNotMatched" computerName="NICK-LAPTOP" duration="00:00:00.0051430" startTime="2009-12-11T10:22:32.7967963-05:00" endTime="2009-12-11T10:22:32.8067969-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="f4879647-381c-4f8b-83b5-dc2d30d94c20" testId="4242f48e-04d8-c77e-a35a-0012ccda7682" testName="SimpleRule" computerName="NICK-LAPTOP" duration="00:00:00.0024499" startTime="2009-12-11T10:22:32.8127972-05:00" endTime="2009-12-11T10:22:32.8207977-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="9e86e5af-9034-49cd-b737-de4da2ed5863" testId="4249aa41-497b-e4ca-f0c5-1694ed263f2e" testName="Chain_LastNotMatched" computerName="NICK-LAPTOP" duration="00:00:00.0084394" startTime="2009-12-11T10:22:32.8307982-05:00" endTime="2009-12-11T10:22:32.8457991-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="5fe923dc-4dcf-479b-99a6-91fce909f3d9" testId="442939cc-db83-a0a1-14e7-db3406b8c7d8" testName="VerifyExecuteWithNineConditionalValues" computerName="NICK-LAPTOP" duration="00:00:00.0772400" startTime="2009-12-11T10:22:32.8537995-05:00" endTime="2009-12-11T10:22:32.9338041-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="b4b988cf-8a6a-4039-a7e1-464c1221f436" testId="444f1f01-4e44-8161-e55d-575189cb9197" testName="ProxyType" computerName="NICK-LAPTOP" duration="00:00:00.0003480" startTime="2009-12-11T10:22:32.9388044-05:00" endTime="2009-12-11T10:22:32.9418046-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="bafa3967-8ec5-4066-978d-e822cdc496ba" testId="47702f76-7181-6260-4d97-c4d698c770af" testName="VerifyExecuteWithOneConditionalValue" computerName="NICK-LAPTOP" duration="00:00:00.0013793" startTime="2009-12-11T10:22:32.9468049-05:00" endTime="2009-12-11T10:22:32.9518051-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="254aeb44-45ec-44ff-a5ba-14bc99a4cccd" testId="596269cd-16ac-2940-48cd-6d8261408c8d" testName="OrNext_FinalMatched" computerName="NICK-LAPTOP" duration="00:00:00.0093147" startTime="2009-12-11T10:22:32.9568054-05:00" endTime="2009-12-11T10:22:32.9688061-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="7dda056c-9e62-498b-8fb8-97d67b238a0b" testId="5afd7dca-3d53-1412-c033-74f373fe308e" testName="Chain_Matched" computerName="NICK-LAPTOP" duration="00:00:00.0075674" startTime="2009-12-11T10:22:32.9738064-05:00" endTime="2009-12-11T10:22:32.9848070-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="b01aaa6e-f21a-4e6f-9f48-a5b432a2202f" testId="5de29529-1904-95d7-de17-af5d02036249" testName="OrNext_LastMatched" computerName="NICK-LAPTOP" duration="00:00:00.0079503" startTime="2009-12-11T10:22:32.9898073-05:00" endTime="2009-12-11T10:22:32.9998079-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="31380a04-6a8f-41e2-a497-af260b6555dd" testId="61dbd89a-ae84-9d78-70cc-5b033157abba" testName="RewriteCondWithServerVariable" computerName="NICK-LAPTOP" duration="00:00:00.0047479" startTime="2009-12-11T10:22:33.0058082-05:00" endTime="2009-12-11T10:22:33.0138087-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a0760aa4-5651-4f51-a547-8f118d5fb865" testId="6203017b-f0f0-69a4-43de-f73bb061e892" testName="Next" computerName="NICK-LAPTOP" duration="00:00:00.0032988" startTime="2009-12-11T10:22:33.0178089-05:00" endTime="2009-12-11T10:22:33.0248093-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="274a2b2b-323c-4bbc-9c3e-316c44b8a021" testId="62e42b25-71cd-fc0c-57b8-d773bfd2a38f" testName="VerifyExecute" computerName="NICK-LAPTOP" duration="00:00:00.0008679" startTime="2009-12-11T10:22:33.0298096-05:00" endTime="2009-12-11T10:22:33.0338098-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="79c9c562-3eae-4a8f-9736-1618209b5b65" testId="6717138f-8c63-28be-57bc-8c0bdd7192a1" testName="VerifyExecuteWithTenConditionalValues" computerName="NICK-LAPTOP" duration="00:00:00.0016654" startTime="2009-12-11T10:22:33.0388101-05:00" endTime="2009-12-11T10:22:33.0438104-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ec218bfa-f92f-452a-939a-1df27c97112d" testId="697f3c34-8fc2-e439-3501-0e3d8086810c" testName="Last_Middle" computerName="NICK-LAPTOP" duration="00:00:00.0036015" startTime="2009-12-11T10:22:33.0478106-05:00" endTime="2009-12-11T10:22:33.0608114-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="be85801a-e086-4d79-8241-477c32b703a4" testId="69b3965f-79f3-76d0-4b8e-e7df31f5ce7e" testName="Redirect_303" computerName="NICK-LAPTOP" duration="00:00:00.0001491" startTime="2009-12-11T10:22:33.0688118-05:00" endTime="2009-12-11T10:22:33.0718120-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="b07227b1-50a6-4534-8506-8bed273fc963" testId="6c64c205-ed6c-81e6-93bb-ef08219d4290" testName="NoCase_Enabled" computerName="NICK-LAPTOP" duration="00:00:00.0052114" startTime="2009-12-11T10:22:33.0758122-05:00" endTime="2009-12-11T10:22:33.0838127-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c156f2dc-2f9a-4d91-8fde-337a3f19e40c" testId="6f8929fd-fa82-ef38-e04f-0bb0e74696ae" testName="ForceHostToUseWww" computerName="NICK-LAPTOP" duration="00:00:00.0047576" startTime="2009-12-11T10:22:33.0878129-05:00" endTime="2009-12-11T10:22:33.0948133-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a0de765b-8472-473b-bc32-881bbe72bc28" testId="7031dde7-6a31-f061-5214-22935b5c314f" testName="Chain_FirstNotMatched" computerName="NICK-LAPTOP" duration="00:00:00.0033073" startTime="2009-12-11T10:22:33.0998136-05:00" endTime="2009-12-11T10:22:33.1058140-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="1d1e3081-0a46-457c-b66f-50303cad62b3" testId="7bbb9d14-d1bb-00cc-0021-ff5eaa8a9c30" testName="InvertMatch_False" computerName="NICK-LAPTOP" duration="00:00:00.0013903" startTime="2009-12-11T10:22:33.1098142-05:00" endTime="2009-12-11T10:22:33.1138144-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="eb51d56c-348a-4156-a412-e29553f5cd37" testId="7ff8b428-89e7-f9b6-6789-df461ef64c19" testName="Chain_FinalNotMatched" computerName="NICK-LAPTOP" duration="00:00:00.0075244" startTime="2009-12-11T10:22:33.1198148-05:00" endTime="2009-12-11T10:22:33.1298153-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ffa37590-a445-4680-a151-ff268b7e70c3" testId="81ae2999-0b0a-4f34-f4de-08b6c43ba20a" testName="VerifyExecuteWithTenConditionalValues" computerName="NICK-LAPTOP" duration="00:00:00.0021533" startTime="2009-12-11T10:22:33.1348156-05:00" endTime="2009-12-11T10:22:33.1388158-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="1fd701c5-3d94-48b5-9c9c-b739fd7a3127" testId="8802b187-31d4-f320-b25a-8b93f7ba72d3" testName="OrNext_NotlMatched" computerName="NICK-LAPTOP" duration="00:00:00.0093390" startTime="2009-12-11T10:22:33.1448162-05:00" endTime="2009-12-11T10:22:33.1568169-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="0c1b7ea1-87e9-42c8-9651-1743f6763558" testId="8aa42663-ef25-f93a-bcab-9c2f5fd2c357" testName="VerifyExecuteWithNineConditionalValues" computerName="NICK-LAPTOP" duration="00:00:00.0014247" startTime="2009-12-11T10:22:33.1618172-05:00" endTime="2009-12-11T10:22:33.1648173-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="7fbf5cde-5769-41ea-b961-8e05034addfb" testId="8aafa9bc-fa02-f7ef-c349-fd4b0568294c" testName="QueryStringAppend_WithQueryString_NoQueryStringOnUrl" computerName="NICK-LAPTOP" duration="00:00:00.0018554" startTime="2009-12-11T10:22:33.1698176-05:00" endTime="2009-12-11T10:22:33.1738178-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ca54728b-3dd4-48cc-acfb-3f8bd0d6f5de" testId="8e1b2ab8-8ac1-5707-1174-44639a000966" testName="RewriteModule_IRuleAction" computerName="NICK-LAPTOP" duration="00:00:00.0014445" startTime="2009-12-11T10:22:33.1808182-05:00" endTime="2009-12-11T10:22:33.1848185-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="2f27e4ff-cd7f-4099-a0f7-4be263c68171" testId="8ec321b9-df7e-5811-af28-5889b34ea126" testName="QueryStringAppend_WithOutQueryString_NoQueryStringOnUrl" computerName="NICK-LAPTOP" duration="00:00:00.0019020" startTime="2009-12-11T10:22:33.1888187-05:00" endTime="2009-12-11T10:22:33.1938190-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="8325fd7b-b5a3-452e-be24-baf2e5056e9d" testId="940e65be-acc6-b3c2-4e3c-ef703615908c" testName="OrNext_FirstMatched" computerName="NICK-LAPTOP" duration="00:00:00.0052098" startTime="2009-12-11T10:22:33.1978192-05:00" endTime="2009-12-11T10:22:33.2048196-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="6befbed0-8e8f-4f80-85ec-bafaa2556a4c" testId="9620b252-c03b-9ff4-a5b0-a4854560e9d2" testName="VerifyExecuteWithOneConditionalValue" computerName="NICK-LAPTOP" duration="00:00:00.0012581" startTime="2009-12-11T10:22:33.2098199-05:00" endTime="2009-12-11T10:22:33.2138201-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d6cd5895-b7bc-4976-9202-52768c402a12" testId="9f7fa01a-0f73-1f04-bb7d-8fb608341132" testName="Redirect_307" computerName="NICK-LAPTOP" duration="00:00:00.0001381" startTime="2009-12-11T10:22:33.2208205-05:00" endTime="2009-12-11T10:22:33.2238207-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="fed3e4fb-4bba-42a2-afc1-fb667f4d5f08" testId="a2d70069-8de0-7718-8da9-2d906374fb5a" testName="VerifyExecuteWithServerVariable" computerName="NICK-LAPTOP" duration="00:00:00.0008643" startTime="2009-12-11T10:22:33.2288210-05:00" endTime="2009-12-11T10:22:33.2318212-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="bd747fb7-abb4-4678-be84-a613c5d69283" testId="a49f4ecd-7238-b358-95c8-1a3be0a7e929" testName="VerifyExecute" computerName="NICK-LAPTOP" duration="00:00:00.0007318" startTime="2009-12-11T10:22:33.2358214-05:00" endTime="2009-12-11T10:22:33.2418217-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ec882a3e-1eb3-400b-a295-bd5b48d8785c" testId="a6ed299b-4d36-31d8-266f-991ec84f39dd" testName="Redirect_SeeOther" computerName="NICK-LAPTOP" duration="00:00:00.0001215" startTime="2009-12-11T10:22:33.2458220-05:00" endTime="2009-12-11T10:22:33.2488221-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="b8b2b0b9-cc4f-4002-86cd-d7a3a8e02f54" testId="a8eca9e4-21ec-3065-30d5-5fdc0380d052" testName="QueryStringAppend_WithOutQueryString" computerName="NICK-LAPTOP" duration="00:00:00.0019377" startTime="2009-12-11T10:22:33.2528224-05:00" endTime="2009-12-11T10:22:33.2568226-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="7f39822c-ffcc-4a07-b2fb-d9f99292d051" testId="a9347108-6280-abf2-f93c-5d4174e75c37" testName="Redirect_Permanent" computerName="NICK-LAPTOP" duration="00:00:00.0001183" startTime="2009-12-11T10:22:33.2618229-05:00" endTime="2009-12-11T10:22:33.2638230-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d05d4f53-89e5-4198-b40d-83dfc21e884e" testId="ac67d3d1-304b-dd0c-3115-d18a303c218f" testName="SimpleRule_WithComplexCondition" computerName="NICK-LAPTOP" duration="00:00:00.0164554" startTime="2009-12-11T10:22:33.2688233-05:00" endTime="2009-12-11T10:22:33.2878244-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="1aed203d-8df7-4d58-983d-1f0eca2b73ca" testId="b1b6dbce-42a8-a6ea-b84f-68a742637ef9" testName="ProxyAsyncType" computerName="NICK-LAPTOP" duration="00:00:00.0002176" startTime="2009-12-11T10:22:33.2918246-05:00" endTime="2009-12-11T10:22:33.2948248-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="aa98b4db-1854-4c67-8dcb-d52f728cff8d" testId="bbd5444f-e1f6-0dee-27a1-13b925659074" testName="ToString_False" computerName="NICK-LAPTOP" duration="00:00:00.0003760" startTime="2009-12-11T10:22:33.2988250-05:00" endTime="2009-12-11T10:22:33.3018252-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="034d95ca-a6ec-4266-95c2-d22d37f7d78d" testId="c1cf6e67-8cb2-fc07-270c-dbe9e35a967a" testName="AddTrailingSlash" computerName="NICK-LAPTOP" duration="00:00:00.0023109" startTime="2009-12-11T10:22:33.3058254-05:00" endTime="2009-12-11T10:22:33.3108257-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a1fa2b6d-a6c2-4252-964c-3460eab79bbe" testId="cd35395e-cf6c-f797-2fff-e5d3622418cd" testName="NoCase_Disabled" computerName="NICK-LAPTOP" duration="00:00:00.0030764" startTime="2009-12-11T10:22:33.3148259-05:00" endTime="2009-12-11T10:22:33.3208263-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="e29e002e-da5e-4d5d-b3ba-54ef79f867b5" testId="d1844e24-1ebd-397c-8e9f-4726701f6819" testName="ToString" computerName="NICK-LAPTOP" duration="00:00:00.0004566" startTime="2009-12-11T10:22:33.3248265-05:00" endTime="2009-12-11T10:22:33.3268266-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="517a1992-5ecc-4c8f-9d04-a616f87084c4" testId="d41cb399-0b3b-3c40-8e66-de9df933608d" testName="Skip" computerName="NICK-LAPTOP" duration="00:00:00.0046636" startTime="2009-12-11T10:22:33.3328269-05:00" endTime="2009-12-11T10:22:33.3398273-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d4fe4e6b-6609-4376-b1d3-cb198b3849be" testId="d9bf56bc-f124-3566-be05-4cd385a8a88a" testName="Redirect_301" computerName="NICK-LAPTOP" duration="00:00:00.0002196" startTime="2009-12-11T10:22:33.3448276-05:00" endTime="2009-12-11T10:22:33.3478278-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="26633bb6-63d9-4880-b619-88c6bb2f6598" testId="de033c36-efed-744d-1db4-4ce50c4457ed" testName="SimpleRule_WithCondition" computerName="NICK-LAPTOP" duration="00:00:00.0056454" startTime="2009-12-11T10:22:33.3518280-05:00" endTime="2009-12-11T10:22:33.3618286-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ded5e7a4-0a69-4db8-b76c-b998335b3f84" testId="dfad8bb3-a885-cd20-2adc-7fbec427ffe9" testName="InvertMatch_True" computerName="NICK-LAPTOP" duration="00:00:00.0004214" startTime="2009-12-11T10:22:33.3678289-05:00" endTime="2009-12-11T10:22:33.3718292-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="63ddc38a-8813-4105-b0c6-c7a12f7881a7" testId="f0b957b5-43d1-82c2-c039-bed91ca85385" testName="RewriteCondWithHttpHeader" computerName="NICK-LAPTOP" duration="00:00:00.0050777" startTime="2009-12-11T10:22:33.3758294-05:00" endTime="2009-12-11T10:22:33.3838299-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="e1df99d7-2935-43e9-813a-f3f4a228adc9" testId="f213e35e-ac49-ca5d-41d6-3bc6581c0b93" testName="Redirect_Temp" computerName="NICK-LAPTOP" duration="00:00:00.0002479" startTime="2009-12-11T10:22:33.3988307-05:00" endTime="2009-12-11T10:22:33.4028309-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="e3a9d06a-4a87-4b04-bad1-268abc5eaef1" testId="f4c40cf9-ed16-4991-3703-23756accc5ef" testName="Redirect_302" computerName="NICK-LAPTOP" duration="00:00:00.0001304" startTime="2009-12-11T10:22:33.4098313-05:00" endTime="2009-12-11T10:22:33.4118315-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="1d5cb215-0426-42c4-85a9-412214f6748c" testId="f74f8d16-6dd9-55db-6288-2005868870d8" testName="Redirect_Found" computerName="NICK-LAPTOP" duration="00:00:00.0001239" startTime="2009-12-11T10:22:33.4168317-05:00" endTime="2009-12-11T10:22:33.4198319-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="4ffeedcf-dce6-4ec4-8ba7-6c0a973b6ffa" testId="f990ae4a-0443-c18c-38fd-47da33e692ad" testName="Last_First" computerName="NICK-LAPTOP" duration="00:00:00.0022501" startTime="2009-12-11T10:22:33.4248322-05:00" endTime="2009-12-11T10:22:33.4298325-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="25bfa297-ba38-440a-86b9-6813c13be837" testId="fde35d16-16e8-d555-4aae-cc8b74634137" testName="WordPress" computerName="NICK-LAPTOP" duration="00:00:00.0025127" startTime="2009-12-11T10:22:33.4338327-05:00" endTime="2009-12-11T10:22:33.4398331-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

@@ -1,0 +1,7 @@
+C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\WebApplicationAjax\bin\RewriterError.dll
+C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\WebApplicationAjax\bin\RewriterError.pdb
+C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\WebApplicationAjax\bin\ManagedFusion.Rewriter.dll
+C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\WebApplicationAjax\bin\ManagedFusion.Rewriter.pdb
+C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\WebApplicationAjax\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\WebApplicationAjax\obj\Release\RewriterError.dll
+C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\WebApplicationAjax\obj\Release\RewriterError.pdb

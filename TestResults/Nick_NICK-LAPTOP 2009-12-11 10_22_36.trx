@@ -1,0 +1,1003 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="0fba3d56-779c-408f-9474-1a0d1ee7682d" name="Nick@NICK-LAPTOP 2009-12-11 10:22:36" runUser="nick-laptop\Nick" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2006">
+  <TestRunConfiguration name="ManagedFusion.Rewriter" id="aceed991-3862-4fd4-8e5b-0413e19a4db9">
+    <Description>This is a default test run configuration for a local test run.</Description>
+    <CodeCoverage enabled="true" keyFile="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.snk">
+      <Regular>
+        <CodeCoverageItem binaryFile="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Source\bin\Debug\ManagedFusion.Rewriter.dll" pdbFile="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Source\bin\Debug\ManagedFusion.Rewriter.instr.pdb" instrumentInPlace="true">
+          <KeyFile path="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.snk" />
+        </CodeCoverageItem>
+      </Regular>
+    </CodeCoverage>
+    <Deployment runDeploymentRoot="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\TestResults\Nick_NICK-LAPTOP 2009-12-11 10_22_36">
+      <DeploymentItem filename="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Dependencies\Moq.dll" />
+      <DeploymentItem filename="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Source\bin\Release\ManagedFusion.Rewriter.dll" />
+    </Deployment>
+    <Plugins>
+      <Plugin>Microsoft.VisualStudio.TestTools.CodeCoverage.CoveragePlugIn, Microsoft.VisualStudio.QualityTools.Plugins.CodeCoverage, PublicKeyToken=b03f5f7f11d50a3a</Plugin>
+    </Plugins>
+    <TestTypeSpecific>
+      <WebTestRunConfiguration testTypeId="4e7599fa-5ecb-43e9-a887-cd63cf72d207">
+        <Browser name="Internet Explorer 7.0">
+          <Headers>
+            <Header name="User-Agent" value="Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)" />
+            <Header name="Accept" value="*/*" />
+            <Header name="Accept-Language" value="{{$IEAcceptLanguage}}" />
+            <Header name="Accept-Encoding" value="GZIP" />
+          </Headers>
+        </Browser>
+        <Network Name="LAN" BandwidthInKbps="0" />
+      </WebTestRunConfiguration>
+    </TestTypeSpecific>
+  </TestRunConfiguration>
+  <ResultSummary outcome="Failed">
+    <Counters total="59" executed="59" error="0" failed="59" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="NICK-LAPTOP" outcome="Warning" timestamp="2009-12-11T10:22:37.5980709-05:00">
+        <Text>Code coverage instrumentation warning while processing file ManagedFusion.Rewriter.dll:
+Warning VSP2013 : Instrumenting this image requires it to run as a 32-bit process.  The CLR header flags have been updated to reflect this.</Text>
+      </RunInfo>
+      <RunInfo computerName="NICK-LAPTOP" outcome="Warning" timestamp="2009-12-11T10:22:37.6320728-05:00">
+        <Text>Warning: conflict during test run deployment: deployment item 'C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Source\bin\Release\ManagedFusion.Rewriter.dll' directly or indirectly referenced by C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll cannot be deployed to 'ManagedFusion.Rewriter.dll' because otherwise the file 'C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Source\bin\Release\ManagedFusion.Rewriter.dll' would overwrite code coverage item 'C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Source\bin\Debug\ManagedFusion.Rewriter.dll'.</Text>
+      </RunInfo>
+      <RunInfo computerName="NICK-LAPTOP" outcome="Warning" timestamp="2009-12-11T10:22:37.6320728-05:00">
+        <Text>Warning: conflict during test run deployment: deployment item 'c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\ManagedFusion.Rewriter.dll' directly or indirectly referenced by the test container 'c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll' cannot be deployed to 'ManagedFusion.Rewriter.dll' because otherwise the file 'c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\ManagedFusion.Rewriter.dll' would overwrite code coverage item 'C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Source\bin\Debug\ManagedFusion.Rewriter.dll'.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <Times creation="2009-12-11T10:22:36.5770125-05:00" queuing="2009-12-11T10:22:38.8041399-05:00" start="2009-12-11T10:22:38.9701494-05:00" finish="2009-12-11T10:22:40.8282557-05:00" />
+  <TestDefinitions>
+    <UnitTest name="OrNext_FinalMatched" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="596269cd-16ac-2940-48cd-6d8261408c8d">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="407e6b52-c8ce-4815-bda6-fe94f50650ed" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Conditions.Flags.OrNextTest, ManagedFusion.Rewriter.Test" name="OrNext_FinalMatched" />
+    </UnitTest>
+    <UnitTest name="Redirect_307" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="9f7fa01a-0f73-1f04-bb7d-8fb608341132">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="80921ef4-2780-4ede-b904-485ee32e71fb" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.RedirectFlagTest, ManagedFusion.Rewriter.Test" name="Redirect_307" />
+    </UnitTest>
+    <UnitTest name="VerifyExecuteWithOneConditionalValue" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="47702f76-7181-6260-4d97-c4d698c770af">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="57a9244d-ad12-4aed-9fe0-a3a1b70492ac" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Rules.Test.DefaultOutputRuleActionTest, ManagedFusion.Rewriter.Test" name="VerifyExecuteWithOneConditionalValue" />
+    </UnitTest>
+    <UnitTest name="ProxyType" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="444f1f01-4e44-8161-e55d-575189cb9197">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="f9c5ed87-38df-409e-8420-e19fd539173e" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.ProxyTest, ManagedFusion.Rewriter.Test" name="ProxyType" />
+    </UnitTest>
+    <UnitTest name="VerifyExecuteWithServerVariable" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="03704e19-0403-4ec7-3628-376579771a2a">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="2ecca89b-459d-42fe-b98d-bdd2d2c1d1f1" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Rules.Test.DefaultOutputRuleActionTest, ManagedFusion.Rewriter.Test" name="VerifyExecuteWithServerVariable" />
+    </UnitTest>
+    <UnitTest name="NoCase_Enabled" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="01bf85d9-28d5-5b35-8394-74da996c2e3e">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="b4f2c6f6-6f01-487f-b16c-d05cbfb5047e" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.NoCaseTest, ManagedFusion.Rewriter.Test" name="NoCase_Enabled" />
+    </UnitTest>
+    <UnitTest name="WordPress" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="fde35d16-16e8-d555-4aae-cc8b74634137">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="0817909b-cae0-4d32-8692-000d6086fffe" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.CommonUseTest, ManagedFusion.Rewriter.Test" name="WordPress" />
+    </UnitTest>
+    <UnitTest name="VerifyExecute" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="62e42b25-71cd-fc0c-57b8-d773bfd2a38f">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="32abe731-339a-42ac-bfa2-b16c783e36b4" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Rules.Test.DefaultRuleActionTest, ManagedFusion.Rewriter.Test" name="VerifyExecute" />
+    </UnitTest>
+    <UnitTest name="ProxyAsyncType" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="b1b6dbce-42a8-a6ea-b84f-68a742637ef9">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="1cadf81c-c83f-4b10-a052-64fbe75872e7" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.ProxyTest, ManagedFusion.Rewriter.Test" name="ProxyAsyncType" />
+    </UnitTest>
+    <UnitTest name="VerifyExecute" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="a49f4ecd-7238-b358-95c8-1a3be0a7e929">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="3b95ee8e-77ae-4ec3-93d6-789155733fa1" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Rules.Test.DefaultOutputRuleActionTest, ManagedFusion.Rewriter.Test" name="VerifyExecute" />
+    </UnitTest>
+    <UnitTest name="Replace_ServerVariable" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="05b2caa2-4dc8-d7de-8ac7-f71c73024290">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="6cd4577a-f811-4feb-a286-b06613dd54d5" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.PatternTest, ManagedFusion.Rewriter.Test" name="Replace_ServerVariable" />
+    </UnitTest>
+    <UnitTest name="VerifyExecuteWithOneConditionalValue" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="9620b252-c03b-9ff4-a5b0-a4854560e9d2">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="115fc86d-dad0-4232-a959-7ad7bdcd7cc4" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Rules.Test.DefaultRuleActionTest, ManagedFusion.Rewriter.Test" name="VerifyExecuteWithOneConditionalValue" />
+    </UnitTest>
+    <UnitTest name="QueryStringAppend_WithQueryString" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="12f6113d-e953-c955-331c-737fb1e2255d">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="07fc6ec2-dfda-4293-947d-144fab1fe94d" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.QueryStringAppendFlagTest, ManagedFusion.Rewriter.Test" name="QueryStringAppend_WithQueryString" />
+    </UnitTest>
+    <UnitTest name="InvertMatch_False" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="7bbb9d14-d1bb-00cc-0021-ff5eaa8a9c30">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="b94f8bdd-c7ba-4586-bd4e-62eb8c271160" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.PatternTest, ManagedFusion.Rewriter.Test" name="InvertMatch_False" />
+    </UnitTest>
+    <UnitTest name="RewriteCondWithHttpHeader" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="f0b957b5-43d1-82c2-c039-bed91ca85385">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="976692f4-3b09-426f-87a2-98a8bfa829a1" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.ApacheStyleTest, ManagedFusion.Rewriter.Test" name="RewriteCondWithHttpHeader" />
+    </UnitTest>
+    <UnitTest name="SimpleRule_WithCondition" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="de033c36-efed-744d-1db4-4ce50c4457ed">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="befbe6a2-a828-4c9e-8333-2594dd46cfb2" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.ApacheStyleTest, ManagedFusion.Rewriter.Test" name="SimpleRule_WithCondition" />
+    </UnitTest>
+    <UnitTest name="Redirect_Found" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="f74f8d16-6dd9-55db-6288-2005868870d8">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="16edf25d-6c63-4a43-b7b5-643b9962bdf8" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.RedirectFlagTest, ManagedFusion.Rewriter.Test" name="Redirect_Found" />
+    </UnitTest>
+    <UnitTest name="SimpleRule" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="4242f48e-04d8-c77e-a35a-0012ccda7682">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="b6c59573-dfe6-4aeb-a63f-a3cc8e5a6281" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.ApacheStyleTest, ManagedFusion.Rewriter.Test" name="SimpleRule" />
+    </UnitTest>
+    <UnitTest name="ToString_False" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="bbd5444f-e1f6-0dee-27a1-13b925659074">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="a7fd76d9-e3f3-4233-ae3c-7ee9c02f92a5" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.PatternTest, ManagedFusion.Rewriter.Test" name="ToString_False" />
+    </UnitTest>
+    <UnitTest name="VerifyExecuteWithServerVariable" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="a2d70069-8de0-7718-8da9-2d906374fb5a">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="59ff02c3-0a59-4a40-ab8b-888af4670119" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Rules.Test.DefaultRuleActionTest, ManagedFusion.Rewriter.Test" name="VerifyExecuteWithServerVariable" />
+    </UnitTest>
+    <UnitTest name="Last_First" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="f990ae4a-0443-c18c-38fd-47da33e692ad">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="b54c918b-f7b8-4dac-bd2d-5ff8299ae605" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.LastFlagTest, ManagedFusion.Rewriter.Test" name="Last_First" />
+    </UnitTest>
+    <UnitTest name="QueryStringAppend_WithQueryString_NoQueryStringOnUrl" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="8aafa9bc-fa02-f7ef-c349-fd4b0568294c">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="708499c0-8577-4377-9622-0f30205b4387" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.QueryStringAppendFlagTest, ManagedFusion.Rewriter.Test" name="QueryStringAppend_WithQueryString_NoQueryStringOnUrl" />
+    </UnitTest>
+    <UnitTest name="ToString_True" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="0d39a281-d2d1-cc58-0cff-ad653dcd5baf">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="f9b48d4e-d127-4792-a71b-1e350803a5d8" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.PatternTest, ManagedFusion.Rewriter.Test" name="ToString_True" />
+    </UnitTest>
+    <UnitTest name="OrNext_NotlMatched" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="8802b187-31d4-f320-b25a-8b93f7ba72d3">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="249b51c0-feda-4f5a-8455-76953f940d81" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Conditions.Flags.OrNextTest, ManagedFusion.Rewriter.Test" name="OrNext_NotlMatched" />
+    </UnitTest>
+    <UnitTest name="InvertMatch_True" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="dfad8bb3-a885-cd20-2adc-7fbec427ffe9">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="f3dc3077-d612-4c72-a099-91a957504176" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.PatternTest, ManagedFusion.Rewriter.Test" name="InvertMatch_True" />
+    </UnitTest>
+    <UnitTest name="ToString" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="d1844e24-1ebd-397c-8e9f-4726701f6819">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="156183bd-5367-4042-b62f-e80265439fbb" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.PatternTest, ManagedFusion.Rewriter.Test" name="ToString" />
+    </UnitTest>
+    <UnitTest name="NoCase_Disabled" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="cd35395e-cf6c-f797-2fff-e5d3622418cd">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="415d250c-2b3a-47fb-8b9e-b3c3198b71ab" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.NoCaseTest, ManagedFusion.Rewriter.Test" name="NoCase_Disabled" />
+    </UnitTest>
+    <UnitTest name="NoCase_Enabled" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="6c64c205-ed6c-81e6-93bb-ef08219d4290">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="ecb1e206-2a57-48c5-8e6a-d54b6c90bad6" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Conditions.Flags.NoCaseTest, ManagedFusion.Rewriter.Test" name="NoCase_Enabled" />
+    </UnitTest>
+    <UnitTest name="OrNext_LastMatched" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="5de29529-1904-95d7-de17-af5d02036249">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="86d3b9a0-271f-45c2-807c-0768c484bc63" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Conditions.Flags.OrNextTest, ManagedFusion.Rewriter.Test" name="OrNext_LastMatched" />
+    </UnitTest>
+    <UnitTest name="Chain_MiddleNotMatched" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="3e890936-6857-4986-06a6-f310c3e56d41">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="d34ff137-e5b0-4372-81c2-449e79bf1ea7" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.ChainFlagTest, ManagedFusion.Rewriter.Test" name="Chain_MiddleNotMatched" />
+    </UnitTest>
+    <UnitTest name="OrNext_FirstMatched" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="940e65be-acc6-b3c2-4e3c-ef703615908c">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="8df812fc-da0f-42a9-b322-5ff5620c307d" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Conditions.Flags.OrNextTest, ManagedFusion.Rewriter.Test" name="OrNext_FirstMatched" />
+    </UnitTest>
+    <UnitTest name="Last_Middle" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="697f3c34-8fc2-e439-3501-0e3d8086810c">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="6fecaa18-975e-473d-90d5-96ad5caed4f0" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.LastFlagTest, ManagedFusion.Rewriter.Test" name="Last_Middle" />
+    </UnitTest>
+    <UnitTest name="ForceHostToUseWww" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="6f8929fd-fa82-ef38-e04f-0bb0e74696ae">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="0a959e74-f842-4d4b-a2bd-2745d789c747" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.CommonUseTest, ManagedFusion.Rewriter.Test" name="ForceHostToUseWww" />
+    </UnitTest>
+    <UnitTest name="Chain_Matched" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="5afd7dca-3d53-1412-c033-74f373fe308e">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="85cd1a70-db1d-4e4f-bc93-d97243a433b4" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.ChainFlagTest, ManagedFusion.Rewriter.Test" name="Chain_Matched" />
+    </UnitTest>
+    <UnitTest name="Chain_LastNotMatched" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="4249aa41-497b-e4ca-f0c5-1694ed263f2e">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="e0f7236a-7785-4c0f-802a-c27e62db0409" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.ChainFlagTest, ManagedFusion.Rewriter.Test" name="Chain_LastNotMatched" />
+    </UnitTest>
+    <UnitTest name="Chain_FirstNotMatched" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="7031dde7-6a31-f061-5214-22935b5c314f">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="83625a59-0a2c-4d10-88e7-696f4e1cb379" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.ChainFlagTest, ManagedFusion.Rewriter.Test" name="Chain_FirstNotMatched" />
+    </UnitTest>
+    <UnitTest name="OrNext_MiddleMatched" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="1412cdb9-1f81-64d7-585d-d013c7d7527c">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="801ba194-19ed-45ed-91e2-a8838f64cd37" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Conditions.Flags.OrNextTest, ManagedFusion.Rewriter.Test" name="OrNext_MiddleMatched" />
+    </UnitTest>
+    <UnitTest name="RewriteModule_IRuleAction" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="8e1b2ab8-8ac1-5707-1174-44639a000966">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="c57fba4f-f52e-48a8-9398-c3da3acff716" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.ApacheStyleTest, ManagedFusion.Rewriter.Test" name="RewriteModule_IRuleAction" />
+    </UnitTest>
+    <UnitTest name="AddTrailingSlash" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="c1cf6e67-8cb2-fc07-270c-dbe9e35a967a">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="8ff139d0-aa7f-4570-9bc1-c1dfab9a895d" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.CommonUseTest, ManagedFusion.Rewriter.Test" name="AddTrailingSlash" />
+    </UnitTest>
+    <UnitTest name="VerifyExecuteWithNineConditionalValues" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="442939cc-db83-a0a1-14e7-db3406b8c7d8">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="05154be5-e823-4253-b5cb-2f3919bd9930" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Rules.Test.DefaultOutputRuleActionTest, ManagedFusion.Rewriter.Test" name="VerifyExecuteWithNineConditionalValues" />
+    </UnitTest>
+    <UnitTest name="Chain_FinalNotMatched" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="7ff8b428-89e7-f9b6-6789-df461ef64c19">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="4b78ba8d-f60d-4c0d-93c1-3a50d267b35b" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.ChainFlagTest, ManagedFusion.Rewriter.Test" name="Chain_FinalNotMatched" />
+    </UnitTest>
+    <UnitTest name="RewriteCondWithServerVariable" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="61dbd89a-ae84-9d78-70cc-5b033157abba">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="1d8189a6-3069-4723-8189-99dd32389fe8" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.ApacheStyleTest, ManagedFusion.Rewriter.Test" name="RewriteCondWithServerVariable" />
+    </UnitTest>
+    <UnitTest name="Last_Final" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="1245d3e4-9e42-1c4f-7694-c5b71866b4e9">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="14bcef70-3c45-4615-ba76-30aa87c33d6e" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.LastFlagTest, ManagedFusion.Rewriter.Test" name="Last_Final" />
+    </UnitTest>
+    <UnitTest name="Skip" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="d41cb399-0b3b-3c40-8e66-de9df933608d">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="225028e3-9627-4782-a64f-7d3d6498bf79" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.SkipRuleFlagTest, ManagedFusion.Rewriter.Test" name="Skip" />
+    </UnitTest>
+    <UnitTest name="Redirect_302" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="f4c40cf9-ed16-4991-3703-23756accc5ef">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="8a4379ee-2912-491e-85b7-d5c9e56832a8" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.RedirectFlagTest, ManagedFusion.Rewriter.Test" name="Redirect_302" />
+    </UnitTest>
+    <UnitTest name="VerifyExecuteWithTenConditionalValues" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="6717138f-8c63-28be-57bc-8c0bdd7192a1">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="34ddcd40-92aa-4217-8264-76cba69edd35" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Rules.Test.DefaultRuleActionTest, ManagedFusion.Rewriter.Test" name="VerifyExecuteWithTenConditionalValues" />
+    </UnitTest>
+    <UnitTest name="SimpleRule_WithComplexCondition" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="ac67d3d1-304b-dd0c-3115-d18a303c218f">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="04a2ca7f-4c86-4e61-86ad-608850ae3c07" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.ApacheStyleTest, ManagedFusion.Rewriter.Test" name="SimpleRule_WithComplexCondition" />
+    </UnitTest>
+    <UnitTest name="Redirect_303" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="69b3965f-79f3-76d0-4b8e-e7df31f5ce7e">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="5d895a5b-3972-49f2-8d73-0437d5a7e1ea" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.RedirectFlagTest, ManagedFusion.Rewriter.Test" name="Redirect_303" />
+    </UnitTest>
+    <UnitTest name="Redirect_SeeOther" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="a6ed299b-4d36-31d8-266f-991ec84f39dd">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="07265122-5c54-44d7-80b2-ec03ce975925" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.RedirectFlagTest, ManagedFusion.Rewriter.Test" name="Redirect_SeeOther" />
+    </UnitTest>
+    <UnitTest name="QueryStringAppend_WithOutQueryString_NoQueryStringOnUrl" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="8ec321b9-df7e-5811-af28-5889b34ea126">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="451e934e-8153-4d7c-bb12-47757be6d3ee" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.QueryStringAppendFlagTest, ManagedFusion.Rewriter.Test" name="QueryStringAppend_WithOutQueryString_NoQueryStringOnUrl" />
+    </UnitTest>
+    <UnitTest name="Next" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="6203017b-f0f0-69a4-43de-f73bb061e892">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="e92530ea-5e28-4851-b04a-9dbfb4e76dea" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.NextRuleFlagTest, ManagedFusion.Rewriter.Test" name="Next" />
+    </UnitTest>
+    <UnitTest name="Redirect_Temp" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="f213e35e-ac49-ca5d-41d6-3bc6581c0b93">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="25af872b-c08d-4791-a476-ea04bcea8f01" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.RedirectFlagTest, ManagedFusion.Rewriter.Test" name="Redirect_Temp" />
+    </UnitTest>
+    <UnitTest name="VerifyExecuteWithTenConditionalValues" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="81ae2999-0b0a-4f34-f4de-08b6c43ba20a">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="4d5f24d5-3281-49b5-8224-716d422a8cd3" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Rules.Test.DefaultOutputRuleActionTest, ManagedFusion.Rewriter.Test" name="VerifyExecuteWithTenConditionalValues" />
+    </UnitTest>
+    <UnitTest name="VerifyExecuteWithNineConditionalValues" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="8aa42663-ef25-f93a-bcab-9c2f5fd2c357">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="ae185b27-4307-420f-8fa9-bfcc615e1a9a" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Rules.Test.DefaultRuleActionTest, ManagedFusion.Rewriter.Test" name="VerifyExecuteWithNineConditionalValues" />
+    </UnitTest>
+    <UnitTest name="QueryStringAppend_WithOutQueryString" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="a8eca9e4-21ec-3065-30d5-5fdc0380d052">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="a2dac685-de19-46c3-bdb6-5a99a3638fd6" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.QueryStringAppendFlagTest, ManagedFusion.Rewriter.Test" name="QueryStringAppend_WithOutQueryString" />
+    </UnitTest>
+    <UnitTest name="NoCase_Disabled" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="142bb897-0ebb-0e2f-aef8-00ee924bd46c">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="ff87002d-78bf-4fd8-b646-20e598241682" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Conditions.Flags.NoCaseTest, ManagedFusion.Rewriter.Test" name="NoCase_Disabled" />
+    </UnitTest>
+    <UnitTest name="Redirect_301" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="d9bf56bc-f124-3566-be05-4cd385a8a88a">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="b43be283-498b-4a76-8b23-031016b8138b" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.RedirectFlagTest, ManagedFusion.Rewriter.Test" name="Redirect_301" />
+    </UnitTest>
+    <UnitTest name="Redirect_Plain" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="39653641-39de-1ab9-0d50-98dca481a8f8">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="70e88acf-f4c4-4eee-a2c2-7074fdc4cdad" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.RedirectFlagTest, ManagedFusion.Rewriter.Test" name="Redirect_Plain" />
+    </UnitTest>
+    <UnitTest name="Redirect_Permanent" storage="c:\users\nick\documents\projects\managed fusion (open source)\managedfusion.rewriter\tests\unit\bin\release\managedfusion.rewriter.test.dll" id="a9347108-6280-abf2-f93c-5d4174e75c37">
+      <Css projectStructure="" iteration="" />
+      <Owners>
+        <Owner name="" />
+      </Owners>
+      <Execution id="07852433-f757-4e9f-a063-ef610c2851fd" />
+      <TestMethod codeBase="C:\Users\Nick\Documents\Projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\Tests\Unit\bin\Release\ManagedFusion.Rewriter.Test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ManagedFusion.Rewriter.Test.Rules.Flags.RedirectFlagTest, ManagedFusion.Rewriter.Test" name="Redirect_Permanent" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="01bf85d9-28d5-5b35-8394-74da996c2e3e" executionId="b4f2c6f6-6f01-487f-b16c-d05cbfb5047e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="03704e19-0403-4ec7-3628-376579771a2a" executionId="2ecca89b-459d-42fe-b98d-bdd2d2c1d1f1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="05b2caa2-4dc8-d7de-8ac7-f71c73024290" executionId="6cd4577a-f811-4feb-a286-b06613dd54d5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0d39a281-d2d1-cc58-0cff-ad653dcd5baf" executionId="f9b48d4e-d127-4792-a71b-1e350803a5d8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1245d3e4-9e42-1c4f-7694-c5b71866b4e9" executionId="14bcef70-3c45-4615-ba76-30aa87c33d6e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="12f6113d-e953-c955-331c-737fb1e2255d" executionId="07fc6ec2-dfda-4293-947d-144fab1fe94d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1412cdb9-1f81-64d7-585d-d013c7d7527c" executionId="801ba194-19ed-45ed-91e2-a8838f64cd37" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="142bb897-0ebb-0e2f-aef8-00ee924bd46c" executionId="ff87002d-78bf-4fd8-b646-20e598241682" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="39653641-39de-1ab9-0d50-98dca481a8f8" executionId="70e88acf-f4c4-4eee-a2c2-7074fdc4cdad" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3e890936-6857-4986-06a6-f310c3e56d41" executionId="d34ff137-e5b0-4372-81c2-449e79bf1ea7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4242f48e-04d8-c77e-a35a-0012ccda7682" executionId="b6c59573-dfe6-4aeb-a63f-a3cc8e5a6281" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4249aa41-497b-e4ca-f0c5-1694ed263f2e" executionId="e0f7236a-7785-4c0f-802a-c27e62db0409" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="442939cc-db83-a0a1-14e7-db3406b8c7d8" executionId="05154be5-e823-4253-b5cb-2f3919bd9930" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="444f1f01-4e44-8161-e55d-575189cb9197" executionId="f9c5ed87-38df-409e-8420-e19fd539173e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="47702f76-7181-6260-4d97-c4d698c770af" executionId="57a9244d-ad12-4aed-9fe0-a3a1b70492ac" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="596269cd-16ac-2940-48cd-6d8261408c8d" executionId="407e6b52-c8ce-4815-bda6-fe94f50650ed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5afd7dca-3d53-1412-c033-74f373fe308e" executionId="85cd1a70-db1d-4e4f-bc93-d97243a433b4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5de29529-1904-95d7-de17-af5d02036249" executionId="86d3b9a0-271f-45c2-807c-0768c484bc63" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="61dbd89a-ae84-9d78-70cc-5b033157abba" executionId="1d8189a6-3069-4723-8189-99dd32389fe8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6203017b-f0f0-69a4-43de-f73bb061e892" executionId="e92530ea-5e28-4851-b04a-9dbfb4e76dea" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="62e42b25-71cd-fc0c-57b8-d773bfd2a38f" executionId="32abe731-339a-42ac-bfa2-b16c783e36b4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6717138f-8c63-28be-57bc-8c0bdd7192a1" executionId="34ddcd40-92aa-4217-8264-76cba69edd35" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="697f3c34-8fc2-e439-3501-0e3d8086810c" executionId="6fecaa18-975e-473d-90d5-96ad5caed4f0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="69b3965f-79f3-76d0-4b8e-e7df31f5ce7e" executionId="5d895a5b-3972-49f2-8d73-0437d5a7e1ea" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6c64c205-ed6c-81e6-93bb-ef08219d4290" executionId="ecb1e206-2a57-48c5-8e6a-d54b6c90bad6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6f8929fd-fa82-ef38-e04f-0bb0e74696ae" executionId="0a959e74-f842-4d4b-a2bd-2745d789c747" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7031dde7-6a31-f061-5214-22935b5c314f" executionId="83625a59-0a2c-4d10-88e7-696f4e1cb379" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7bbb9d14-d1bb-00cc-0021-ff5eaa8a9c30" executionId="b94f8bdd-c7ba-4586-bd4e-62eb8c271160" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7ff8b428-89e7-f9b6-6789-df461ef64c19" executionId="4b78ba8d-f60d-4c0d-93c1-3a50d267b35b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="81ae2999-0b0a-4f34-f4de-08b6c43ba20a" executionId="4d5f24d5-3281-49b5-8224-716d422a8cd3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8802b187-31d4-f320-b25a-8b93f7ba72d3" executionId="249b51c0-feda-4f5a-8455-76953f940d81" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8aa42663-ef25-f93a-bcab-9c2f5fd2c357" executionId="ae185b27-4307-420f-8fa9-bfcc615e1a9a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8aafa9bc-fa02-f7ef-c349-fd4b0568294c" executionId="708499c0-8577-4377-9622-0f30205b4387" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8e1b2ab8-8ac1-5707-1174-44639a000966" executionId="c57fba4f-f52e-48a8-9398-c3da3acff716" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8ec321b9-df7e-5811-af28-5889b34ea126" executionId="451e934e-8153-4d7c-bb12-47757be6d3ee" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="940e65be-acc6-b3c2-4e3c-ef703615908c" executionId="8df812fc-da0f-42a9-b322-5ff5620c307d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9620b252-c03b-9ff4-a5b0-a4854560e9d2" executionId="115fc86d-dad0-4232-a959-7ad7bdcd7cc4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9f7fa01a-0f73-1f04-bb7d-8fb608341132" executionId="80921ef4-2780-4ede-b904-485ee32e71fb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a2d70069-8de0-7718-8da9-2d906374fb5a" executionId="59ff02c3-0a59-4a40-ab8b-888af4670119" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a49f4ecd-7238-b358-95c8-1a3be0a7e929" executionId="3b95ee8e-77ae-4ec3-93d6-789155733fa1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a6ed299b-4d36-31d8-266f-991ec84f39dd" executionId="07265122-5c54-44d7-80b2-ec03ce975925" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a8eca9e4-21ec-3065-30d5-5fdc0380d052" executionId="a2dac685-de19-46c3-bdb6-5a99a3638fd6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a9347108-6280-abf2-f93c-5d4174e75c37" executionId="07852433-f757-4e9f-a063-ef610c2851fd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ac67d3d1-304b-dd0c-3115-d18a303c218f" executionId="04a2ca7f-4c86-4e61-86ad-608850ae3c07" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b1b6dbce-42a8-a6ea-b84f-68a742637ef9" executionId="1cadf81c-c83f-4b10-a052-64fbe75872e7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bbd5444f-e1f6-0dee-27a1-13b925659074" executionId="a7fd76d9-e3f3-4233-ae3c-7ee9c02f92a5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c1cf6e67-8cb2-fc07-270c-dbe9e35a967a" executionId="8ff139d0-aa7f-4570-9bc1-c1dfab9a895d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cd35395e-cf6c-f797-2fff-e5d3622418cd" executionId="415d250c-2b3a-47fb-8b9e-b3c3198b71ab" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d1844e24-1ebd-397c-8e9f-4726701f6819" executionId="156183bd-5367-4042-b62f-e80265439fbb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d41cb399-0b3b-3c40-8e66-de9df933608d" executionId="225028e3-9627-4782-a64f-7d3d6498bf79" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d9bf56bc-f124-3566-be05-4cd385a8a88a" executionId="b43be283-498b-4a76-8b23-031016b8138b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="de033c36-efed-744d-1db4-4ce50c4457ed" executionId="befbe6a2-a828-4c9e-8333-2594dd46cfb2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="dfad8bb3-a885-cd20-2adc-7fbec427ffe9" executionId="f3dc3077-d612-4c72-a099-91a957504176" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f0b957b5-43d1-82c2-c039-bed91ca85385" executionId="976692f4-3b09-426f-87a2-98a8bfa829a1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f213e35e-ac49-ca5d-41d6-3bc6581c0b93" executionId="25af872b-c08d-4791-a476-ea04bcea8f01" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f4c40cf9-ed16-4991-3703-23756accc5ef" executionId="8a4379ee-2912-491e-85b7-d5c9e56832a8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f74f8d16-6dd9-55db-6288-2005868870d8" executionId="16edf25d-6c63-4a43-b7b5-643b9962bdf8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f990ae4a-0443-c18c-38fd-47da33e692ad" executionId="b54c918b-f7b8-4dac-bd2d-5ff8299ae605" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fde35d16-16e8-d555-4aae-cc8b74634137" executionId="0817909b-cae0-4d32-8692-000d6086fffe" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="b4f2c6f6-6f01-487f-b16c-d05cbfb5047e" testId="01bf85d9-28d5-5b35-8394-74da996c2e3e" testName="NoCase_Enabled" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:39.3881733-05:00" endTime="2009-12-11T10:22:39.8702009-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="2ecca89b-459d-42fe-b98d-bdd2d2c1d1f1" testId="03704e19-0403-4ec7-3628-376579771a2a" testName="VerifyExecuteWithServerVariable" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:39.8802014-05:00" endTime="2009-12-11T10:22:39.8832016-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="6cd4577a-f811-4feb-a286-b06613dd54d5" testId="05b2caa2-4dc8-d7de-8ac7-f71c73024290" testName="Replace_ServerVariable" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:39.8842017-05:00" endTime="2009-12-11T10:22:39.8872018-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="f9b48d4e-d127-4792-a71b-1e350803a5d8" testId="0d39a281-d2d1-cc58-0cff-ad653dcd5baf" testName="ToString_True" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:39.8872018-05:00" endTime="2009-12-11T10:22:39.8912021-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="14bcef70-3c45-4615-ba76-30aa87c33d6e" testId="1245d3e4-9e42-1c4f-7694-c5b71866b4e9" testName="Last_Final" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:39.8962023-05:00" endTime="2009-12-11T10:22:39.8992025-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="07fc6ec2-dfda-4293-947d-144fab1fe94d" testId="12f6113d-e953-c955-331c-737fb1e2255d" testName="QueryStringAppend_WithQueryString" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:39.9002026-05:00" endTime="2009-12-11T10:22:39.9032027-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="801ba194-19ed-45ed-91e2-a8838f64cd37" testId="1412cdb9-1f81-64d7-585d-d013c7d7527c" testName="OrNext_MiddleMatched" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:39.9042028-05:00" endTime="2009-12-11T10:22:39.9112032-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ff87002d-78bf-4fd8-b646-20e598241682" testId="142bb897-0ebb-0e2f-aef8-00ee924bd46c" testName="NoCase_Disabled" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:39.9122033-05:00" endTime="2009-12-11T10:22:39.9182036-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="70e88acf-f4c4-4eee-a2c2-7074fdc4cdad" testId="39653641-39de-1ab9-0d50-98dca481a8f8" testName="Redirect_Plain" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:39.9192037-05:00" endTime="2009-12-11T10:22:39.9272041-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d34ff137-e5b0-4372-81c2-449e79bf1ea7" testId="3e890936-6857-4986-06a6-f310c3e56d41" testName="Chain_MiddleNotMatched" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:39.9272041-05:00" endTime="2009-12-11T10:22:39.9312043-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="b6c59573-dfe6-4aeb-a63f-a3cc8e5a6281" testId="4242f48e-04d8-c77e-a35a-0012ccda7682" testName="SimpleRule" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:39.9312043-05:00" endTime="2009-12-11T10:22:39.9482053-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="e0f7236a-7785-4c0f-802a-c27e62db0409" testId="4249aa41-497b-e4ca-f0c5-1694ed263f2e" testName="Chain_LastNotMatched" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:39.9482053-05:00" endTime="2009-12-11T10:22:39.9552057-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="05154be5-e823-4253-b5cb-2f3919bd9930" testId="442939cc-db83-a0a1-14e7-db3406b8c7d8" testName="VerifyExecuteWithNineConditionalValues" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:39.9552057-05:00" endTime="2009-12-11T10:22:39.9612061-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="f9c5ed87-38df-409e-8420-e19fd539173e" testId="444f1f01-4e44-8161-e55d-575189cb9197" testName="ProxyType" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:39.9612061-05:00" endTime="2009-12-11T10:22:39.9682065-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="57a9244d-ad12-4aed-9fe0-a3a1b70492ac" testId="47702f76-7181-6260-4d97-c4d698c770af" testName="VerifyExecuteWithOneConditionalValue" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:39.9692065-05:00" endTime="2009-12-11T10:22:39.9722067-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="407e6b52-c8ce-4815-bda6-fe94f50650ed" testId="596269cd-16ac-2940-48cd-6d8261408c8d" testName="OrNext_FinalMatched" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:39.9732068-05:00" endTime="2009-12-11T10:22:39.9832073-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="85cd1a70-db1d-4e4f-bc93-d97243a433b4" testId="5afd7dca-3d53-1412-c033-74f373fe308e" testName="Chain_Matched" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:39.9832073-05:00" endTime="2009-12-11T10:22:39.9862075-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="86d3b9a0-271f-45c2-807c-0768c484bc63" testId="5de29529-1904-95d7-de17-af5d02036249" testName="OrNext_LastMatched" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:39.9872076-05:00" endTime="2009-12-11T10:22:39.9912078-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="1d8189a6-3069-4723-8189-99dd32389fe8" testId="61dbd89a-ae84-9d78-70cc-5b033157abba" testName="RewriteCondWithServerVariable" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:39.9922078-05:00" endTime="2009-12-11T10:22:39.9972081-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="e92530ea-5e28-4851-b04a-9dbfb4e76dea" testId="6203017b-f0f0-69a4-43de-f73bb061e892" testName="Next" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:39.9992082-05:00" endTime="2009-12-11T10:22:40.0022084-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="32abe731-339a-42ac-bfa2-b16c783e36b4" testId="62e42b25-71cd-fc0c-57b8-d773bfd2a38f" testName="VerifyExecute" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:40.0022084-05:00" endTime="2009-12-11T10:22:40.0092088-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="34ddcd40-92aa-4217-8264-76cba69edd35" testId="6717138f-8c63-28be-57bc-8c0bdd7192a1" testName="VerifyExecuteWithTenConditionalValues" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:40.0102089-05:00" endTime="2009-12-11T10:22:40.0152092-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="6fecaa18-975e-473d-90d5-96ad5caed4f0" testId="697f3c34-8fc2-e439-3501-0e3d8086810c" testName="Last_Middle" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:40.0162092-05:00" endTime="2009-12-11T10:22:40.0192094-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="5d895a5b-3972-49f2-8d73-0437d5a7e1ea" testId="69b3965f-79f3-76d0-4b8e-e7df31f5ce7e" testName="Redirect_303" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:40.0212095-05:00" endTime="2009-12-11T10:22:40.0272098-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ecb1e206-2a57-48c5-8e6a-d54b6c90bad6" testId="6c64c205-ed6c-81e6-93bb-ef08219d4290" testName="NoCase_Enabled" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:40.0272098-05:00" endTime="2009-12-11T10:22:40.0302100-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="0a959e74-f842-4d4b-a2bd-2745d789c747" testId="6f8929fd-fa82-ef38-e04f-0bb0e74696ae" testName="ForceHostToUseWww" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:40.0312101-05:00" endTime="2009-12-11T10:22:40.0372104-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="83625a59-0a2c-4d10-88e7-696f4e1cb379" testId="7031dde7-6a31-f061-5214-22935b5c314f" testName="Chain_FirstNotMatched" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:40.0372104-05:00" endTime="2009-12-11T10:22:40.0422107-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="b94f8bdd-c7ba-4586-bd4e-62eb8c271160" testId="7bbb9d14-d1bb-00cc-0021-ff5eaa8a9c30" testName="InvertMatch_False" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:40.0432108-05:00" endTime="2009-12-11T10:22:40.0492111-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="4b78ba8d-f60d-4c0d-93c1-3a50d267b35b" testId="7ff8b428-89e7-f9b6-6789-df461ef64c19" testName="Chain_FinalNotMatched" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:40.0502112-05:00" endTime="2009-12-11T10:22:40.0532113-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="4d5f24d5-3281-49b5-8224-716d422a8cd3" testId="81ae2999-0b0a-4f34-f4de-08b6c43ba20a" testName="VerifyExecuteWithTenConditionalValues" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:40.0532113-05:00" endTime="2009-12-11T10:22:40.0582116-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="249b51c0-feda-4f5a-8455-76953f940d81" testId="8802b187-31d4-f320-b25a-8b93f7ba72d3" testName="OrNext_NotlMatched" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:40.0592117-05:00" endTime="2009-12-11T10:22:40.0622118-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ae185b27-4307-420f-8fa9-bfcc615e1a9a" testId="8aa42663-ef25-f93a-bcab-9c2f5fd2c357" testName="VerifyExecuteWithNineConditionalValues" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:40.0642120-05:00" endTime="2009-12-11T10:22:40.0682122-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="708499c0-8577-4377-9622-0f30205b4387" testId="8aafa9bc-fa02-f7ef-c349-fd4b0568294c" testName="QueryStringAppend_WithQueryString_NoQueryStringOnUrl" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:40.0742125-05:00" endTime="2009-12-11T10:22:40.0762126-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c57fba4f-f52e-48a8-9398-c3da3acff716" testId="8e1b2ab8-8ac1-5707-1174-44639a000966" testName="RewriteModule_IRuleAction" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:40.0772127-05:00" endTime="2009-12-11T10:22:40.0812129-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="451e934e-8153-4d7c-bb12-47757be6d3ee" testId="8ec321b9-df7e-5811-af28-5889b34ea126" testName="QueryStringAppend_WithOutQueryString_NoQueryStringOnUrl" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:40.0822130-05:00" endTime="2009-12-11T10:22:40.0892134-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="8df812fc-da0f-42a9-b322-5ff5620c307d" testId="940e65be-acc6-b3c2-4e3c-ef703615908c" testName="OrNext_FirstMatched" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:40.0892134-05:00" endTime="2009-12-11T10:22:40.0972138-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="115fc86d-dad0-4232-a959-7ad7bdcd7cc4" testId="9620b252-c03b-9ff4-a5b0-a4854560e9d2" testName="VerifyExecuteWithOneConditionalValue" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:40.0982139-05:00" endTime="2009-12-11T10:22:40.1032142-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="80921ef4-2780-4ede-b904-485ee32e71fb" testId="9f7fa01a-0f73-1f04-bb7d-8fb608341132" testName="Redirect_307" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:40.1042142-05:00" endTime="2009-12-11T10:22:40.1072144-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="59ff02c3-0a59-4a40-ab8b-888af4670119" testId="a2d70069-8de0-7718-8da9-2d906374fb5a" testName="VerifyExecuteWithServerVariable" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:40.1082145-05:00" endTime="2009-12-11T10:22:40.1132148-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="3b95ee8e-77ae-4ec3-93d6-789155733fa1" testId="a49f4ecd-7238-b358-95c8-1a3be0a7e929" testName="VerifyExecute" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:40.1132148-05:00" endTime="2009-12-11T10:22:40.1192151-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="07265122-5c54-44d7-80b2-ec03ce975925" testId="a6ed299b-4d36-31d8-266f-991ec84f39dd" testName="Redirect_SeeOther" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:40.1192151-05:00" endTime="2009-12-11T10:22:40.1262155-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a2dac685-de19-46c3-bdb6-5a99a3638fd6" testId="a8eca9e4-21ec-3065-30d5-5fdc0380d052" testName="QueryStringAppend_WithOutQueryString" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:40.1262155-05:00" endTime="2009-12-11T10:22:40.1312158-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="07852433-f757-4e9f-a063-ef610c2851fd" testId="a9347108-6280-abf2-f93c-5d4174e75c37" testName="Redirect_Permanent" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:40.1312158-05:00" endTime="2009-12-11T10:22:40.1362161-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="04a2ca7f-4c86-4e61-86ad-608850ae3c07" testId="ac67d3d1-304b-dd0c-3115-d18a303c218f" testName="SimpleRule_WithComplexCondition" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:40.1372161-05:00" endTime="2009-12-11T10:22:40.1522170-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="1cadf81c-c83f-4b10-a052-64fbe75872e7" testId="b1b6dbce-42a8-a6ea-b84f-68a742637ef9" testName="ProxyAsyncType" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:40.1542171-05:00" endTime="2009-12-11T10:22:40.1572173-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a7fd76d9-e3f3-4233-ae3c-7ee9c02f92a5" testId="bbd5444f-e1f6-0dee-27a1-13b925659074" testName="ToString_False" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:40.1592174-05:00" endTime="2009-12-11T10:22:40.1612175-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="8ff139d0-aa7f-4570-9bc1-c1dfab9a895d" testId="c1cf6e67-8cb2-fc07-270c-dbe9e35a967a" testName="AddTrailingSlash" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:40.1642177-05:00" endTime="2009-12-11T10:22:40.1672178-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="415d250c-2b3a-47fb-8b9e-b3c3198b71ab" testId="cd35395e-cf6c-f797-2fff-e5d3622418cd" testName="NoCase_Disabled" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:40.1672178-05:00" endTime="2009-12-11T10:22:40.1692180-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="156183bd-5367-4042-b62f-e80265439fbb" testId="d1844e24-1ebd-397c-8e9f-4726701f6819" testName="ToString" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:40.1692180-05:00" endTime="2009-12-11T10:22:40.1712181-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="225028e3-9627-4782-a64f-7d3d6498bf79" testId="d41cb399-0b3b-3c40-8e66-de9df933608d" testName="Skip" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:40.1712181-05:00" endTime="2009-12-11T10:22:40.1732182-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="b43be283-498b-4a76-8b23-031016b8138b" testId="d9bf56bc-f124-3566-be05-4cd385a8a88a" testName="Redirect_301" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:40.1732182-05:00" endTime="2009-12-11T10:22:40.1752183-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="befbe6a2-a828-4c9e-8333-2594dd46cfb2" testId="de033c36-efed-744d-1db4-4ce50c4457ed" testName="SimpleRule_WithCondition" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:40.1752183-05:00" endTime="2009-12-11T10:22:40.1772184-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="f3dc3077-d612-4c72-a099-91a957504176" testId="dfad8bb3-a885-cd20-2adc-7fbec427ffe9" testName="InvertMatch_True" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:40.1782185-05:00" endTime="2009-12-11T10:22:40.1842188-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="976692f4-3b09-426f-87a2-98a8bfa829a1" testId="f0b957b5-43d1-82c2-c039-bed91ca85385" testName="RewriteCondWithHttpHeader" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:40.1852189-05:00" endTime="2009-12-11T10:22:40.1872190-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="25af872b-c08d-4791-a476-ea04bcea8f01" testId="f213e35e-ac49-ca5d-41d6-3bc6581c0b93" testName="Redirect_Temp" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:40.1872190-05:00" endTime="2009-12-11T10:22:40.1892191-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="8a4379ee-2912-491e-85b7-d5c9e56832a8" testId="f4c40cf9-ed16-4991-3703-23756accc5ef" testName="Redirect_302" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:40.1892191-05:00" endTime="2009-12-11T10:22:40.1912192-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="16edf25d-6c63-4a43-b7b5-643b9962bdf8" testId="f74f8d16-6dd9-55db-6288-2005868870d8" testName="Redirect_Found" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:40.1912192-05:00" endTime="2009-12-11T10:22:40.1932193-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="b54c918b-f7b8-4dac-bd2d-5ff8299ae605" testId="f990ae4a-0443-c18c-38fd-47da33e692ad" testName="Last_First" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:40.1932193-05:00" endTime="2009-12-11T10:22:40.1952194-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="0817909b-cae0-4d32-8692-000d6086fffe" testId="fde35d16-16e8-d555-4aae-cc8b74634137" testName="WordPress" computerName="NICK-LAPTOP" duration="00:00:00" startTime="2009-12-11T10:22:40.1952194-05:00" endTime="2009-12-11T10:22:40.1982196-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Unit Test Adapter threw exception: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information..</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

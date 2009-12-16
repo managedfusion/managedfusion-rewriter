@@ -1,0 +1,6 @@
+﻿RewriteEngine on
+
+RewriteBase /
+
+RewriteRule ^/Default\.aspx$		/test/			[NS,NC,R=301,L]
+RewriteRule ^(/test/?)$				/Default.aspx	[NC,L]

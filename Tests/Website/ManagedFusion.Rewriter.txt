@@ -1,0 +1,25 @@
+RewriteEngine On
+
+#
+# test the reverse proxy
+RewriteRule ^/proxy/(.*)   http://$1 [P]
+
+#
+# test redirect
+RewriteRule ^(/redirect/me1.html)	 /default.aspx?r=$1 [R,NC]
+
+#
+# test redirect by number
+RewriteRule ^(/redirect/me2.html)	 /default.aspx?r=$1 [R=302]
+
+#
+# test redirect by descriptive name
+RewriteRule ^(/redirect/me4.html)	/default.aspx?r=$1 [redirect=found]
+
+#
+# rewrite test
+RewriteRule ^/not-a-directory/(.*)	/SubFolder/default.aspx [NC,L]
+
+#
+# redirect sub folder
+RewriteRule ^/SubFolder/(.*)		/default.aspx [NC,L]
