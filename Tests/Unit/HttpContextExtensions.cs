@@ -72,6 +72,9 @@ namespace ManagedFusion.Rewriter.Test
 
 				// set server variables as read only
 				isReadOnlyProperty.SetValue(context.Request.ServerVariables, true, null);
+
+				// this calls the populate method
+				var stringServerVariables = context.Request.ServerVariables.ToString();
 			}
 			catch (MethodAccessException) { }
 			catch (NullReferenceException) { }

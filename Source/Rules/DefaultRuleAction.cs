@@ -1,5 +1,5 @@
 /** 
- * Copyright (C) 2007-2008 Nicholas Berardi, Managed Fusion, LLC (nick@managedfusion.com)
+ * Copyright (C) 2007-2010 Nicholas Berardi, Managed Fusion, LLC (nick@managedfusion.com)
  * 
  * <author>Nicholas Berardi</author>
  * <author_email>nick@managedfusion.com</author_email>
@@ -121,7 +121,7 @@ namespace ManagedFusion.Rewriter.Rules
 			string substituedUrl = Pattern.Replace(inputUrl, _substitution, context);
 
 			Manager.LogIf(context.LogLevel >= 2, "Output: " + substituedUrl, context.LogCategory);
-			context.SubstitutedUrl = new Uri(context.CurrentUrl, substituedUrl);
+			context.SubstitutedUrl = new Uri(context.CurrentUrl, substituedUrl, RuleFlagsProcessor.HasNoEscape(context.RuleFlags));
 		}
 
 		#endregion

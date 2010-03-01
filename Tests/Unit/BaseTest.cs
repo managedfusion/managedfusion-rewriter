@@ -71,9 +71,15 @@ namespace ManagedFusion.Rewriter.Test
 			
 			if (action == null)
 				action = new Mock<IRuleAction>().Object;
-			
+
 			if (flags == null)
-				flags = new Mock<IRuleFlagProcessor>().Object;
+			{
+				var flagsMock = new Mock<IRuleFlagProcessor>();
+				flagsMock.Expect(x => x.GetEnumerator()).Returns(() => {
+					return new List<IRuleFlag>(0).GetEnumerator();
+				});
+				flags = flagsMock.Object;
+			}
 
 			var ruleMock = new Mock<IRule>();
 			ruleMock.ExpectGet(r => r.Conditions).Returns(conditions);

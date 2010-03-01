@@ -1,5 +1,5 @@
 /** 
- * Copyright (C) 2007-2008 Nicholas Berardi, Managed Fusion, LLC (nick@managedfusion.com)
+ * Copyright (C) 2007-2010 Nicholas Berardi, Managed Fusion, LLC (nick@managedfusion.com)
  * 
  * <author>Nicholas Berardi</author>
  * <author_email>nick@managedfusion.com</author_email>
@@ -31,9 +31,7 @@ namespace ManagedFusion.Rewriter
 	public sealed class Pattern
 	{
 		private static readonly RegexOptions FileOptions = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.CultureInvariant;
-		private static readonly Regex ServerVariable = new Regex(@"%{[\s]*((?<type>[\w\-]+)[\s]*:)?[\s]*(?<name>[\w\-]+)[\s]*}", FileOptions);
-		private static readonly Regex ConditionVariable = new Regex(@"%(?<index>[1-9]+)", FileOptions);
-		private static readonly Regex RuleVariable = new Regex(@"\$(?<index>[1-9]+)", FileOptions);
+		private static readonly Regex Variables = new Regex(@"(?<servervar>%{[\s]*((?<type>[\w\-]+)[\s]*:)?[\s]*(?<name>[\w\-]+)[\s]*})|(?<condvar>%(?<index>[1-9]+))|(?<rulevar>\$(?<index>[1-9]+))", FileOptions);
 
 		private readonly Regex _pattern;
 		private readonly bool _invertMatch;
@@ -147,15 +145,18 @@ namespace ManagedFusion.Rewriter
 		/// <returns>Returns the value of the pattern for the <paramref name="index"/></returns>
 		public string GetValue(string input, int index, RuleContext context)
 		{
-			// if the input contains a rule or a condition placeholders that need to be 
-			// replaced from the input URL it needs to be processed by the rule pattern 
-			// before we can check if it is a match
-			if (input.IndexOfAny(new char[] { '%' }) >= 0)
-			{
-				input = ReplaceServerVariables(context.GetRelativeInputUrl(), input, context);
-				input = ReplaceConditionVariables(context.GetRelativeInputUrl(), input, context);
-			}
+			return GetValue(input, index);
+		}
 
+		/// <summary>
+		/// Gets the value of a condition.
+		/// </summary>
+		/// <param name="input"></param>
+		/// <param name="index"></param>
+		/// <param name="context"></param>
+		/// <returns></returns>
+		public string GetValue(string input, int index, ConditionContext context)
+		{
 			return GetValue(input, index);
 		}
 
@@ -192,9 +193,25 @@ namespace ManagedFusion.Rewriter
 		{
 			string replacement = input;
 
-			replacement = ReplaceServerVariables(input, replacement, context);
-			replacement = ReplaceConditionVariables(input, replacement, context);
-			replacement = ReplaceRuleVariables(input, replacement, context);
+			if (context != null)
+				replacement = Variables.Replace(replacement, match => {
+					if (match.Groups["rulevar"].Success)
+					{
+						var ruleVar = GetRuleVariable(match);
+						return ruleVar.GetValue(input, context);
+					}
+					else if (match.Groups["condvar"].Success)
+					{
+						var condVar = GetConditionVariable(match);
+						return condVar.GetValue(input, context);
+					}
+					else if (match.Groups["servervar"].Success)
+					{
+						var serverVar = GetServerVariable(match);
+						return serverVar.GetValue(input, context);
+					}
+					return match.Value;
+				});
 
 			return replacement;
 		}
@@ -208,67 +225,23 @@ namespace ManagedFusion.Rewriter
 		/// <returns></returns>
 		public string Replace(string input, string replacement, RuleContext context)
 		{
-			replacement = ReplaceServerVariables(input, replacement, context);
-			replacement = ReplaceConditionVariables(input, replacement, context);
+			if (context != null)
+				replacement = Variables.Replace(replacement, match => {
+					if (match.Groups["condvar"].Success)
+					{
+						var condVar = GetConditionVariable(match);
+						return condVar.GetValue(input, context);
+					}
+					else if (match.Groups["servervar"].Success)
+					{
+						var serverVar = GetServerVariable(match);
+						return serverVar.GetValue(input, context);
+					}
+					return match.Value;
+				});
+
 
 			return _pattern.Replace(input, replacement);
-		}
-
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <param name="input"></param>
-		/// <param name="replacement"></param>
-		/// <param name="context"></param>
-		/// <returns></returns>
-		private static string ReplaceRuleVariables(string input, string replacement, RuleContext context)
-		{
-			// replace any rule variables in the replacement string
-			if (context != null)
-				replacement = RuleVariable.Replace(replacement, match => {
-					var ruleVar = GetRuleVariable(match);
-					return ruleVar.GetValue(input, context);
-				});
-
-			return replacement;
-		}
-
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <param name="input"></param>
-		/// <param name="replacement"></param>
-		/// <param name="context"></param>
-		/// <returns></returns>
-		private static string ReplaceConditionVariables(string input, string replacement, RuleContext context)
-		{
-			// replace any condition variables in the replacement string
-			if (context != null)
-				replacement = ConditionVariable.Replace(replacement, match => {
-					var condVar = GetConditionVariable(match);
-					return condVar.GetValue(input, context);
-				});
-
-			return replacement;
-		}
-
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <param name="input"></param>
-		/// <param name="replacement"></param>
-		/// <param name="context"></param>
-		/// <returns></returns>
-		public static string ReplaceServerVariables(string input, string replacement, RuleContext context)
-		{
-			// replace any server variables in the replacement string
-			if (ServerVariable.IsMatch(replacement))
-				replacement = ServerVariable.Replace(replacement, match => {
-					var serverVar = GetServerVariable(match);
-					return serverVar.GetValue(input, context);
-				});
-
-			return replacement;
 		}
 
 		/// <summary>

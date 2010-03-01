@@ -1,5 +1,5 @@
 /** 
- * Copyright (C) 2007-2008 Nicholas Berardi, Managed Fusion, LLC (nick@managedfusion.com)
+ * Copyright (C) 2007-2010 Nicholas Berardi, Managed Fusion, LLC (nick@managedfusion.com)
  * 
  * <author>Nicholas Berardi</author>
  * <author_email>nick@managedfusion.com</author_email>
@@ -219,8 +219,9 @@ namespace ManagedFusion.Rewriter.Engines
 				case "nocase":
 				case "NC":
 					return new RF.NoCaseFlag();
-				//case "noescape":
-				//case "NE": key = "noescape"; break;
+				case "noescape":
+				case "NE":
+					return new RF.NoEscapeFlag();
 				case "nosubreq":
 				case "NS":
 					return new RF.NotForInternalSubRequestsFlag();	
@@ -261,9 +262,10 @@ namespace ManagedFusion.Rewriter.Engines
 		/// <returns></returns>
 		private IRuleFlagProcessor SplitRuleFlags(string flags)
 		{
-			IRuleFlagProcessor dictionary = new RuleFlagProcessor();
+			RuleFlagProcessor dictionary = new RuleFlagProcessor();
 			List<string> temporaryHolding = new List<string>();
 
+			dictionary.BeginAdd();
 			foreach (string flag in flags.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
 			{
 				string temp = flag;
@@ -285,6 +287,7 @@ namespace ManagedFusion.Rewriter.Engines
 				if (ruleFlag != null)
 					dictionary.Add(ruleFlag);
 			}
+			dictionary.EndAdd();
 
 			return dictionary;
 		}

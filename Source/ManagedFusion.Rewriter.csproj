@@ -72,6 +72,8 @@
     <Compile Include="IHttpProxyHandler.cs" />
     <Compile Include="IRuleFlag.cs" />
     <Compile Include="IRuleFlagProcessor.cs" />
+    <Compile Include="KnownHttpVerb.cs" />
+    <Compile Include="OrderedList.cs" />
     <Compile Include="ProxyAsyncHandler.cs" />
     <Compile Include="ConditionVariable.cs" />
     <Compile Include="RuleFlagProcessorResponse.cs" />
@@ -105,6 +107,7 @@
     <Compile Include="Rules\Flags\ChainFlag.cs" />
     <Compile Include="Rules\Flags\LastFlag.cs" />
     <Compile Include="Rules\Flags\NextRuleFlag.cs" />
+    <Compile Include="Rules\Flags\NoEscapeFlag.cs" />
     <Compile Include="Rules\Flags\NotForInternalSubRequestsFlag.cs" />
     <Compile Include="Rules\Flags\ProxyFlag.cs" />
     <Compile Include="Rules\Flags\QueryStringAppendFlag.cs" />

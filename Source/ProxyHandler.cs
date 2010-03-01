@@ -1,5 +1,5 @@
 ﻿/** 
- * Copyright (C) 2007-2008 Nicholas Berardi, Managed Fusion, LLC (nick@managedfusion.com)
+ * Copyright (C) 2007-2010 Nicholas Berardi, Managed Fusion, LLC (nick@managedfusion.com)
  * 
  * <author>Nicholas Berardi</author>
  * <author_email>nick@managedfusion.com</author_email>
@@ -34,82 +34,6 @@ namespace ManagedFusion.Rewriter
 	/// </summary>
 	public class ProxyHandler : IHttpProxyHandler, IHttpHandler
 	{
-		#region KnownHttpVerb
-
-		/// <summary>
-		/// 
-		/// </summary>
-		private class KnownHttpVerb
-		{
-			private static Dictionary<string, KnownHttpVerb> NamedHeaders;
-
-			/// <summary>
-			/// Initializes the <see cref="KnownHttpVerb"/> class.
-			/// </summary>
-			static KnownHttpVerb()
-			{
-				NamedHeaders = new Dictionary<string, KnownHttpVerb>(StringComparer.OrdinalIgnoreCase);
-
-				NamedHeaders.Add("GET", new KnownHttpVerb("GET", false, true, false, false));
-				NamedHeaders.Add("POST", new KnownHttpVerb("POST", true, false, false, false));
-				NamedHeaders.Add("HEAD", new KnownHttpVerb("HEAD", false, true, false, true));
-				NamedHeaders.Add("CONNECT", new KnownHttpVerb("CONNECT", false, true, true, false));
-				NamedHeaders.Add("PUT", new KnownHttpVerb("PUT", true, false, false, false));
-			}
-
-			/// <summary>
-			/// Parses the specified name.
-			/// </summary>
-			/// <param name="name">The name.</param>
-			/// <returns></returns>
-			public static KnownHttpVerb Parse(string name)
-			{
-				KnownHttpVerb verb = NamedHeaders[name];
-				if (verb == null)
-					verb = new KnownHttpVerb(name, false, false, false, false);
-
-				return verb;
-			}
-
-			public string Name;
-			public bool RequireContentBody;
-			public bool ContentBodyNotAllowed;
-			public bool ConnectRequest;
-			public bool ExpectNoContentResponse;
-
-			/// <summary>
-			/// Initializes a new instance of the <see cref="KnownHttpVerb"/> class.
-			/// </summary>
-			/// <param name="name">The name.</param>
-			/// <param name="requireContentBody">if set to <c>true</c> [require content body].</param>
-			/// <param name="contentBodyNotAllowed">if set to <c>true</c> [content body not allowed].</param>
-			/// <param name="connectRequest">if set to <c>true</c> [connect request].</param>
-			/// <param name="expectNoContentResponse">if set to <c>true</c> [expect no content response].</param>
-			private KnownHttpVerb(string name, bool requireContentBody, bool contentBodyNotAllowed, bool connectRequest, bool expectNoContentResponse)
-			{
-				this.Name = name;
-				this.RequireContentBody = requireContentBody;
-				this.ContentBodyNotAllowed = contentBodyNotAllowed;
-				this.ConnectRequest = connectRequest;
-				this.ExpectNoContentResponse = expectNoContentResponse;
-			}
-
-			/// <summary>
-			/// Equalses the specified verb.
-			/// </summary>
-			/// <param name="verb">The verb.</param>
-			/// <returns></returns>
-			public bool Equals(KnownHttpVerb verb)
-			{
-				if (this != verb)
-					return String.Compare(this.Name, verb.Name, StringComparison.OrdinalIgnoreCase) == 0;
-
-				return true;
-			}
-		}
-
-		#endregion
-
 		/// <summary>
 		/// Initializes a new instance of the <see cref="ProxyHandler"/> class.
 		/// </summary>
@@ -291,17 +215,28 @@ namespace ManagedFusion.Rewriter
 				{
 					byte[] buffer = new byte[bufferSize];
 
-					while (true)
+					try
 					{
-						int bytesReturned = bufferStream.Read(buffer, 0, bufferSize);
+						while (true)
+						{
+							// make sure that the stream can be read from
+							if (!bufferStream.CanRead)
+								break;
 
-						// if not bytes were returned the end of the stream has been reached
-						// and the loop should exit
-						if (bytesReturned == 0)
-							break;
+							int bytesReturned = bufferStream.Read(buffer, 0, bufferSize);
 
-						// write bytes to the response
-						requestStream.Write(buffer, 0, bytesReturned);
+							// if not bytes were returned the end of the stream has been reached
+							// and the loop should exit
+							if (bytesReturned == 0)
+								break;
+
+							// write bytes to the response
+							requestStream.Write(buffer, 0, bytesReturned);
+						}
+					}
+					catch (Exception exc)
+					{
+						Manager.Log("Error on request: " + exc.Message, "Proxy");
 					}
 				}
 			}
@@ -461,17 +396,28 @@ namespace ManagedFusion.Rewriter
 			{
 				byte[] buffer = new byte[bufferSize];
 
-				while (true)
+				try
 				{
-					int bytesReturned = bufferStream.Read(buffer, 0, bufferSize);
+					while (true)
+					{
+						// make sure that the stream can be read from
+						if (!bufferStream.CanRead)
+							break;
 
-					// if not bytes were returned the end of the stream has been reached
-					// and the loop should exit
-					if (bytesReturned == 0)
-						break;
+						int bytesReturned = bufferStream.Read(buffer, 0, bufferSize);
 
-					// write bytes to the response
-					context.Response.OutputStream.Write(buffer, 0, bytesReturned);
+						// if not bytes were returned the end of the stream has been reached
+						// and the loop should exit
+						if (bytesReturned == 0)
+							break;
+
+						// write bytes to the response
+						context.Response.OutputStream.Write(buffer, 0, bytesReturned);
+					}
+				}
+				catch (Exception exc)
+				{
+					Manager.Log("Error on response: " + exc.Message, "Proxy");
 				}
 			}
 		}

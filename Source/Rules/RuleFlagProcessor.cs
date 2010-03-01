@@ -1,5 +1,5 @@
 /** 
- * Copyright (C) 2007-2008 Nicholas Berardi, Managed Fusion, LLC (nick@managedfusion.com)
+ * Copyright (C) 2007-2010 Nicholas Berardi, Managed Fusion, LLC (nick@managedfusion.com)
  * 
  * <author>Nicholas Berardi</author>
  * <author_email>nick@managedfusion.com</author_email>
@@ -20,6 +20,7 @@
  * <license_url>http://www.managedfusion.com/products/url-rewriter/license.aspx</license_url>
  */
 
+using System;
 using System.Collections.Generic;
 using ManagedFusion.Rewriter.Rules.Flags;
 
@@ -30,14 +31,51 @@ namespace ManagedFusion.Rewriter.Rules
 	/// </summary>
 	public class RuleFlagProcessor : IRuleFlagProcessor
 	{
-		private List<IRuleFlag> _flags;
+		private OrderedList<IRuleFlag> _flags;
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="RuleFlagProcessor"/> class.
 		/// </summary>
 		public RuleFlagProcessor()
 		{
-			_flags = new List<IRuleFlag>(0);
+			_flags = new OrderedList<IRuleFlag>(Comparison, 5);
+		}
+
+		/// <summary>
+		/// Performs a comparison between rules inorder to sort them
+		/// </summary>
+		/// <param name="a">Rule X</param>
+		/// <param name="b">Rule Y</param>
+		/// <returns></returns>
+		private int Comparison(IRuleFlag x, IRuleFlag y)
+		{
+			bool xLast = x is LastFlag;
+			bool yLast = y is LastFlag;
+
+			bool xExit = x is ProxyFlag || x is RedirectFlag;
+			bool yExit = y is ProxyFlag || y is RedirectFlag;
+
+			bool isXSpecial = xLast || xExit;
+			bool isYSpecial = yLast || yExit;
+
+			// neither are a special case
+			if (!isXSpecial && !isYSpecial)
+				return 0;
+			// y is a special case
+			else if (!isXSpecial && isYSpecial)
+				return -1;
+			// x is a special case
+			else if (isXSpecial && !isYSpecial)
+				return 1;
+			// both special case, x is Last and y is Exit
+			else if (xLast && yExit)
+				return 1;
+			// both special case, y is Last and x is Exit
+			else if (xExit && yLast)
+				return -1;
+			// they are equal
+			else
+				return 0;
 		}
 
 		/// <summary>
@@ -61,12 +99,28 @@ namespace ManagedFusion.Rewriter.Rules
 		#region IRuleFlagProcessor Members
 
 		/// <summary>
+		/// Begin bulk loading.
+		/// </summary>
+		public void BeginAdd()
+		{
+			_flags.BeginAdd();
+		}
+
+		/// <summary>
 		/// Adds the specified flag.
 		/// </summary>
 		/// <param name="flag">The flag.</param>
 		public void Add(IRuleFlag flag)
 		{
 			_flags.Add(flag);
+		}
+
+		/// <summary>
+		/// End bulk loading.
+		/// </summary>
+		public void EndAdd()
+		{
+			_flags.EndAdd();
 		}
 
 		#endregion
@@ -150,6 +204,22 @@ namespace ManagedFusion.Rewriter.Rules
 		{
 			foreach (IRuleFlag flag in flags)
 				if (flag is ChainFlag)
+					return true;
+
+			return false;
+		}
+
+		/// <summary>
+		/// Determines whether [has no escape] [the specified flags].
+		/// </summary>
+		/// <param name="flags">The flags.</param>
+		/// <returns>
+		/// 	<see langword="true"/> if [has no escape] [the specified flags]; otherwise, <see langword="false"/>.
+		/// </returns>
+		public static bool HasNoEscape(IRuleFlagProcessor flags)
+		{
+			foreach (IRuleFlag flag in flags)
+				if (flag is NoEscapeFlag)
 					return true;
 
 			return false;

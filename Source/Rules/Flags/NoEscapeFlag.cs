@@ -20,15 +20,33 @@
  * <license_url>http://www.managedfusion.com/products/url-rewriter/license.aspx</license_url>
  */
 
-namespace ManagedFusion.Rewriter.Conditions.Flags
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ManagedFusion.Rewriter.Rules.Flags
 {
-	public class OrNextFlag : IConditionFlag
+	public class NoEscapeFlag : IRuleFlag
 	{
 		/// <summary>
-		/// Initializes a new instance of the <see cref="OrNextFlag"/> class.
+		/// Initializes a new instance of the <see cref="NoEscapeFlag"/> class.
 		/// </summary>
-		public OrNextFlag()
+		public NoEscapeFlag()
 		{
 		}
+
+		#region IRuleFlag Members
+
+		/// <summary>
+		/// Applies the specified context.
+		/// </summary>
+		/// <param name="context">The context.</param>
+		/// <returns></returns>
+		public RuleFlagProcessorResponse Apply(RuleContext context)
+		{
+			return RuleFlagProcessorResponse.ContinueToNextFlag;
+		}
+
+		#endregion
 	}
 }

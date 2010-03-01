@@ -54,10 +54,13 @@
   <ItemGroup>
     <Compile Include="ApacheStyleTest.cs" />
     <Compile Include="BaseTest.cs" />
+    <Compile Include="CommonProblemTest.cs" />
     <Compile Include="CommonUseTest.cs" />
     <Compile Include="Conditions\Flags\NoCaseTest.cs" />
     <Compile Include="Conditions\Flags\OrNextTest.cs" />
+    <Compile Include="KnownHttpVerbTest.cs" />
     <Compile Include="MockExtensions.cs" />
+    <Compile Include="RuleFlagProcessorTest.cs" />
     <Compile Include="Rules\DefaultOutputRuleActionTest.cs" />
     <Compile Include="HttpContextExtensions.cs" />
     <Compile Include="PatternTest.cs" />

@@ -14,12 +14,12 @@ RewriteRule ^(/redirect/me2.html)	 /default.aspx?r=$1 [R=302]
 
 #
 # test redirect by descriptive name
-RewriteRule ^(/redirect/me4.html)	/default.aspx?r=$1 [redirect=found]
+RewriteRule ^(/redirect/me4.html)	 /default.aspx?r=$1 [redirect=found]
 
 #
 # rewrite test
-RewriteRule ^/not-a-directory/(.*)	/SubFolder/default.aspx [NC,L]
+RewriteRule ^/not-a-directory/(.*)	 /SubFolder/default.aspx [NC,L]
 
 #
 # redirect sub folder
-RewriteRule ^/SubFolder/(.*)		/default.aspx [NC,L]
+RewriteRule ^/SubFolder/(.*)		 /default.aspx [NC,L]

@@ -1,0 +1,7 @@
+[Oo]bj/
+bin/
+*.suo
+*.user
+/TestResults
+*.vspscc
+*.vssscc
