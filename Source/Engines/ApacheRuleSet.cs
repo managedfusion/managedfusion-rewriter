@@ -697,7 +697,7 @@ namespace ManagedFusion.Rewriter.Engines
 					{
 						#region OutRewriteCond
 
-						Match match = RewriteCondLine.Match(line);
+						Match match = OutRewriteCondLine.Match(line);
 
 						string module1 = match.Groups["module1"].Value;
 						string module2 = match.Groups["module2"].Value;
@@ -777,7 +777,7 @@ namespace ManagedFusion.Rewriter.Engines
 					{
 						#region OutRewriteRule
 
-						Match match = RewriteRuleLine.Match(line);
+						Match match = OutRewriteRuleLine.Match(line);
 
 						string module1 = match.Groups["module1"].Value;
 						string module2 = match.Groups["module2"].Value;
