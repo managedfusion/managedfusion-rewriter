@@ -575,6 +575,19 @@ namespace ManagedFusion.Rewriter
 				case RulesEngine.Microsoft:
 					_rewriterEngine = new MicrosoftEngine();
 					break;
+
+				case RulesEngine.Other:
+					{
+						try
+						{
+							_rewriterEngine = (IRewriterEngine)Type.GetType(Configuration.Rules.EngineType);
+							break;
+						}
+						catch (Exception exc)
+						{
+							throw new RewriterEngineException("The engine specified in the web.config cannot be found, " + Configuration.Rules.EngineType, exc);
+						}
+					}
 			}
 
 			// init engine

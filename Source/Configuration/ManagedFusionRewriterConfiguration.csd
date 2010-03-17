@@ -1,5 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <configurationSectionModel dslVersion="1.0.0.0" Id="7e9de863-fc47-4f6c-b49a-1149320599c4" namespace="ManagedFusion.Rewriter.Configuration" xmlSchemaNamespace="http://managedfusion.com/xsd/managedFusion/rewriter" xmlns="http://schemas.microsoft.com/dsltools/ConfigurationSectionDesigner">
+  <typeDefinitions>
+    <externalType name="String" namespace="System" />
+    <externalType name="Boolean" namespace="System" />
+    <externalType name="Int32" namespace="System" />
+    <externalType name="Int64" namespace="System" />
+    <externalType name="Single" namespace="System" />
+    <externalType name="Double" namespace="System" />
+    <externalType name="DateTime" namespace="System" />
+    <externalType name="TimeSpan" namespace="System" />
+    <externalType name="RulesEngine" namespace="ManagedFusion.Rewriter.Configuration" />
+    <externalType name="Type" namespace="System" />
+  </typeDefinitions>
   <configurationElements>
     <configurationSection name="ManagedFusionRewriterSectionGroup" namespace="ManagedFusion.Rewriter.Configuration" codeGenOptions="Singleton, XmlnsProperty" xmlSectionName="managedFusion.rewriter">
       <elementProperties>
@@ -20,6 +32,11 @@
         <attributeProperty name="Engine" isRequired="false" isKey="false" isDefaultCollection="false" xmlName="engine" isReadOnly="false" defaultValue="RulesEngine.Apache">
           <type>
             <externalTypeMoniker name="/7e9de863-fc47-4f6c-b49a-1149320599c4/RulesEngine" />
+          </type>
+        </attributeProperty>
+        <attributeProperty name="EngineType" isRequired="false" isKey="false" isDefaultCollection="false" xmlName="engineType" isReadOnly="false">
+          <type>
+            <externalTypeMoniker name="/7e9de863-fc47-4f6c-b49a-1149320599c4/String" />
           </type>
         </attributeProperty>
         <attributeProperty name="AllowOutputProcessing" isRequired="false" isKey="false" isDefaultCollection="false" xmlName="allowOutputProcessing" isReadOnly="false" defaultValue="false">
@@ -183,16 +200,7 @@
       </attributeProperties>
     </configurationElement>
   </configurationElements>
-  <typeDefinitions>
-    <externalType name="String" namespace="System" />
-    <externalType name="Boolean" namespace="System" />
-    <externalType name="Int32" namespace="System" />
-    <externalType name="Int64" namespace="System" />
-    <externalType name="Single" namespace="System" />
-    <externalType name="Double" namespace="System" />
-    <externalType name="DateTime" namespace="System" />
-    <externalType name="TimeSpan" namespace="System" />
-    <externalType name="RulesEngine" namespace="ManagedFusion.Rewriter.Configuration" />
-    <externalType name="Type" namespace="System" />
-  </typeDefinitions>
+  <propertyValidators>
+    <validators />
+  </propertyValidators>
 </configurationSectionModel>

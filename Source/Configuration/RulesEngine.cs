@@ -34,6 +34,10 @@ namespace ManagedFusion.Rewriter.Configuration
 		/// <summary>
 		/// 
 		/// </summary>
-		Microsoft
+		Microsoft,
+		/// <summary>
+		/// 
+		/// </summary>
+		Other
 	}
 }

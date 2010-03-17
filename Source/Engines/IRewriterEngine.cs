@@ -28,7 +28,7 @@ namespace ManagedFusion.Rewriter.Engines
 	/// <summary>
 	/// 
 	/// </summary>
-	internal interface IRewriterEngine
+	public interface IRewriterEngine
 	{
 		/// <summary>
 		/// Inits this instance.

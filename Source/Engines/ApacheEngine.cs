@@ -33,7 +33,7 @@ namespace ManagedFusion.Rewriter.Engines
 	/// <summary>
 	/// 
 	/// </summary>
-	internal class ApacheEngine : IRewriterEngine
+	public class ApacheEngine : IRewriterEngine
 	{
 		private IDictionary<string, ApacheRuleSet> _paths;
 
@@ -236,7 +236,7 @@ namespace ManagedFusion.Rewriter.Engines
 		/// </summary>
 		/// <param name="relativePath">The relative path.</param>
 		/// <param name="file">The file.</param>
-		private void Add(string relativePath, FileInfo file)
+		protected virtual void Add(string relativePath, FileInfo file)
 		{
 			ApacheRuleSet rule = new ApacheRuleSet(relativePath, file);
 			_paths.Add(relativePath, rule);
@@ -250,7 +250,7 @@ namespace ManagedFusion.Rewriter.Engines
 		/// <summary>
 		/// Scans the directories for rules.
 		/// </summary>
-		public void Init()
+		public virtual void Init()
 		{
 			_paths.Clear();
 
@@ -268,7 +268,7 @@ namespace ManagedFusion.Rewriter.Engines
 		/// <summary>
 		/// Refreshes the rules.
 		/// </summary>
-		public void RefreshRules()
+		public virtual void RefreshRules()
 		{
 			foreach (ApacheRuleSet set in _paths.Values)
 				set.RefreshRules();
@@ -279,7 +279,7 @@ namespace ManagedFusion.Rewriter.Engines
 		/// </summary>
 		/// <param name="context">The context.</param>
 		/// <returns></returns>
-		public Uri RunRules(HttpContext context)
+		public virtual Uri RunRules(HttpContext context)
 		{
 			Uri url = new Uri(context.Request.Url, context.Request.RawUrl);
 			string path = context.Request.ApplicationPath;
@@ -300,7 +300,7 @@ namespace ManagedFusion.Rewriter.Engines
 		/// Runs the output rules.
 		/// </summary>
 		/// <param name="context">The context.</param>
-		public void RunOutputRules(HttpContext context)
+		public virtual void RunOutputRules(HttpContext context)
 		{
 			Uri url = new Uri(context.Request.Url, context.Request.RawUrl);
 			string path = context.Request.ApplicationPath;

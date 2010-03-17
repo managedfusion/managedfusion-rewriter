@@ -36,7 +36,7 @@ using CF = ManagedFusion.Rewriter.Conditions.Flags;
 
 namespace ManagedFusion.Rewriter.Engines
 {
-	internal class ApacheRuleSet : RuleSet
+	public class ApacheRuleSet : RuleSet
 	{
 		private static readonly RegexOptions FileOptions = RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.CultureInvariant;
 
@@ -82,8 +82,9 @@ namespace ManagedFusion.Rewriter.Engines
 		private object _refreshLock;
 
 		/// <summary>
-		/// Initializes a new instance of the <see cref="RuleSet"/> class.
+		/// Initializes a new instance of the <see cref="ApacheRuleSet"/> class.
 		/// </summary>
+		/// <param name="physicalBase">The physical base.</param>
 		/// <param name="ruleSetFile">The rule set file.</param>
 		public ApacheRuleSet(string physicalBase, FileInfo ruleSetFile)
 		{
@@ -385,6 +386,7 @@ namespace ManagedFusion.Rewriter.Engines
 				IList<ICondition> conditions = new List<ICondition>(0);
 				IList<IRule> rules = new List<IRule>();
 				IList<IRule> outputRules = new List<IRule>();
+				IList<string> unknownLines = new List<string>();
 				ModuleFactory modules = new ModuleFactory();
 
 				while (reader.Peek() >= 0)
@@ -857,7 +859,7 @@ namespace ManagedFusion.Rewriter.Engines
 					}
 					else
 					{
-						Manager.LogIf(tempLogLevel >= 4, "Not Understood: " + line, "Unknown");
+						unknownLines.Add(line);
 					}
 				}
 
@@ -868,6 +870,16 @@ namespace ManagedFusion.Rewriter.Engines
 				AddRules(rules);
 				AddOutputRules(outputRules);
 
+				// try to process any unknown lines
+				if (unknownLines.Count > 0)
+				{
+					RefreshUnknownLines(ref unknownLines);
+
+					foreach (var unknownLine in unknownLines)
+						Manager.LogIf(tempLogLevel >= 4, "Not Understood: " + unknownLine, "Unknown");
+				}
+							
+
 				// set the ruleset defining properties
 				VirtualBase = tempBase;
 				LogLocation = tempLogPath;
@@ -876,6 +888,15 @@ namespace ManagedFusion.Rewriter.Engines
 				Manager.LogPath = tempLogPath;
 				Manager.LogEnabled = tempLogLevel > 0;
 			}
+		}
+
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="lines"></param>
+		/// <returns></returns>
+		protected virtual void RefreshUnknownLines(ref IList<string> lines)
+		{
 		}
 	}
 }

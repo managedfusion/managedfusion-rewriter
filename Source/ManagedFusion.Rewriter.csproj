@@ -51,16 +51,16 @@
     <Compile Include="Conditions\DefaultConditionTestValue.cs" />
     <Compile Include="Conditions\LexicographicallyFollowsCondition.cs" />
     <Compile Include="Conditions\LexicographicallyPrecedesCondition.cs" />
+    <Compile Include="Configuration\ManagedFusionRewriterConfiguration.csd.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ManagedFusionRewriterConfiguration.csd</DependentUpon>
+    </Compile>
     <Compile Include="Configuration\RewriterModuleItem.cs" />
     <Compile Include="Engines\ApacheRuleSet.cs" />
     <Compile Include="Engines\ApplicationEngine.cs" />
     <Compile Include="Engines\ApplicationRuleSet.cs" />
     <Compile Include="ConditionContext.cs" />
-    <Compile Include="Configuration\ManagedFusionRewriterConfigurationCode.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ManagedFusionRewriterConfigurationCode.tt</DependentUpon>
-    </Compile>
     <Compile Include="Configuration\RulesEngine.cs" />
     <Compile Include="Engines\MicrosoftEngine.cs" />
     <Compile Include="Engines\MicrosoftRuleSet.cs" />
@@ -136,31 +136,18 @@
     <None Include="..\..\ManagedFusion.snk">
       <Link>ManagedFusion.snk</Link>
     </None>
-    <None Include="Configuration\ManagedFusionRewriterConfiguration.csd" />
+    <None Include="Configuration\ManagedFusionRewriterConfiguration.csd">
+      <Generator>CsdFileGenerator</Generator>
+      <LastGenOutput>ManagedFusionRewriterConfiguration.csd.cs</LastGenOutput>
+    </None>
+    <None Include="Configuration\ManagedFusionRewriterConfiguration.csd.config">
+      <DependentUpon>ManagedFusionRewriterConfiguration.csd</DependentUpon>
+    </None>
     <None Include="Configuration\ManagedFusionRewriterConfiguration.csd.diagram">
       <DependentUpon>ManagedFusionRewriterConfiguration.csd</DependentUpon>
     </None>
-    <None Include="Configuration\ManagedFusionRewriterConfigurationCode.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ManagedFusionRewriterConfigurationCode.cs</LastGenOutput>
-    </None>
-    <None Include="Configuration\ManagedFusionRewriterConfigurationSample.config">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ManagedFusionRewriterConfigurationSample.tt</DependentUpon>
-    </None>
-    <None Include="Configuration\ManagedFusionRewriterConfigurationSample.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ManagedFusionRewriterConfigurationSample.config</LastGenOutput>
-    </None>
-    <None Include="Configuration\ManagedFusionRewriterConfigurationSchema.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ManagedFusionRewriterConfigurationSchema.xsd</LastGenOutput>
-    </None>
-    <None Include="Configuration\ManagedFusionRewriterConfigurationSchema.xsd">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ManagedFusionRewriterConfigurationSchema.tt</DependentUpon>
+    <None Include="Configuration\ManagedFusionRewriterConfiguration.csd.xsd">
+      <DependentUpon>ManagedFusionRewriterConfiguration.csd</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
