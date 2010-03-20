@@ -580,7 +580,7 @@ namespace ManagedFusion.Rewriter
 					{
 						try
 						{
-							_rewriterEngine = (IRewriterEngine)Type.GetType(Configuration.Rules.EngineType);
+							_rewriterEngine = (IRewriterEngine)Activator.CreateInstance(Type.GetType(Configuration.Rules.EngineType));
 							break;
 						}
 						catch (Exception exc)

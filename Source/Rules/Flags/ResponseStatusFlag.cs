@@ -89,7 +89,7 @@ namespace ManagedFusion.Rewriter.Rules.Flags
 					description = FromCamelCase(code.ToString());
 				}
 			}
-			catch (Exception exc)
+			catch (Exception)
 			{
 				Manager.Log("Could not create a response status from " + type, "Error");
 			}

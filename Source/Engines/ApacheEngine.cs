@@ -35,14 +35,12 @@ namespace ManagedFusion.Rewriter.Engines
 	/// </summary>
 	public class ApacheEngine : IRewriterEngine
 	{
-		private IDictionary<string, ApacheRuleSet> _paths;
-
 		/// <summary>
 		/// Initializes a new instance of the <see cref="ApacheEngine"/> class.
 		/// </summary>
 		public ApacheEngine()
 		{
-			_paths = new Dictionary<string, ApacheRuleSet>();
+			Paths = new Dictionary<string, ApacheRuleSet>();
 
 			// set file name
 			FileName = Manager.Configuration.Rules.Apache.DefaultFileName;
@@ -64,6 +62,8 @@ namespace ManagedFusion.Rewriter.Engines
 				}
 			}
 		}
+
+		protected IDictionary<string, ApacheRuleSet> Paths { get; private set; }
 
 		/// <summary>
 		/// Gets or sets the name of the file.
@@ -99,7 +99,7 @@ namespace ManagedFusion.Rewriter.Engines
 				if (String.IsNullOrEmpty(relativePath))
 					relativePath = "/";
 
-				found = _paths.ContainsKey(relativePath);
+				found = Paths.ContainsKey(relativePath);
 
 				// if not found then go to the parent directory of the current relative path
 				if (!found)
@@ -110,7 +110,7 @@ namespace ManagedFusion.Rewriter.Engines
 			if (!found)
 				return null;
 
-			return _paths[relativePath];
+			return Paths[relativePath];
 		}
 
 		#region Scan Directory For Rules
@@ -215,7 +215,7 @@ namespace ManagedFusion.Rewriter.Engines
 		/// </summary>
 		/// <param name="relativePath">The relative path.</param>
 		/// <param name="fullPath">The full path.</param>
-		private void AddRuleSetMonitoring(string relativePath, string fullPath)
+		protected void AddRuleSetMonitoring(string relativePath, string fullPath)
 		{
 			// add a cache place holder to monitor the file system for changes
 			HttpRuntime.Cache.Insert(
@@ -239,7 +239,7 @@ namespace ManagedFusion.Rewriter.Engines
 		protected virtual void Add(string relativePath, FileInfo file)
 		{
 			ApacheRuleSet rule = new ApacheRuleSet(relativePath, file);
-			_paths.Add(relativePath, rule);
+			Paths.Add(relativePath, rule);
 
 			// start monitoring the rule set
 			AddRuleSetMonitoring(relativePath, file.FullName);
@@ -252,7 +252,7 @@ namespace ManagedFusion.Rewriter.Engines
 		/// </summary>
 		public virtual void Init()
 		{
-			_paths.Clear();
+			Paths.Clear();
 
 			// use defined rules if they are set
 			// else scan the directories for values
@@ -270,7 +270,7 @@ namespace ManagedFusion.Rewriter.Engines
 		/// </summary>
 		public virtual void RefreshRules()
 		{
-			foreach (ApacheRuleSet set in _paths.Values)
+			foreach (ApacheRuleSet set in Paths.Values)
 				set.RefreshRules();
 		}
 

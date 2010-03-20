@@ -121,7 +121,7 @@ namespace ManagedFusion.Rewriter.Rules
 			string substituedUrl = Pattern.Replace(inputUrl, _substitution, context);
 
 			Manager.LogIf(context.LogLevel >= 2, "Output: " + substituedUrl, context.LogCategory);
-			context.SubstitutedUrl = new Uri(context.CurrentUrl, substituedUrl, RuleFlagsProcessor.HasNoEscape(context.RuleFlags));
+			context.SubstitutedUrl = new Uri(context.CurrentUrl, substituedUrl);
 		}
 
 		#endregion

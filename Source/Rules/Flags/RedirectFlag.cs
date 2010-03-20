@@ -63,7 +63,7 @@ namespace ManagedFusion.Rewriter.Rules.Flags
 					statusCode = (uint)code;
 				}
 			}
-			catch (Exception exc)
+			catch (Exception)
 			{
 				Manager.Log("Could not create a redirect status from " + type, "Error");
 			}
