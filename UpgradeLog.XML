@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ManagedFusion.Rewriter">
+</Property><Property Name="Solution File" Value="C:\development\projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\ManagedFusion.Rewriter.sln">
+</Property><Property Name="Date" Value="Tuesday, June 22, 2010">
+</Property><Property Name="Time" Value="17:44:19 PM">
+</Property></Properties><Event ErrorLevel="0" Project="ManagedFusion.Rewriter.Test" Source="Tests\Unit\ManagedFusion.Rewriter.Test.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="ManagedFusion.Rewriter.Test" Source="Tests\Unit\ManagedFusion.Rewriter.Test.csproj" Description="Converted">
+</Event><Event ErrorLevel="2" Project="" Source="ManagedFusion.Rewriter.testrunconfig" Description="Failed to convert the file 'C:\development\projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\ManagedFusion.Rewriter.testrunconfig' to the current format: Access to the path 'C:\development\projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\ManagedFusion.Rewriter.testrunconfig' is denied.">
+</Event><Event ErrorLevel="2" Project="" Source="ManagedFusion.Rewriter.vsmdi" Description="Failed to convert the file 'C:\development\projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\ManagedFusion.Rewriter.vsmdi' to the current format: Access to the path 'C:\development\projects\Managed Fusion (Open Source)\ManagedFusion.Rewriter\ManagedFusion.Rewriter.vsmdi' is denied.">
+</Event><Event ErrorLevel="0" Project="ManagedFusion.Rewriter.Test" Source="Tests\Unit\ManagedFusion.Rewriter.Test.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>
