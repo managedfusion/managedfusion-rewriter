@@ -34,10 +34,10 @@ namespace ManagedFusion.Rewriter.Engines
 		public ApplicationRuleSet(LoadRulesEventArgs args)
 		{
 			// add rules
-			this.AddRules(args.Rules);
+			AddRules(args.Rules);
 
 			// set the application base
-			this.VirtualBase = args.Base;
+			VirtualBase = args.Base;
 		}
 	}
 }

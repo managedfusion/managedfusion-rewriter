@@ -182,7 +182,7 @@ namespace ManagedFusion.Rewriter.Engines
 					throw new RewriterEngineException("Your ApplicationPath, " + item.ApplicationPath + ", in the config file must start with \"/\".");
 
 				if (!file.Exists)
-                    throw new RewriterEngineException("Your ConfigPath, " + item.ConfigPath + ", in the config file does not exist.");
+					throw new RewriterEngineException("Your ConfigPath, " + item.ConfigPath + ", in the config file does not exist.");
 
 				// add the rewriter to the available rewriters
 				Add(item.ApplicationPath, file);
@@ -225,7 +225,7 @@ namespace ManagedFusion.Rewriter.Engines
 				Cache.NoAbsoluteExpiration,
 				Cache.NoSlidingExpiration,
 				CacheItemPriority.NotRemovable,
-				new CacheItemRemovedCallback(RuleSetExpired)
+				RuleSetExpired
 			);
 		}
 
@@ -281,7 +281,7 @@ namespace ManagedFusion.Rewriter.Engines
 		/// <returns></returns>
 		public virtual Uri RunRules(HttpContext context)
 		{
-			Uri url = new Uri(context.Request.Url, context.Request.RawUrl);
+			var url = new Uri(context.Request.Url, context.Request.RawUrl);
 			string path = context.Request.ApplicationPath;
 
 			// get the ruleset to execute
@@ -302,7 +302,6 @@ namespace ManagedFusion.Rewriter.Engines
 		/// <param name="context">The context.</param>
 		public virtual void RunOutputRules(HttpContext context)
 		{
-			Uri url = new Uri(context.Request.Url, context.Request.RawUrl);
 			string path = context.Request.ApplicationPath;
 
 			// get the ruleset to execute

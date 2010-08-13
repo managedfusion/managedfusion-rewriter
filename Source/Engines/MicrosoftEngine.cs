@@ -47,7 +47,7 @@ namespace ManagedFusion.Rewriter.Engines
 		private void RefreshConfig()
 		{
 			string configurationPath = HostingEnvironment.MapPath("/web.config");
-			FileInfo configurationFile = new FileInfo(configurationPath);
+			var configurationFile = new FileInfo(configurationPath);
 
 			_ruleSet = new MicrosoftRuleSet(configurationFile);
 		}

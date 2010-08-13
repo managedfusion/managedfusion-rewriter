@@ -32,7 +32,7 @@ namespace ManagedFusion.Rewriter
 	{
 		private Uri _substitutedUrl;
 		private byte[] _substitutedContent;
-		private byte[] _currentContent;
+		private readonly byte[] _currentContent;
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="RuleContext"/> class.
@@ -80,7 +80,7 @@ namespace ManagedFusion.Rewriter
 		/// </summary>
 		/// <param name="index">The index.</param>
 		/// <param name="ruleSetContext">The rule set context.</param>
-		/// <param name="currentUrl">The current content.</param>
+		/// <param name="currentContent"></param>
 		/// <param name="rule">The rule.</param>
 		public RuleContext(int index, RuleSetContext ruleSetContext, byte[] currentContent, IRule rule)
 			: base(ruleSetContext)
@@ -119,7 +119,7 @@ namespace ManagedFusion.Rewriter
 		{
 			get
 			{
-				byte[] output = new byte[_currentContent.LongLength];
+				var output = new byte[_currentContent.LongLength];
 				Array.Copy(_currentContent, output, _currentContent.LongLength);
 				return output;
 			}
@@ -172,7 +172,7 @@ namespace ManagedFusion.Rewriter
 		/// Gets the flags.
 		/// </summary>
 		/// <value>The flags.</value>
-		public virtual IRuleFlagProcessor RuleFlags
+		public IRuleFlagProcessor RuleFlags
 		{
 			get { return CurrentRule.Flags; }
 		}
@@ -181,7 +181,7 @@ namespace ManagedFusion.Rewriter
 		/// Gets or sets the conditions.
 		/// </summary>
 		/// <value>The conditions.</value>
-		public virtual IList<ICondition> Conditions
+		public IList<ICondition> Conditions
 		{
 			get { return CurrentRule.Conditions; }
 		}
@@ -191,7 +191,7 @@ namespace ManagedFusion.Rewriter
 		/// </summary>
 		/// <param name="index">The index.</param>
 		/// <returns></returns>
-		public virtual string GetConditionValue(int index)
+		public string GetConditionValue(int index)
 		{
 			if (Conditions.Count - 1 < index)
 				return null;
@@ -208,7 +208,7 @@ namespace ManagedFusion.Rewriter
 		/// Gets the relative input URL.
 		/// </summary>
 		/// <returns></returns>
-		public virtual string GetRelativeInputUrl()
+		public string GetRelativeInputUrl()
 		{
 			return RequestedUrl.GetComponents(UriComponents.Path, UriFormat.SafeUnescaped);
 		}

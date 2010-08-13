@@ -24,10 +24,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
-using System.Security;
 using System.Web.Compilation;
-using System.Web.Hosting;
-
 using ManagedFusion.Rewriter.Conditions;
 using ManagedFusion.Rewriter.Rules;
 
@@ -63,21 +60,6 @@ namespace ManagedFusion.Rewriter.Engines
 		private static readonly Regex OutRewriteCondLine = new Regex(@"^OutRewriteCond(\((?<module1>\w*)\,(?<module2>\w*)\))?[\s]+(?<test>[\S]+)[\s]+(?<pattern>[\S]+)[\s]*(\[(?<flags>[\s\w][^\]]*)\])?", FileOptions);
 		private static readonly Regex OutRewriteRuleLine = new Regex(@"^OutRewriteRule(\((?<module1>\w*)\,(?<module2>\w*)\))?[\s]+(?<pattern>[\S]+)[\s]+(""(?<substitution>[^""]+)""|(?<substitution>[\S]+))[\s]*(\[(?<flags>[\s\w][^\]]*)\])?", FileOptions);
 
-		private static readonly Regex HtmlTagExpression = new Regex(@"(?'tag_start'</?)(?'tag'\w+)((\s+(?'attr'(?'attr_name'\w+)(\s*=\s*(?:"".*?""|'.*?'|[^'"">\s]+)))?)+\s*|\s*)(?'tag_end'/?>)", RegexOptions.Singleline | RegexOptions.IgnoreCase | RegexOptions.Compiled);
-		private static readonly Dictionary<string, List<string>> TagAndAttributes = new Dictionary<string, List<string>> {
-			{ "a", new List<string> { "href" } }, 
-			{ "area", new List<string> { "href" } }, 
-			{ "base", new List<string> { "href" } }, 
-			{ "form", new List<string> { "action" } }, 
-			{ "frame", new List<string> { "src", "longdesc" } }, 
-			{ "head", new List<string> { "profile" } }, 
-			{ "iframe", new List<string> { "src", "longdesc" } }, 
-			{ "img", new List<string> { "src", "longdesc", "usemap" } }, 
-			{ "input", new List<string> { "src", "usemap" } }, 
-			{ "link", new List<string> { "href" } }, 
-			{ "script", new List<string> { "src" } }
-		};
-
 		private readonly FileInfo _ruleSetFile;
 		private object _refreshLock;
 
@@ -111,14 +93,14 @@ namespace ManagedFusion.Rewriter.Engines
 			if (equalIndex == 0)
 				return null;
 
-			string[] temporarySplit = flag.Split(new char[] { '=' }, 2, StringSplitOptions.None);
+			string[] temporarySplit = flag.Split(new[] { '=' }, 2, StringSplitOptions.None);
 			string key = temporarySplit[0].Trim();
 			string value = temporarySplit.Length > 1 ? temporarySplit[1].Trim() : String.Empty;
 
 			//if (String.IsNullOrEmpty(value))
 			//    value = key;
 
-			return new string[] { key, value };
+			return new[] { key, value };
 		}
 
 		/// <summary>
@@ -155,7 +137,7 @@ namespace ManagedFusion.Rewriter.Engines
 		{
 			IConditionFlagProcessor dictionary = new ConditionFlagProcessor();
 
-			foreach (string flag in flags.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+			foreach (string flag in flags.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
 			{
 				IConditionFlag conditionFlag = AddConditionFlag(flag);
 				if (conditionFlag != null)
@@ -187,7 +169,7 @@ namespace ManagedFusion.Rewriter.Engines
 						if (value == null)
 							return null;
 
-						string[] info = value.Split(new char[] { ':' }, 5, StringSplitOptions.None);
+						string[] info = value.Split(new[] { ':' }, 5, StringSplitOptions.None);
 						string name = info[0],
 							   val = info[1],
 							   domain = info.Length > 2 ? info[2].Trim() : String.Empty,
@@ -267,7 +249,7 @@ namespace ManagedFusion.Rewriter.Engines
 			List<string> temporaryHolding = new List<string>();
 
 			dictionary.BeginAdd();
-			foreach (string flag in flags.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+			foreach (string flag in flags.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
 			{
 				string temp = flag;
 
@@ -438,7 +420,7 @@ namespace ManagedFusion.Rewriter.Engines
 						{
 							foreach (Capture var in variables.Captures)
 							{
-								string[] parts = var.Value.Split(new char[] { '=' }, 2);
+								string[] parts = var.Value.Split(new[] { '=' }, 2);
 								bool variableUnderstood = false;
 
 								if (parts.Length == 2)
@@ -577,8 +559,8 @@ namespace ManagedFusion.Rewriter.Engines
 
 							string test = match.Groups["test"].Value;
 							string pattern = match.Groups["pattern"].Value;
-							IConditionTestValue testValue = null;
-							ICondition condition = null;
+							IConditionTestValue testValue;
+							ICondition condition;
 
 							// create the second module
 							if (moduleType2 == null)
@@ -739,8 +721,8 @@ namespace ManagedFusion.Rewriter.Engines
 
 							string test = match.Groups["test"].Value;
 							string pattern = match.Groups["pattern"].Value;
-							IConditionTestValue testValue = null;
-							ICondition condition = null;
+							IConditionTestValue testValue;
+							ICondition condition;
 
 							// create the second module
 							if (moduleType2 == null)

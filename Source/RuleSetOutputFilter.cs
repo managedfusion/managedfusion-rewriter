@@ -20,10 +20,7 @@
  * <license_url>http://www.managedfusion.com/products/url-rewriter/license.aspx</license_url>
  */
 
-using System;
 using System.IO;
-using System.Text;
-using System.Text.RegularExpressions;
 using System.Web;
 
 namespace ManagedFusion.Rewriter
@@ -41,6 +38,8 @@ namespace ManagedFusion.Rewriter
 		/// Initializes a new instance of the <see cref="FormActionFilter"/> class.
 		/// </summary>
 		/// <param name="stream">The stream.</param>
+		/// <param name="context"></param>
+		/// <param name="ruleSet"></param>
 		public RuleSetOutputFilter(Stream stream, HttpContext context, RuleSet ruleSet)
 		{
 			_responseStream = stream;

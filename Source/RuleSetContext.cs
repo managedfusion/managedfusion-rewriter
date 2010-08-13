@@ -22,7 +22,6 @@
 
 using System;
 using System.Web;
-using System.Collections.Generic;
 
 namespace ManagedFusion.Rewriter
 {
@@ -109,7 +108,7 @@ namespace ManagedFusion.Rewriter
 		/// Gets the log level.
 		/// </summary>
 		/// <value>The log level.</value>
-		public virtual int LogLevel
+		public int LogLevel
 		{
 			get { return RuleSet.LogLevel; }
 		}
@@ -118,7 +117,7 @@ namespace ManagedFusion.Rewriter
 		/// Gets the log category.
 		/// </summary>
 		/// <value>The log category.</value>
-		public virtual string LogCategory { get; protected set; }
+		public string LogCategory { get; protected set; }
 
 		/// <summary>
 		/// Gets or sets the rule set.

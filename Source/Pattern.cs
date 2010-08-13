@@ -105,7 +105,7 @@ namespace ManagedFusion.Rewriter
 			// if the input contains a rule or a condition placeholders that need to be 
 			// replaced from the input URL it needs to be processed by the rule pattern 
 			// before we can check if it is a match
-			if (input.IndexOfAny(new char[] { '%', '$' }) >= 0)
+			if (input.IndexOfAny(new[] { '%', '$' }) >= 0)
 				input = Replace(input, context);
 
 			return IsMatch(input);
@@ -186,7 +186,6 @@ namespace ManagedFusion.Rewriter
 		/// Replaces the specified input.
 		/// </summary>
 		/// <param name="input">The input.</param>
-		/// <param name="replacement">The replacement.</param>
 		/// <param name="context">The context.</param>
 		/// <returns></returns>
 		public static string Replace(string input, RuleContext context)
@@ -315,8 +314,8 @@ namespace ManagedFusion.Rewriter
 				case "get":
 					type = ServerVariableType.QueryString;
 					break;
-				case "var":
-				case "server":
+				//case "var":
+				//case "server":
 				default:
 					type = ServerVariableType.ServerVariables;
 					break;

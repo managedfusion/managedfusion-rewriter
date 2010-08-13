@@ -28,8 +28,6 @@ using System.Web;
 using ManagedFusion.Rewriter.Rules;
 using System.Web.Hosting;
 using System.Security.Permissions;
-using System.Security;
-using System.Text.RegularExpressions;
 
 namespace ManagedFusion.Rewriter
 {

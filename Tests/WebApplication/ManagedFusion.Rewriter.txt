@@ -1,8 +1,10 @@
 RewriteEngine On
 
+RewriteRule ^/proxy/(.*)   http://test.socketlabs.com/$1 [P, QSA]
+
 #
 # test the reverse proxy
-RewriteRule ^/proxy/(.*)   http://$1 [P]
+#RewriteRule ^/proxy/(.*)   http://$1 [P]
 
 #
 # test redirect

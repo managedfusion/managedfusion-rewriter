@@ -21,9 +21,6 @@
  */
 
 using System;
-using System.Collections.Generic;
-using System.Text;
-using ManagedFusion.Rewriter.Conditions;
 using System.Web;
 
 namespace ManagedFusion.Rewriter

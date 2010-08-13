@@ -25,7 +25,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Web;
-using System.Collections.Specialized;
 
 namespace ManagedFusion.Rewriter
 {
@@ -100,7 +99,7 @@ namespace ManagedFusion.Rewriter
 			// depending on the type of this request specific values for an HTTP request
 			if (request is HttpWebRequest)
 			{
-				HttpWebRequest httpRequest = request as HttpWebRequest;
+				var httpRequest = request as HttpWebRequest;
 				httpRequest.AllowAutoRedirect = false;
 				httpRequest.ServicePoint.Expect100Continue = false;
 
@@ -392,7 +391,8 @@ namespace ManagedFusion.Rewriter
 
 			int bufferSize = Manager.Configuration.Rewriter.Proxy.ResponseSize;
 			// push the content out to through the stream
-			using (Stream responseStream = response.GetResponseStream(), bufferStream = new BufferedStream(responseStream, Manager.Configuration.Rewriter.Proxy.BufferSize))
+			using (Stream responseStream = response.GetResponseStream())
+			using (Stream bufferStream = new BufferedStream(responseStream, Manager.Configuration.Rewriter.Proxy.BufferSize))
 			{
 				byte[] buffer = new byte[bufferSize];
 

@@ -22,7 +22,6 @@
 
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace ManagedFusion.Rewriter
 {
@@ -31,20 +30,20 @@ namespace ManagedFusion.Rewriter
 	/// </summary>
 	internal class KnownHttpVerb
 	{
-		private static Dictionary<string, KnownHttpVerb> NamedHeaders;
+		private static readonly Dictionary<string, KnownHttpVerb> NamedHeaders;
 
 		/// <summary>
 		/// Initializes the <see cref="KnownHttpVerb"/> class.
 		/// </summary>
 		static KnownHttpVerb()
 		{
-			NamedHeaders = new Dictionary<string, KnownHttpVerb>(StringComparer.OrdinalIgnoreCase);
-
-			NamedHeaders.Add("GET", new KnownHttpVerb("GET", false, true, false, false));
-			NamedHeaders.Add("POST", new KnownHttpVerb("POST", true, false, false, false));
-			NamedHeaders.Add("HEAD", new KnownHttpVerb("HEAD", false, true, false, true));
-			NamedHeaders.Add("CONNECT", new KnownHttpVerb("CONNECT", false, true, true, false));
-			NamedHeaders.Add("PUT", new KnownHttpVerb("PUT", true, false, false, false));
+			NamedHeaders = new Dictionary<string, KnownHttpVerb>(StringComparer.OrdinalIgnoreCase) {
+			    {"GET", new KnownHttpVerb("GET", false, true, false, false)},
+			    {"POST", new KnownHttpVerb("POST", true, false, false, false)},
+			    {"HEAD", new KnownHttpVerb("HEAD", false, true, false, true)},
+			    {"CONNECT", new KnownHttpVerb("CONNECT", false, true, true, false)},
+			    {"PUT", new KnownHttpVerb("PUT", true, false, false, false)}
+			};
 		}
 
 		/// <summary>
@@ -54,7 +53,7 @@ namespace ManagedFusion.Rewriter
 		/// <returns></returns>
 		public static KnownHttpVerb Parse(string name)
 		{
-			KnownHttpVerb verb = null;
+			KnownHttpVerb verb;
 
 			if (!NamedHeaders.TryGetValue(name, out verb))
 				verb = new KnownHttpVerb(name, false, false, false, false);
@@ -78,11 +77,11 @@ namespace ManagedFusion.Rewriter
 		/// <param name="expectNoContentResponse">if set to <c>true</c> [expect no content response].</param>
 		private KnownHttpVerb(string name, bool requireContentBody, bool contentBodyNotAllowed, bool connectRequest, bool expectNoContentResponse)
 		{
-			this.Name = name;
-			this.RequireContentBody = requireContentBody;
-			this.ContentBodyNotAllowed = contentBodyNotAllowed;
-			this.ConnectRequest = connectRequest;
-			this.ExpectNoContentResponse = expectNoContentResponse;
+			Name = name;
+			RequireContentBody = requireContentBody;
+			ContentBodyNotAllowed = contentBodyNotAllowed;
+			ConnectRequest = connectRequest;
+			ExpectNoContentResponse = expectNoContentResponse;
 		}
 
 		/// <summary>
@@ -93,7 +92,7 @@ namespace ManagedFusion.Rewriter
 		public bool Equals(KnownHttpVerb verb)
 		{
 			if (this != verb)
-				return String.Compare(this.Name, verb.Name, StringComparison.OrdinalIgnoreCase) == 0;
+				return String.Compare(Name, verb.Name, StringComparison.OrdinalIgnoreCase) == 0;
 
 			return true;
 		}

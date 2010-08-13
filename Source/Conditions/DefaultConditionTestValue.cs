@@ -20,11 +20,6 @@
  * <license_url>http://www.managedfusion.com/products/url-rewriter/license.aspx</license_url>
  */
 
-using System;
-
-using System.Web;
-using System.Text.RegularExpressions;
-
 namespace ManagedFusion.Rewriter.Conditions
 {
 	/// <summary>
@@ -90,7 +85,7 @@ namespace ManagedFusion.Rewriter.Conditions
 		/// </returns>
 		public override string ToString()
 		{
-			return Test.ToString();
+			return Test;
 		}
 	}
 }

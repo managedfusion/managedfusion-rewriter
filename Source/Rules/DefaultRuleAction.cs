@@ -60,7 +60,7 @@ namespace ManagedFusion.Rewriter.Rules
 		/// Initializes a new instance of the <see cref="DefaultRuleAction"/> class.
 		/// </summary>
 		/// <param name="pattern">The pattern.</param>
-		/// <param name="text">The text.</param>
+		/// <param name="substitution"></param>
 		public DefaultRuleAction(Pattern pattern, string substitution)
 		{
 			((IRuleAction)this).Init(pattern, substitution);
@@ -72,7 +72,7 @@ namespace ManagedFusion.Rewriter.Rules
 		/// Inits the specified text.
 		/// </summary>
 		/// <param name="pattern">The pattern.</param>
-		/// <param name="text">The text.</param>
+		/// <param name="substitution"></param>
 		void IRuleAction.Init(Pattern pattern, string substitution)
 		{
 			_pattern = pattern;

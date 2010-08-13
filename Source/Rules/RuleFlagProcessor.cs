@@ -20,7 +20,6 @@
  * <license_url>http://www.managedfusion.com/products/url-rewriter/license.aspx</license_url>
  */
 
-using System;
 using System.Collections.Generic;
 using ManagedFusion.Rewriter.Rules.Flags;
 

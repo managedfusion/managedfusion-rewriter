@@ -22,7 +22,6 @@
 
 using System;
 using System.Collections.Generic;
-using System.Text;
 using ManagedFusion.Rewriter.Configuration;
 
 namespace ManagedFusion.Rewriter.Engines
