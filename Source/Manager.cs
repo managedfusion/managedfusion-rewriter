@@ -102,13 +102,28 @@ namespace ManagedFusion.Rewriter
 			get { return RewriterName + "/" + RewriterVersion.ToString(2); }
 		}
 
+		private static ManagedFusionRewriterSectionGroup _configuration;
+
 		/// <summary>
 		/// Gets the configuration.
 		/// </summary>
 		/// <value>The configuration.</value>
 		public static ManagedFusionRewriterSectionGroup Configuration
 		{
-			get { return ManagedFusionRewriterSectionGroup.Instance; }
+			get
+			{
+				if (_configuration == null)
+				{
+					try { _configuration = ManagedFusionRewriterSectionGroup.Instance; }
+					finally
+					{
+						if (_configuration == null)
+							_configuration = new ManagedFusionRewriterSectionGroup();
+					}
+				}
+
+				return _configuration;
+			}
 		}
 
 		/// <summary>
