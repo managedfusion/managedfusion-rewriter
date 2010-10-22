@@ -63,10 +63,18 @@
    a. ManagedFusion.Rewriter.dll
    b. ManagedFusion.Rewriter.pdb
   
-3. And create a rules file named 'ManagedFusion.Rewriter.txt' (which is just a plain text file that can be done with Notepad)
-   If you are converting your Apache rules over from .htaccess then you just need to copy everything between
-   the <IfModule mod_rewrite.c> ... </IfModule> tags in your .htaccess file.
+3. And create a rules file named 'ManagedFusion.Rewriter.txt' (which is just a plain text file that can be done 
+   with Notepad)  To get the file started add the following as a test or see some of the sample applications:
+
+   RewriteEngine On
+   RewriteRule ^/(.*)      http://google.com [R=302]
+
+   ** If you are converting your Apache rules over from .htaccess then you just need to copy everything
+   between the <IfModule mod_rewrite.c> ... </IfModule> tags in your .htaccess file.
    
+4. If you are using IIS 6 please make sure you read the instructions in Part 3.  This step is very important, and if 
+   you are using IIS 6 and you forget to do it, nothing will work.
+
 ****************************************************************************
  2. Available Rules
 ****************************************************************************
@@ -84,9 +92,10 @@ All the following rules defined at http://httpd.apache.org/docs/2.0/mod/mod_rewr
  3. Enabling wildcards in IIS 5/6
 ****************************************************************************
 
-If you are using IIS 5 or 6 then you will want to enable wildcards to gain the full functionality of the Managed Fusion Url Rewriter, 
-you can do so by adding a new application mapping to your websites IIS settings.  You should note that if you use the server built in 
-to Visual Studio or you use IIS 7 you do not need to follow these directions.
+If you are using IIS 5 or 6 then you will want to enable wildcards to gain the full functionality of the 
+Managed Fusion Url Rewriter, you can do so by adding a new application mapping to your websites IIS settings.  
+You should note that if you use the server built in to Visual Studio or you use IIS 7 you do not need to follow 
+these directions.
 
 ** This solution works only if your website is using ASP.NET server pages and not mixing with other dynamic server pages such as ASP and PHP.
 
@@ -115,4 +124,12 @@ The following instructions apply for IIS 6.
  4. Support
 ****************************************************************************
 
-If you have any questions or comments please e-mail them to support@managedfusion.com.
+If you have any questions or comments please e-mail them to support@managedfusion.com, but before you do so please
+make sure to create a log of what is going on with your rules you can do that by adding the following right below
+the RewriteEngine statement:
+
+RewriteLog "log.txt"
+RewriteLogLevel 9
+
+After you do this a log.txt file will be produced in the root of your web application that will log any request the
+rewriter services.
