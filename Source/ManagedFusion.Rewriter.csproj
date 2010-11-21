@@ -24,7 +24,7 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>..\..\ManagedFusion.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>ManagedFusion.snk</AssemblyOriginatorKeyFile>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
@@ -157,9 +157,6 @@
     <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\ManagedFusion.snk">
-      <Link>ManagedFusion.snk</Link>
-    </None>
     <None Include="Configuration\ManagedFusionRewriterConfiguration.csd">
       <Generator>CsdFileGenerator</Generator>
       <LastGenOutput>ManagedFusionRewriterConfiguration.csd.cs</LastGenOutput>
@@ -173,6 +170,7 @@
     <None Include="Configuration\ManagedFusionRewriterConfiguration.csd.xsd">
       <DependentUpon>ManagedFusionRewriterConfiguration.csd</DependentUpon>
     </None>
+    <None Include="ManagedFusion.snk" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

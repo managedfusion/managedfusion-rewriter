@@ -9,40 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		rewrite_schema.xml = rewrite_schema.xml
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test Webs", "Test Webs", "{52278F72-C8ED-40F4-8241-9F55C01D7CBB}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagedFusion.Rewriter", "Source\ManagedFusion.Rewriter.csproj", "{4C655AE4-83F4-4A0F-BFC0-95689A50BCDD}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication", "Tests\WebApplication\WebApplication.csproj", "{D653BA1D-5F0F-4F0A-9C8B-A2C012206E15}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplicationAjax", "Tests\WebApplicationAjax\WebApplicationAjax.csproj", "{20D7B1DD-0B8A-48C1-BBD3-D3D5E2FD12B2}"
-EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Website", "Tests\Website", "{B02FB97C-B6C7-4ABF-B0D9-D22DBA47D0D1}"
-	ProjectSection(WebsiteProperties) = preProject
-		SccProjectName = ""
-		SccAuxPath = ""
-		SccLocalPath = ""
-		SccProvider = ""
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv3.5"
-		ProjectReferences = "{4C655AE4-83F4-4A0F-BFC0-95689A50BCDD}|ManagedFusion.Rewriter.dll;"
-		Debug.AspNetCompiler.VirtualPath = "/Website"
-		Debug.AspNetCompiler.PhysicalPath = "Tests\Website\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Website\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/Website"
-		Release.AspNetCompiler.PhysicalPath = "Tests\Website\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Website\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "6986"
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagedFusion.Rewriter.Contrib", "..\ManagedFusion.Rewriter.Contrib\Source\ManagedFusion.Rewriter.Contrib.csproj", "{637C22D0-ED49-476F-A13B-3EBE716D99DF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagedFusion.Rewriter.Test", "Tests\Unit\ManagedFusion.Rewriter.Test.csproj", "{1FFC4726-A607-41AE-8EC9-6349A0432DBE}"
 EndProject
@@ -56,22 +23,6 @@ Global
 		{4C655AE4-83F4-4A0F-BFC0-95689A50BCDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C655AE4-83F4-4A0F-BFC0-95689A50BCDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C655AE4-83F4-4A0F-BFC0-95689A50BCDD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D653BA1D-5F0F-4F0A-9C8B-A2C012206E15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D653BA1D-5F0F-4F0A-9C8B-A2C012206E15}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D653BA1D-5F0F-4F0A-9C8B-A2C012206E15}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D653BA1D-5F0F-4F0A-9C8B-A2C012206E15}.Release|Any CPU.Build.0 = Release|Any CPU
-		{20D7B1DD-0B8A-48C1-BBD3-D3D5E2FD12B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{20D7B1DD-0B8A-48C1-BBD3-D3D5E2FD12B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{20D7B1DD-0B8A-48C1-BBD3-D3D5E2FD12B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{20D7B1DD-0B8A-48C1-BBD3-D3D5E2FD12B2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B02FB97C-B6C7-4ABF-B0D9-D22DBA47D0D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B02FB97C-B6C7-4ABF-B0D9-D22DBA47D0D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B02FB97C-B6C7-4ABF-B0D9-D22DBA47D0D1}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{B02FB97C-B6C7-4ABF-B0D9-D22DBA47D0D1}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{637C22D0-ED49-476F-A13B-3EBE716D99DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{637C22D0-ED49-476F-A13B-3EBE716D99DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{637C22D0-ED49-476F-A13B-3EBE716D99DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{637C22D0-ED49-476F-A13B-3EBE716D99DF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1FFC4726-A607-41AE-8EC9-6349A0432DBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1FFC4726-A607-41AE-8EC9-6349A0432DBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1FFC4726-A607-41AE-8EC9-6349A0432DBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -79,10 +30,5 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{D653BA1D-5F0F-4F0A-9C8B-A2C012206E15} = {52278F72-C8ED-40F4-8241-9F55C01D7CBB}
-		{20D7B1DD-0B8A-48C1-BBD3-D3D5E2FD12B2} = {52278F72-C8ED-40F4-8241-9F55C01D7CBB}
-		{B02FB97C-B6C7-4ABF-B0D9-D22DBA47D0D1} = {52278F72-C8ED-40F4-8241-9F55C01D7CBB}
 	EndGlobalSection
 EndGlobal
