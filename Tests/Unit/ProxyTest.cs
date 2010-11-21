@@ -2,20 +2,20 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace ManagedFusion.Rewriter.Test
 {
-	[TestClass]
+	[TestFixture]
 	public class ProxyTest : BaseTest
 	{
-		[TestMethod]
+		[Test]
 		public void ProxyType()
 		{
 			Assert.AreEqual(Manager.ProxyType, typeof(TestProxyHandler));
 		}
 
-		[TestMethod]
+		[Test]
 		public void ProxyAsyncType()
 		{
 			Assert.AreEqual(Manager.ProxyAsyncType, typeof(TestProxyAsyncHandler));

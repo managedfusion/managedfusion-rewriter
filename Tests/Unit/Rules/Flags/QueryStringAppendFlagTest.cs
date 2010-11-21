@@ -1,12 +1,12 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace ManagedFusion.Rewriter.Test.Rules.Flags
 {
-	[TestClass]
+	[TestFixture]
 	public class QueryStringAppendFlagTest : BaseTest
 	{
-		[TestMethod]
+		[Test]
 		public void QueryStringAppend_WithQueryString()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx?type2=pass");
@@ -19,7 +19,7 @@ namespace ManagedFusion.Rewriter.Test.Rules.Flags
 			Assert.AreEqual(expected, result);
 		}
 
-		[TestMethod]
+		[Test]
 		public void QueryStringAppend_WithOutQueryString()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx?type2=pass");
@@ -32,7 +32,7 @@ namespace ManagedFusion.Rewriter.Test.Rules.Flags
 			Assert.AreEqual(expected, result);
 		}
 
-		[TestMethod]
+		[Test]
 		public void QueryStringAppend_WithQueryString_NoQueryStringOnUrl()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
@@ -45,7 +45,7 @@ namespace ManagedFusion.Rewriter.Test.Rules.Flags
 			Assert.AreEqual(expected, result);
 		}
 
-		[TestMethod]
+		[Test]
 		public void QueryStringAppend_WithOutQueryString_NoQueryStringOnUrl()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");

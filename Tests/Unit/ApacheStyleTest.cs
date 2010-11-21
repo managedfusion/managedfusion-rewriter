@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace ManagedFusion.Rewriter.Test
 {
-	[TestClass]
+	[TestFixture]
 	public class ApacheStyleTest : BaseTest
 	{
-		[TestMethod]
+		[Test]
 		public void SimpleRule()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
@@ -20,7 +20,7 @@ namespace ManagedFusion.Rewriter.Test
 			Assert.AreEqual(expected, result);
 		}
 
-		[TestMethod]
+		[Test]
 		public void SimpleRule_WithCondition()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
@@ -37,7 +37,7 @@ RewriteRule ^(.*)$ /pass []");
 			Assert.AreEqual(expected, result);
 		}
 
-		[TestMethod]
+		[Test]
 		public void RewriteCondWithServerVariable()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
@@ -54,7 +54,7 @@ RewriteRule ^/([a-z]+)\.aspx  /$1 []");
 			Assert.AreEqual(expected, result);
 		}
 
-		[TestMethod]
+		[Test]
 		public void RewriteModule_IRuleAction()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
@@ -69,7 +69,7 @@ RewriteRule(,PostQueryString) ^(.*)$  $1");
 			Assert.AreEqual(expected, result);
 		}
 
-		[TestMethod]
+		[Test]
 		public void RewriteCondWithHttpHeader()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
@@ -86,7 +86,7 @@ RewriteRule ^/([a-z]+)\.aspx  /$1.txt []");
 			Assert.AreEqual(expected, result);
 		}
 
-		[TestMethod]
+		[Test]
 		public void SimpleRule_WithComplexCondition()
 		{
 			var target = CreateRuleSet(@"

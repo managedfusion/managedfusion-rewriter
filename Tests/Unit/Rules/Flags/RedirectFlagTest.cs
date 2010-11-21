@@ -1,15 +1,15 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace ManagedFusion.Rewriter.Test.Rules.Flags
 {
 	/// <summary>
 	/// Summary description for ChainFlagTest
 	/// </summary>
-	[TestClass]
+	[TestFixture]
 	public class RedirectFlagTest : BaseTest
 	{
-		[TestMethod]
+		[Test]
 		public void Redirect_Plain()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
@@ -29,7 +29,7 @@ RewriteRule ^/test.aspx$   /pass   [R]");
 			Assert.AreEqual(expected, result);
 		}
 
-		[TestMethod]
+		[Test]
 		public void Redirect_301()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
@@ -49,7 +49,7 @@ RewriteRule ^/test.aspx$   /pass   [R=301]");
 			Assert.AreEqual(expected, result);
 		}
 
-		[TestMethod]
+		[Test]
 		public void Redirect_302()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
@@ -69,7 +69,7 @@ RewriteRule ^/test.aspx$   /pass   [R=302]");
 			Assert.AreEqual(expected, result);
 		}
 
-		[TestMethod]
+		[Test]
 		public void Redirect_303()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
@@ -89,7 +89,7 @@ RewriteRule ^/test.aspx$   /pass   [R=303]");
 			Assert.AreEqual(expected, result);
 		}
 
-		[TestMethod]
+		[Test]
 		public void Redirect_307()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
@@ -109,7 +109,7 @@ RewriteRule ^/test.aspx$   /pass   [R=307]");
 			Assert.AreEqual(expected, result);
 		}
 
-		[TestMethod]
+		[Test]
 		public void Redirect_Permanent()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
@@ -129,7 +129,7 @@ RewriteRule ^/test.aspx$   /pass   [R=permanent]");
 			Assert.AreEqual(expected, result);
 		}
 
-		[TestMethod]
+		[Test]
 		public void Redirect_Found()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
@@ -149,7 +149,7 @@ RewriteRule ^/test.aspx$   /pass   [R=found]");
 			Assert.AreEqual(expected, result);
 		}
 
-		[TestMethod]
+		[Test]
 		public void Redirect_SeeOther()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
@@ -169,7 +169,7 @@ RewriteRule ^/test.aspx$   /pass   [R=seeother]");
 			Assert.AreEqual(expected, result);
 		}
 
-		[TestMethod]
+		[Test]
 		public void Redirect_Temp()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");

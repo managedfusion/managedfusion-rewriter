@@ -1,15 +1,15 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace ManagedFusion.Rewriter.Test.Rules.Flags
 {
 	/// <summary>
 	/// Summary description for ChainFlagTest
 	/// </summary>
-	[TestClass]
+	[TestFixture]
 	public class ChainFlagTest : BaseTest
 	{
-		[TestMethod]
+		[Test]
 		public void Chain_FirstNotMatched()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
@@ -27,7 +27,7 @@ RewriteRule ^/test.aspx$ /pass []");
 			Assert.AreEqual(expected, result);
 		}
 
-		[TestMethod]
+		[Test]
 		public void Chain_MiddleNotMatched()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
@@ -45,7 +45,7 @@ RewriteRule ^/test.aspx$ /pass []");
 			Assert.AreEqual(expected, result);
 		}
 
-		[TestMethod]
+		[Test]
 		public void Chain_LastNotMatched()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
@@ -63,7 +63,7 @@ RewriteRule ^/test.aspx$ /pass []");
 			Assert.AreEqual(expected, result);
 		}
 
-		[TestMethod]
+		[Test]
 		public void Chain_FinalNotMatched()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
@@ -81,7 +81,7 @@ RewriteRule ^/test.aspx$ /pass []");
 			Assert.AreEqual(expected, result);
 		}
 
-		[TestMethod]
+		[Test]
 		public void Chain_Matched()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");

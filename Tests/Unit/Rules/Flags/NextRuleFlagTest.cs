@@ -1,15 +1,15 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace ManagedFusion.Rewriter.Test.Rules.Flags
 {
 	/// <summary>
 	/// Summary description for NextRuleFlagTest
 	/// </summary>
-	[TestClass]
+	[TestFixture]
 	public class NextRuleFlagTest : BaseTest
 	{
-		[TestMethod]
+		[Test]
 		public void Next()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");

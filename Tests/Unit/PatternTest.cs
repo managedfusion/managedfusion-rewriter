@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using System.Text.RegularExpressions;
 
 namespace ManagedFusion.Rewriter.Test
 {
-	[TestClass]
+	[TestFixture]
 	public class PatternTest : BaseTest
 	{
-		[TestMethod]
+		[Test]
 		public void InvertMatch_True()
 		{
 			string pattern = "!^(www).*$";
@@ -20,7 +20,7 @@ namespace ManagedFusion.Rewriter.Test
 			Assert.AreEqual(true, actual);
 		}
 
-		[TestMethod]
+		[Test]
 		public void InvertMatch_False()
 		{
 			string pattern = "^(www).*$";
@@ -32,7 +32,7 @@ namespace ManagedFusion.Rewriter.Test
 			Assert.AreEqual(false, actual);
 		}
 
-		[TestMethod]
+		[Test]
 		public void Replace_ServerVariable()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
@@ -52,7 +52,7 @@ namespace ManagedFusion.Rewriter.Test
 			Assert.AreEqual(expected, result);
 		}
 
-		[TestMethod]
+		[Test]
 		public new void ToString()
 		{
 			string pattern = "!^(www).*$";
@@ -65,7 +65,7 @@ namespace ManagedFusion.Rewriter.Test
 			Assert.AreEqual(expected, actual);
 		}
 
-		[TestMethod]
+		[Test]
 		public void ToString_True()
 		{
 			string pattern = "!^(www).*$";
@@ -79,7 +79,7 @@ namespace ManagedFusion.Rewriter.Test
 			Assert.AreEqual(expected, actual);
 		}
 
-		[TestMethod]
+		[Test]
 		public void ToString_False()
 		{
 			string pattern = "!^(www).*$";

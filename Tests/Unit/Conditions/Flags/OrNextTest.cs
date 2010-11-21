@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace ManagedFusion.Rewriter.Test.Conditions.Flags
 {
 	/// <summary>
 	/// Summary description for OrNextTest
 	/// </summary>
-	[TestClass]
+	[TestFixture]
 	public class OrNextTest : BaseTest
 	{
-		[TestMethod]
+		[Test]
 		public void OrNext_FirstMatched()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
@@ -31,7 +31,7 @@ RewriteRule ^/test.aspx$  /fail []");
 			Assert.AreEqual(expected, result);
 		}
 
-		[TestMethod]
+		[Test]
 		public void OrNext_MiddleMatched()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
@@ -52,7 +52,7 @@ RewriteRule ^/test.aspx$  /fail []");
 			Assert.AreEqual(expected, result);
 		}
 
-		[TestMethod]
+		[Test]
 		public void OrNext_LastMatched()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
@@ -73,7 +73,7 @@ RewriteRule ^/test.aspx$  /fail []");
 			Assert.AreEqual(expected, result);
 		}
 
-		[TestMethod]
+		[Test]
 		public void OrNext_FinalMatched()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
@@ -94,7 +94,7 @@ RewriteRule ^/test.aspx$  /fail []");
 			Assert.AreEqual(expected, result);
 		}
 
-		[TestMethod]
+		[Test]
 		public void OrNext_NotlMatched()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");

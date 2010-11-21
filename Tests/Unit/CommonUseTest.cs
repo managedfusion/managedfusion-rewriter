@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace ManagedFusion.Rewriter.Test
 {
-	[TestClass]
+	[TestFixture]
 	public class CommonUseTest : BaseTest
 	{
-		[TestMethod]
+		[Test]
 		public void AddTrailingSlash()
 		{
 			var target = CreateRuleSet(@"
@@ -36,7 +36,7 @@ RewriteRule ^([^.?]+[^.?/])$  $1/ [R=301,L]");
 		/// <summary>
 		/// Forces the host to use WWW.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void ForceHostToUseWww()
 		{
 			var target = CreateRuleSet(@"
@@ -67,7 +67,7 @@ RewriteRule ^(.*)$ http://www.%1$1 [R=301]");
 			Assert.IsNull(result);
 		}
 
-		[TestMethod]
+		[Test]
 		public void WordPress()
 		{
 			var target = CreateRuleSet(@"

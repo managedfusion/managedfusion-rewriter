@@ -2,15 +2,15 @@
 using System.Text;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using ManagedFusion.Rewriter.Rules.Flags;
 
 namespace ManagedFusion.Rewriter.Rules.Test
 {
-	[TestClass]
+	[TestFixture]
 	public class RuleFlagProcessorTest
 	{
-		[TestMethod]
+		[Test]
 		public void OrderOfOpperations_Followed()
 		{
 			// arrange
@@ -26,13 +26,13 @@ namespace ManagedFusion.Rewriter.Rules.Test
 
 			// assert
 			var list = processor.ToList();
-			Assert.IsInstanceOfType(list[0], typeof(NoCaseFlag));
-			Assert.IsInstanceOfType(list[1], typeof(NoEscapeFlag));
-			Assert.IsInstanceOfType(list[2], typeof(ResponseCookieFlag));
-			Assert.IsInstanceOfType(list[3], typeof(LastFlag));
+			Assert.IsInstanceOf<NoCaseFlag>(list[0]);
+			Assert.IsInstanceOf<NoEscapeFlag>(list[1]);
+			Assert.IsInstanceOf<ResponseCookieFlag>(list[2]);
+			Assert.IsInstanceOf<LastFlag>(list[3]);
 		}
 
-		[TestMethod]
+		[Test]
 		public void OrderOfOpperations_Followed_2()
 		{
 			// arrange
@@ -48,13 +48,13 @@ namespace ManagedFusion.Rewriter.Rules.Test
 
 			// assert
 			var list = processor.ToList();
-			Assert.IsInstanceOfType(list[0], typeof(NoCaseFlag));
-			Assert.IsInstanceOfType(list[1], typeof(NoEscapeFlag));
-			Assert.IsInstanceOfType(list[2], typeof(ResponseCookieFlag));
-			Assert.IsInstanceOfType(list[3], typeof(ProxyFlag));
+			Assert.IsInstanceOf<NoCaseFlag>(list[0]);
+			Assert.IsInstanceOf<NoEscapeFlag>(list[1]);
+			Assert.IsInstanceOf<ResponseCookieFlag>(list[2]);
+			Assert.IsInstanceOf<ProxyFlag>(list[3]);
 		}
 
-		[TestMethod]
+		[Test]
 		public void OrderOfOpperations_Followed_3()
 		{
 			// arrange
@@ -70,13 +70,13 @@ namespace ManagedFusion.Rewriter.Rules.Test
 
 			// assert
 			var list = processor.ToList();
-			Assert.IsInstanceOfType(list[0], typeof(NoCaseFlag));
-			Assert.IsInstanceOfType(list[1], typeof(NoEscapeFlag));
-			Assert.IsInstanceOfType(list[2], typeof(ResponseCookieFlag));
-			Assert.IsInstanceOfType(list[3], typeof(RedirectFlag));
+			Assert.IsInstanceOf<NoCaseFlag>(list[0]);
+			Assert.IsInstanceOf<NoEscapeFlag>(list[1]);
+			Assert.IsInstanceOf<ResponseCookieFlag>(list[2]);
+			Assert.IsInstanceOf<RedirectFlag>(list[3]);
 		}
 
-		[TestMethod]
+		[Test]
 		public void OrderOfOpperations_Followed_4()
 		{
 			// arrange
@@ -93,14 +93,14 @@ namespace ManagedFusion.Rewriter.Rules.Test
 
 			// assert
 			var list = processor.ToList();
-			Assert.IsInstanceOfType(list[0], typeof(NoCaseFlag));
-			Assert.IsInstanceOfType(list[1], typeof(NoEscapeFlag));
-			Assert.IsInstanceOfType(list[2], typeof(ResponseCookieFlag));
-			Assert.IsInstanceOfType(list[3], typeof(RedirectFlag));
-			Assert.IsInstanceOfType(list[4], typeof(LastFlag));
+			Assert.IsInstanceOf<NoCaseFlag>(list[0]);
+			Assert.IsInstanceOf<NoEscapeFlag>(list[1]);
+			Assert.IsInstanceOf<ResponseCookieFlag>(list[2]);
+			Assert.IsInstanceOf<RedirectFlag>(list[3]);
+			Assert.IsInstanceOf<LastFlag>(list[4]);
 		}
 
-		[TestMethod]
+		[Test]
 		public void OrderOfOpperations_NotFollowed_First()
 		{
 			// arrange
@@ -116,13 +116,13 @@ namespace ManagedFusion.Rewriter.Rules.Test
 
 			// assert
 			var list = processor.ToList();
-			Assert.IsInstanceOfType(list[0], typeof(NoCaseFlag));
-			Assert.IsInstanceOfType(list[1], typeof(NoEscapeFlag));
-			Assert.IsInstanceOfType(list[2], typeof(ResponseCookieFlag));
-			Assert.IsInstanceOfType(list[3], typeof(LastFlag));
+			Assert.IsInstanceOf<NoCaseFlag>(list[0]);
+			Assert.IsInstanceOf<NoEscapeFlag>(list[1]);
+			Assert.IsInstanceOf<ResponseCookieFlag>(list[2]);
+			Assert.IsInstanceOf<LastFlag>(list[3]);
 		}
 
-		[TestMethod]
+		[Test]
 		public void OrderOfOpperations_NotFollowed_Middle()
 		{
 			// arrange
@@ -138,13 +138,13 @@ namespace ManagedFusion.Rewriter.Rules.Test
 
 			// assert
 			var list = processor.ToList();
-			Assert.IsInstanceOfType(list[0], typeof(NoCaseFlag));
-			Assert.IsInstanceOfType(list[1], typeof(NoEscapeFlag));
-			Assert.IsInstanceOfType(list[2], typeof(ResponseCookieFlag));
-			Assert.IsInstanceOfType(list[3], typeof(LastFlag));
+			Assert.IsInstanceOf<NoCaseFlag>(list[0]);
+			Assert.IsInstanceOf<NoEscapeFlag>(list[1]);
+			Assert.IsInstanceOf<ResponseCookieFlag>(list[2]);
+			Assert.IsInstanceOf<LastFlag>(list[3]);
 		}
 
-		[TestMethod]
+		[Test]
 		public void OrderOfOpperations_NotFollowed_LastMiddle()
 		{
 			// arrange
@@ -161,14 +161,14 @@ namespace ManagedFusion.Rewriter.Rules.Test
 
 			// assert
 			var list = processor.ToList();
-			Assert.IsInstanceOfType(list[0], typeof(NoCaseFlag));
-			Assert.IsInstanceOfType(list[1], typeof(NoEscapeFlag));
-			Assert.IsInstanceOfType(list[2], typeof(ResponseCookieFlag));
-			Assert.IsInstanceOfType(list[3], typeof(LastFlag));
-			Assert.IsInstanceOfType(list[4], typeof(LastFlag));
+			Assert.IsInstanceOf<NoCaseFlag>(list[0]);
+			Assert.IsInstanceOf<NoEscapeFlag>(list[1]);
+			Assert.IsInstanceOf<ResponseCookieFlag>(list[2]);
+			Assert.IsInstanceOf<LastFlag>(list[3]);
+			Assert.IsInstanceOf<LastFlag>(list[4]);
 		}
 
-		[TestMethod]
+		[Test]
 		public void OrderOfOpperations_NotFollowed_LastMiddleFirst()
 		{
 			// arrange
@@ -186,15 +186,15 @@ namespace ManagedFusion.Rewriter.Rules.Test
 
 			// assert
 			var list = processor.ToList();
-			Assert.IsInstanceOfType(list[0], typeof(NoCaseFlag));
-			Assert.IsInstanceOfType(list[1], typeof(NoEscapeFlag));
-			Assert.IsInstanceOfType(list[2], typeof(ResponseCookieFlag));
-			Assert.IsInstanceOfType(list[3], typeof(ProxyFlag));
-			Assert.IsInstanceOfType(list[4], typeof(LastFlag));
-			Assert.IsInstanceOfType(list[5], typeof(LastFlag));
+			Assert.IsInstanceOf<NoCaseFlag>(list[0]);
+			Assert.IsInstanceOf<NoEscapeFlag>(list[1]);
+			Assert.IsInstanceOf<ResponseCookieFlag>(list[2]);
+			Assert.IsInstanceOf<ProxyFlag>(list[3]);
+			Assert.IsInstanceOf<LastFlag>(list[4]);
+			Assert.IsInstanceOf<LastFlag>(list[5]);
 		}
 
-		[TestMethod]
+		[Test]
 		public void NotBulkLoaded()
 		{
 			// arrange
@@ -211,12 +211,12 @@ namespace ManagedFusion.Rewriter.Rules.Test
 
 			// assert
 			var list = processor.ToList();
-			Assert.IsInstanceOfType(list[0], typeof(NoCaseFlag));
-			Assert.IsInstanceOfType(list[1], typeof(NoEscapeFlag));
-			Assert.IsInstanceOfType(list[2], typeof(ResponseCookieFlag));
-			Assert.IsInstanceOfType(list[3], typeof(ProxyFlag));
-			Assert.IsInstanceOfType(list[4], typeof(LastFlag));
-			Assert.IsInstanceOfType(list[5], typeof(LastFlag));
+			Assert.IsInstanceOf<NoCaseFlag>(list[0]);
+			Assert.IsInstanceOf<NoEscapeFlag>(list[1]);
+			Assert.IsInstanceOf<ResponseCookieFlag>(list[2]);
+			Assert.IsInstanceOf<ProxyFlag>(list[3]);
+			Assert.IsInstanceOf<LastFlag>(list[4]);
+			Assert.IsInstanceOf<LastFlag>(list[5]);
 		}
 	}
 }

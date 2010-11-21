@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace ManagedFusion.Rewriter.Test
 {
-	[TestClass]
+	[TestFixture]
 	public class CommonProblemTest : BaseTest
 	{
-		[TestMethod]
+		[Test]
 		public void VariableDoubleProcessingNotAllowed()
 		{
 			var target = CreateRuleSet(@"

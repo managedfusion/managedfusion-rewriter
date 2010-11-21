@@ -2,17 +2,17 @@
 using System.Text;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace ManagedFusion.Rewriter.Test.Rules.Flags
 {
 	/// <summary>
 	/// Summary description for NoCaseTest
 	/// </summary>
-	[TestClass]
+	[TestFixture]
 	public class NoCaseTest : BaseTest
 	{
-		[TestMethod]
+		[Test]
 		public void NoCase_Enabled()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
@@ -27,7 +27,7 @@ RewriteRule ^/test.aspx$ /fail []");
 			Assert.AreEqual(expected, result);
 		}
 
-		[TestMethod]
+		[Test]
 		public void NoCase_Disabled()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");

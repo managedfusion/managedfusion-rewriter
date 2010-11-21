@@ -1,16 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using ManagedFusion.Rewriter.Test;
 using ManagedFusion.Rewriter.Conditions;
+using NUnit.Framework;
 
 namespace ManagedFusion.Rewriter.Rules.Test
 {
-	[TestClass]
+	[TestFixture]
 	public class DefaultRuleActionTest : BaseTest
 	{
-		[TestMethod]
+		[Test]
 		public void VerifyExecute()
 		{
 			var text = "/$1";
@@ -30,7 +31,7 @@ namespace ManagedFusion.Rewriter.Rules.Test
 			Assert.AreEqual(expected, result);
 		}
 
-		[TestMethod]
+		[Test]
 		public void VerifyExecuteWithServerVariable()
 		{
 			var text = "http://%{HTTP_HOST}/$1";
@@ -52,7 +53,7 @@ namespace ManagedFusion.Rewriter.Rules.Test
 			Assert.AreEqual(expected, result);
 		}
 
-		[TestMethod]
+		[Test]
 		public void VerifyExecuteWithOneConditionalValue()
 		{
 			var text = "http://%1/$1";
@@ -78,7 +79,7 @@ namespace ManagedFusion.Rewriter.Rules.Test
 			Assert.AreEqual(expected, result);
 		}
 
-		[TestMethod]
+		[Test]
 		public void VerifyExecuteWithNineConditionalValues()
 		{
 			var text = "http://%3/%2/%1/$1";
@@ -104,7 +105,7 @@ namespace ManagedFusion.Rewriter.Rules.Test
 			Assert.AreEqual(expected, result);
 		}
 
-		[TestMethod]
+		[Test]
 		public void VerifyExecuteWithTenConditionalValues()
 		{
 			var text = "http://%3/%5/$1";

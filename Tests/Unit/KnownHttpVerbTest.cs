@@ -2,17 +2,17 @@
 using System.Text;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace ManagedFusion.Rewriter.Test
 {
 	/// <summary>
 	/// Summary description for KnownHttpVerbTest
 	/// </summary>
-	[TestClass]
+	[TestFixture]
 	public class KnownHttpVerbTest
 	{
-		[TestMethod]
+		[Test]
 		public void OPTIONS_Verb()
 		{
 			// arrange
@@ -29,7 +29,7 @@ namespace ManagedFusion.Rewriter.Test
 			Assert.IsFalse(result.RequireContentBody);
 		}
 
-		[TestMethod]
+		[Test]
 		public void GET_Verb()
 		{
 			// arrange
@@ -46,7 +46,7 @@ namespace ManagedFusion.Rewriter.Test
 			Assert.IsFalse(result.RequireContentBody);
 		}
 
-		[TestMethod]
+		[Test]
 		public void HEAD_Verb()
 		{
 			// arrange
@@ -63,7 +63,7 @@ namespace ManagedFusion.Rewriter.Test
 			Assert.IsFalse(result.RequireContentBody);
 		}
 
-		[TestMethod]
+		[Test]
 		public void POST_Verb()
 		{
 			// arrange
@@ -80,7 +80,7 @@ namespace ManagedFusion.Rewriter.Test
 			Assert.IsTrue(result.RequireContentBody);
 		}
 
-		[TestMethod]
+		[Test]
 		public void PUT_Verb()
 		{
 			// arrange
@@ -97,7 +97,7 @@ namespace ManagedFusion.Rewriter.Test
 			Assert.IsTrue(result.RequireContentBody);
 		}
 
-		[TestMethod]
+		[Test]
 		public void DELETE_Verb()
 		{
 			// arrange
@@ -114,7 +114,7 @@ namespace ManagedFusion.Rewriter.Test
 			Assert.IsFalse(result.RequireContentBody);
 		}
 
-		[TestMethod]
+		[Test]
 		public void TRACE_Verb()
 		{
 			// arrange
@@ -131,7 +131,7 @@ namespace ManagedFusion.Rewriter.Test
 			Assert.IsFalse(result.RequireContentBody);
 		}
 
-		[TestMethod]
+		[Test]
 		public void CONNECT_Verb()
 		{
 			// arrange

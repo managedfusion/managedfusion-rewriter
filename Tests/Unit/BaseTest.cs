@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Web;
 using System.IO;
 using Moq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using ManagedFusion.Rewriter.Engines;
 using System.Text.RegularExpressions;
 
@@ -11,12 +11,6 @@ namespace ManagedFusion.Rewriter.Test
 {
 	public class BaseTest
 	{
-		/// <summary>
-		/// Gets or sets the test context.
-		/// </summary>
-		/// <value>The test context.</value>
-		public TestContext TestContext { get; set; }
-
 		/// <summary>
 		/// Creates the rule set.
 		/// </summary>

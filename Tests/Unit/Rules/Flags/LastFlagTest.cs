@@ -1,15 +1,15 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace ManagedFusion.Rewriter.Test.Rules.Flags
 {
 	/// <summary>
 	/// Summary description for LastFlagTest
 	/// </summary>
-	[TestClass]
+	[TestFixture]
 	public class LastFlagTest : BaseTest
 	{
-		[TestMethod]
+		[Test]
 		public void Last_First()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
@@ -25,7 +25,7 @@ RewriteRule ^(.*)$ /fail [L]");
 			Assert.AreEqual(expected, result);
 		}
 
-		[TestMethod]
+		[Test]
 		public void Last_Middle()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
@@ -41,7 +41,7 @@ RewriteRule ^(.*)$ /fail [L]");
 			Assert.AreEqual(expected, result);
 		}
 
-		[TestMethod]
+		[Test]
 		public void Last_Final()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");

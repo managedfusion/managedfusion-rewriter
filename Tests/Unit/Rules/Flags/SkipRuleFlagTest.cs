@@ -1,12 +1,12 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace ManagedFusion.Rewriter.Test.Rules.Flags
 {
-	[TestClass]
+	[TestFixture]
 	public class SkipRuleFlagTest : BaseTest
 	{
-		[TestMethod]
+		[Test]
 		public void Skip()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
