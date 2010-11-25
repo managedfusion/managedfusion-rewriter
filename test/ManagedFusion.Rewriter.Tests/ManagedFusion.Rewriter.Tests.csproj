@@ -8,8 +8,8 @@
     <ProjectGuid>{1FFC4726-A607-41AE-8EC9-6349A0432DBE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ManagedFusion.Rewriter.Test</RootNamespace>
-    <AssemblyName>ManagedFusion.Rewriter.Test</AssemblyName>
+    <RootNamespace>ManagedFusion.Rewriter.Tests</RootNamespace>
+    <AssemblyName>ManagedFusion.Rewriter.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -22,7 +22,7 @@
     <SccProvider>
     </SccProvider>
     <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>..\..\Source\ManagedFusion.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>..\..\src\ManagedFusion.snk</AssemblyOriginatorKeyFile>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <OldToolsVersion>4.0</OldToolsVersion>
@@ -63,12 +63,11 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Moq, Version=2.6.1014.1, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Dependencies\Moq.dll</HintPath>
+    <Reference Include="Moq">
+      <HintPath>..\..\lib\Moq.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-      <HintPath>..\..\Dependencies\nunit.framework.dll</HintPath>
+      <HintPath>..\..\lib\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
@@ -108,13 +107,13 @@
     <Compile Include="TestRuleAction.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Source\ManagedFusion.Rewriter.csproj">
+    <ProjectReference Include="..\..\src\ManagedFusion.Rewriter.csproj">
       <Project>{4C655AE4-83F4-4A0F-BFC0-95689A50BCDD}</Project>
       <Name>ManagedFusion.Rewriter</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\Source\ManagedFusion.snk">
+    <None Include="..\..\src\ManagedFusion.snk">
       <Link>ManagedFusion.snk</Link>
     </None>
     <None Include="App.config" />

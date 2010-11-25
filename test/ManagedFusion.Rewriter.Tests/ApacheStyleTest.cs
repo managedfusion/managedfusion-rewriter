@@ -60,7 +60,7 @@ RewriteRule ^/([a-z]+)\.aspx  /$1 []");
 			var url = new Uri("http://www.somesite.com/test.aspx");
 			var context = CreateHttpContext(url);
 			var target = CreateRuleSet(@"
-RewriteModule PostQueryString  ManagedFusion.Rewriter.Test.TestRuleAction,  ManagedFusion.Rewriter.Test
+RewriteModule PostQueryString  ManagedFusion.Rewriter.Test.TestRuleAction,  ManagedFusion.Rewriter.Tests
 RewriteRule(,PostQueryString) ^(.*)$  $1");
 
 			Uri expected = new Uri("http://www.somesite.com/pass");
