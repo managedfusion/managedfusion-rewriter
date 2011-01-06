@@ -279,7 +279,7 @@ namespace ManagedFusion.Rewriter.Engines
 		/// </summary>
 		/// <param name="context">The context.</param>
 		/// <returns></returns>
-		public virtual Uri RunRules(HttpContext context)
+		public virtual Uri RunRules(HttpContextBase context)
 		{
 			var url = new Uri(context.Request.Url, context.Request.RawUrl);
 			string path = context.Request.ApplicationPath;
@@ -300,7 +300,7 @@ namespace ManagedFusion.Rewriter.Engines
 		/// Runs the output rules.
 		/// </summary>
 		/// <param name="context">The context.</param>
-		public virtual void RunOutputRules(HttpContext context)
+		public virtual void RunOutputRules(HttpContextBase context)
 		{
 			string path = context.Request.ApplicationPath;
 

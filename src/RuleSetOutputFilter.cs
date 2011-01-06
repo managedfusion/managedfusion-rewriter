@@ -31,7 +31,7 @@ namespace ManagedFusion.Rewriter
 	internal class RuleSetOutputFilter : Stream
 	{
 		private Stream _responseStream;
-		private HttpContext _context;
+		private HttpContextBase _context;
 		private RuleSet _ruleSet;
 
 		/// <summary>
@@ -40,7 +40,7 @@ namespace ManagedFusion.Rewriter
 		/// <param name="stream">The stream.</param>
 		/// <param name="context"></param>
 		/// <param name="ruleSet"></param>
-		public RuleSetOutputFilter(Stream stream, HttpContext context, RuleSet ruleSet)
+		public RuleSetOutputFilter(Stream stream, HttpContextBase context, RuleSet ruleSet)
 		{
 			_responseStream = stream;
 			_context = context;

@@ -10,7 +10,7 @@ namespace ManagedFusion.Rewriter.Test.Rules.Flags
 		public void Skip()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
-			var context = CreateHttpContext(url);
+			var context = HttpHelpers.MockHttpContext(url);
 			var target = CreateRuleSet(@"
 RewriteRule ^(.*)$ $1 [S=3]
 RewriteRule ^(.*)$ /fail []

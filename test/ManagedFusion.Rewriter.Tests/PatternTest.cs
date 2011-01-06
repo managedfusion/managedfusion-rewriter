@@ -36,7 +36,8 @@ namespace ManagedFusion.Rewriter.Test
 		public void Replace_ServerVariable()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
-			var httpContext = CreateHttpContext(url).SetServerVariables(new Dictionary<string, string> { 
+			var httpContext = HttpHelpers.MockHttpContext(url);
+			httpContext.Request.SetServerVariables(new Dictionary<string, string> { 
 				{ "SERVER_PORT", "1234" } 
 			});
 			var context = CreateRuleContext(url, httpContext);

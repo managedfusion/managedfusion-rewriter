@@ -34,13 +34,6 @@ namespace ManagedFusion.Rewriter
 	public class RewriterModule : IHttpModule
 	{
 		/// <summary>
-		/// Initializes a new instance of the <see cref="RewriterModule"/> class.
-		/// </summary>
-		public RewriterModule()
-		{
-		}
-
-		/// <summary>
 		/// Occurs when [load application rules].
 		/// </summary>
 		public event EventHandler<LoadRulesEventArgs> LoadApplicationRules;
@@ -86,13 +79,13 @@ namespace ManagedFusion.Rewriter
 		[PermissionSet(SecurityAction.Demand, Unrestricted = true)]
 		public void Init(HttpApplication context)
 		{
-			context.BeginRequest += new EventHandler(context_BeginRequest);
+			context.BeginRequest += context_BeginRequest;
 
-			context.PostResolveRequestCache += new EventHandler(context_PostResolveRequestCache);
-			context.PostMapRequestHandler += new EventHandler(context_PostMapRequestHandler);
+			context.PostResolveRequestCache += context_PostResolveRequestCache;
+			context.PostMapRequestHandler += context_PostMapRequestHandler;
 
-			context.PostRequestHandlerExecute += new EventHandler(context_PostRequestHandlerExecute);
-			context.PostReleaseRequestState += new EventHandler(context_PostReleaseRequestState);
+			context.PostRequestHandlerExecute += context_PostRequestHandlerExecute;
+			context.PostReleaseRequestState += context_PostReleaseRequestState;
 		}
 
 		#endregion
@@ -109,7 +102,7 @@ namespace ManagedFusion.Rewriter
 			if (Manager.ApplicationRulesNeedLoading)
 			{
 				// call load application rules
-				LoadRulesEventArgs loadRulesArgs = new LoadRulesEventArgs();
+				var loadRulesArgs = new LoadRulesEventArgs();
 				OnLoadApplicationRules(loadRulesArgs);
 
 				Manager.LoadApplicationRules(loadRulesArgs);
@@ -117,15 +110,13 @@ namespace ManagedFusion.Rewriter
 
 			#endregion
 
-			HttpContext context = ((HttpApplication)sender).Context;
-			Uri rewrittenUrl = Manager.RunRules(context);
+			var context = new HttpContextWrapper(((HttpApplication)sender).Context);
+			var rewrittenUrl = Manager.RunRules(context);
 
 			// make sure the rewrittenUrl returned is not null
 			// a null value can indicate a proxy request
 			if (rewrittenUrl != null)
 			{
-				string rawUrl = context.Request.RawUrl;
-
 				// configure IIS7 for worker request
 				// this will not do anything if the IIS7 worker request is not found
 				Manager.ModifyIIS7WorkerRequest(context);
@@ -136,8 +127,8 @@ namespace ManagedFusion.Rewriter
 				// rewrite path using new URL
 				if (HttpRuntime.UsingIntegratedPipeline && Manager.Configuration.Rewriter.AllowIis7TransferRequest)
 				{
-					HttpRequest request = context.Request;
-					NameValueCollection headers = new NameValueCollection(context.Request.Headers);
+					var request = context.Request;
+					var headers = new NameValueCollection(context.Request.Headers);
 
 					int transferCount = 1;
 					string transferCountHeader = headers["X-Rewriter-Transfer"];
@@ -168,7 +159,7 @@ namespace ManagedFusion.Rewriter
 		/// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
 		private void context_PostResolveRequestCache(object sender, EventArgs e)
 		{
-			HttpContext context = ((HttpApplication)sender).Context;
+			var context = new HttpContextWrapper(((HttpApplication)sender).Context);
 
 			// check to see if this is a proxy request
 			if (context.Items.Contains(Manager.ProxyHandlerStorageName))
@@ -182,12 +173,12 @@ namespace ManagedFusion.Rewriter
 		/// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
 		private void context_PostMapRequestHandler(object sender, EventArgs e)
 		{
-			HttpContext context = ((HttpApplication)sender).Context;
+			var context = new HttpContextWrapper(((HttpApplication)sender).Context);
 
 			// check to see if this is a proxy request
 			if (context.Items.Contains(Manager.ProxyHandlerStorageName))
 			{
-				IHttpProxyHandler proxy = context.Items[Manager.ProxyHandlerStorageName] as IHttpProxyHandler;
+				var proxy = context.Items[Manager.ProxyHandlerStorageName] as IHttpProxyHandler;
 
 				context.RewritePath("~" + proxy.ResponseUrl.PathAndQuery);
 				context.Handler = proxy;
@@ -203,7 +194,7 @@ namespace ManagedFusion.Rewriter
 		{
 			#region RefreshApplicationRules Event
 
-			RefreshRulesEventArgs refreshRulesArgs = new RefreshRulesEventArgs();
+			var refreshRulesArgs = new RefreshRulesEventArgs();
 			OnRefreshApplicationRules(refreshRulesArgs);
 
 			// if refresh rules is set to true then clear out the application rules
@@ -224,7 +215,7 @@ namespace ManagedFusion.Rewriter
 		{
 			if (Manager.Configuration.Rules.AllowOutputProcessing)
 			{
-				HttpContext context = ((HttpApplication)sender).Context;
+				var context = new HttpContextWrapper(((HttpApplication)sender).Context);
 				Manager.RunOutputRules(context);
 			}
 		}

@@ -33,13 +33,6 @@ namespace ManagedFusion.Rewriter
 	/// </summary>
 	public class ProxyHandler : IHttpProxyHandler, IHttpHandler
 	{
-		/// <summary>
-		/// Initializes a new instance of the <see cref="ProxyHandler"/> class.
-		/// </summary>
-		public ProxyHandler()
-		{
-		}
-
 		#region IHttpProxyHandler Members
 
 		/// <summary>
@@ -87,10 +80,10 @@ namespace ManagedFusion.Rewriter
 		private WebResponse SendRequestToTarget(HttpContext context)
 		{
 			// get the request
-			WebRequest request = WebRequest.CreateDefault(RequestUrl);
+			var request = WebRequest.CreateDefault(RequestUrl);
 
 			if (request == null)
-				throw new HttpException((int)HttpStatusCode.BadRequest, "The requested url, <" + RequestUrl + ">, could not be found.");
+				throw new HttpException((int)HttpStatusCode.BadRequest, String.Format("The requested url, <{0}>, could not be found.", RequestUrl));
 
 			// keep the same HTTP request method
 			request.Method = context.Request.HttpMethod;
@@ -118,7 +111,7 @@ namespace ManagedFusion.Rewriter
 							if (connection.IndexOf("Keep-Alive", StringComparison.OrdinalIgnoreCase) > 0)
 								httpRequest.KeepAlive = true;
 
-							List<string> list = new List<string>();
+							var list = new List<string>();
 							foreach (string conn in connection.Split(','))
 							{
 								string c = conn.Trim();
@@ -245,21 +238,21 @@ namespace ManagedFusion.Rewriter
 			try { response = request.GetResponse(); }
 			catch (WebException exc)
 			{
-				Manager.Log("Error received from " + request.RequestUri + ": " + exc.Message, "Proxy");
+				Manager.Log(String.Format("Error received from {0}: {1}", request.RequestUri, exc.Message), "Proxy");
 				response = exc.Response;
 			}
 
 			if (response == null)
 			{
 				Manager.Log("No response was received, returning a '400 Bad Request' to the client.", "Proxy");
-				throw new HttpException((int)HttpStatusCode.BadRequest, "The requested url, <" + RequestUrl + ">, could not be found.");
+				throw new HttpException((int)HttpStatusCode.BadRequest, String.Format("The requested url, <{0}>, could not be found.", RequestUrl));
 			}
 
 			Manager.Log(response.GetType().ToString(), "Proxy");
 			if (response is HttpWebResponse)
 			{
-				HttpWebResponse httpResponse = response as HttpWebResponse;
-				Manager.Log("Received '" + ((int)httpResponse.StatusCode) + " " + httpResponse.StatusDescription + "'", "Proxy");
+				var httpResponse = response as HttpWebResponse;
+				Manager.Log(String.Format("Received '{0} {1}'", ((int)httpResponse.StatusCode), httpResponse.StatusDescription), "Proxy");
 			}
 
 			return response;
@@ -306,8 +299,8 @@ namespace ManagedFusion.Rewriter
 						if (!String.IsNullOrEmpty(location))
 						{
 							// reminder: If location is an absolute URL, the Uri instance is created using only location.
-							Uri requestLocationUrl = new Uri(RequestUrl, location);
-							UriBuilder responseLocationUrl = new UriBuilder(requestLocationUrl);
+							var requestLocationUrl = new Uri(RequestUrl, location);
+							var responseLocationUrl = new UriBuilder(requestLocationUrl);
 
 							// if the requested location for the host and port is the same as the requested URL we need to update them to the response
 							if (Uri.Compare(requestLocationUrl, RequestUrl, UriComponents.SchemeAndServer, UriFormat.SafeUnescaped, StringComparison.OrdinalIgnoreCase) == 0)
@@ -372,27 +365,27 @@ namespace ManagedFusion.Rewriter
 					context.Response.AppendHeader(name, value);
 			}
 
-			Manager.Log("Response is " + (context.Response.BufferOutput ? "" : "not ") + "being buffered", "Proxy");
+			Manager.Log(String.Format("Response is {0}being buffered", (context.Response.BufferOutput ? "" : "not ")), "Proxy");
 
 			// add the vanity url to the header
-			Manager.TryToAddVanityHeader(context);
+			Manager.TryToAddVanityHeader(new HttpContextWrapper(context));
 
 			// set all HTTP specific protocol stuff
 			if (response is HttpWebResponse)
 			{
-				HttpWebResponse httpResponse = response as HttpWebResponse;
+				var httpResponse = response as HttpWebResponse;
 				context.Response.StatusCode = (int)httpResponse.StatusCode;
 				context.Response.StatusDescription = httpResponse.StatusDescription;
 
-				Manager.Log("Responding '" + ((int)httpResponse.StatusCode) + " " + httpResponse.StatusDescription + "'", "Proxy");
+				Manager.Log(String.Format("Responding '{0} {1}'", ((int)httpResponse.StatusCode), httpResponse.StatusDescription), "Proxy");
 			}
 
 			OnResponseToClient(context, response);
 
 			int bufferSize = Manager.Configuration.Rewriter.Proxy.ResponseSize;
 			// push the content out to through the stream
-			using (Stream responseStream = response.GetResponseStream())
-			using (Stream bufferStream = new BufferedStream(responseStream, Manager.Configuration.Rewriter.Proxy.BufferSize))
+			using (var responseStream = response.GetResponseStream())
+			using (var bufferStream = new BufferedStream(responseStream, Manager.Configuration.Rewriter.Proxy.BufferSize))
 			{
 				byte[] buffer = new byte[bufferSize];
 

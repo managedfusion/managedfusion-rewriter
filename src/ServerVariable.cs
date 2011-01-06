@@ -80,14 +80,14 @@ namespace ManagedFusion.Rewriter
 			protected internal set { _type = value; }
 		}
 
-		/// <summary>
-		/// Gets or sets the value.
-		/// </summary>
-		/// <value>The value.</value>
-		private string Value
+		private string GetKeyValue(HttpContextBase context)
 		{
-			get { return HttpContext.Current.Items[_key] as string; }
-			set { HttpContext.Current.Items[_key] = value; }
+			return context.Items[_key] as string;
+		}
+
+		private void SetKeyValue(HttpContextBase context, string value)
+		{
+			context.Items[_key] = value;
 		}
 
 		/// <summary>
@@ -98,8 +98,8 @@ namespace ManagedFusion.Rewriter
 		public string GetValue(string input, RuleSetContext context)
 		{
 			// if the value has already been cached then return that value instead of reprocessing
-			if (Value != null)
-				return Value;
+			if (GetKeyValue(context.HttpContext) != null)
+				return GetKeyValue(context.HttpContext);
 
 			string value = String.Empty;
 
@@ -162,7 +162,7 @@ namespace ManagedFusion.Rewriter
 				value = context.HttpContext.Request.Form[_name];
 			else if ((_type & ServerVariableType.Cookies) != 0)
 			{
-				HttpCookie cookie = context.HttpContext.Request.Cookies[_name];
+				var cookie = context.HttpContext.Request.Cookies[_name];
 
 				// if cookie was found set the value to the value of the cookie
 				if (cookie != null)
@@ -171,7 +171,7 @@ namespace ManagedFusion.Rewriter
 
 			Manager.LogIf(context.LogLevel >= 2, "Input: " + value, context.LogCategory);
 
-			Value = value;
+			SetKeyValue(context.HttpContext, value);
 			return value;
 		}
 	}

@@ -42,7 +42,7 @@ namespace ManagedFusion.Rewriter.Rules.Flags
 		/// <returns></returns>
 		public RuleFlagProcessorResponse Apply(RuleContext context)
 		{
-			IHttpProxyHandler proxyHandler = null;
+			var proxyHandler = (IHttpProxyHandler)null;
 
 			if (Manager.Configuration.Rewriter.Proxy.UseAsyncProxy)
 				proxyHandler = Activator.CreateInstance(Manager.ProxyAsyncType) as IHttpProxyHandler;

@@ -17,7 +17,8 @@ RewriteCond %{QUERY_STRING} ^id=(.*)$
 RewriteRule ^/test.aspx$ /pass/%2/ [L]");
 
 			var url = new Uri("http://somesite.com/test.aspx");
-			var context = CreateHttpContext(url).SetServerVariables(new Dictionary<string, string> {
+			var context = HttpHelpers.MockHttpContext(url);
+			context.Request.SetServerVariables(new Dictionary<string, string> {
 				{ "QUERY_STRING", "id=%{HTTP_HOST}" },
 				{ "HTTP_HOST", "somesite.com" }
 			});

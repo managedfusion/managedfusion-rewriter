@@ -14,7 +14,7 @@ namespace ManagedFusion.Rewriter.Test
 RewriteRule ^([^.?]+[^.?/])$  $1/ [R=301,L]");
 
 			var url = new Uri("http://somesite.com/pass");
-			var context = CreateHttpContext(url);
+			var context = HttpHelpers.MockHttpContext(url);
 
 			string expected = "http://somesite.com/pass/";
 			Uri resultUrl = target.RunRules(context, url);
@@ -24,7 +24,7 @@ RewriteRule ^([^.?]+[^.?/])$  $1/ [R=301,L]");
 			Assert.AreEqual(expected, result);
 
 			url = new Uri("http://somesite.com/fail/");
-			context = CreateHttpContext(url);
+			context = HttpHelpers.MockHttpContext(url);
 
 			resultUrl = target.RunRules(context, url);
 			result = context.Response.RedirectLocation;
@@ -44,7 +44,8 @@ RewriteCond %{HTTP_HOST} !^(www).*$ [NC]
 RewriteRule ^(.*)$ http://www.%1$1 [R=301]");
 
 			var url = new Uri("http://somesite.com/pass");
-			var context = CreateHttpContext(url).SetServerVariables(new Dictionary<string, string> { 
+			var context = HttpHelpers.MockHttpContext(url);
+			context.Request.SetServerVariables(new Dictionary<string, string> { 
 				{ "HTTP_HOST", url.GetComponents(UriComponents.Host, UriFormat.SafeUnescaped) } 
 			});
 
@@ -56,7 +57,8 @@ RewriteRule ^(.*)$ http://www.%1$1 [R=301]");
 			Assert.AreEqual(expected, result);
 
 			url = new Uri("http://www.somesite.com/fail");
-			context = CreateHttpContext(url).SetServerVariables(new Dictionary<string, string> { 
+			context = HttpHelpers.MockHttpContext(url);
+			context.Request.SetServerVariables(new Dictionary<string, string> { 
 				{ "HTTP_HOST", url.GetComponents(UriComponents.Host, UriFormat.SafeUnescaped) } 
 			});
 
@@ -74,7 +76,8 @@ RewriteRule ^(.*)$ http://www.%1$1 [R=301]");
 RewriteRule . /index.php [L]");
 
 			var url = new Uri("http://somesite.com/");
-			var context = CreateHttpContext(url).SetServerVariables(new Dictionary<string,string> {
+			var context = HttpHelpers.MockHttpContext(url);
+			context.Request.SetServerVariables(new Dictionary<string, string> {
 				{ "REQUEST_FILENAME", @"D:\Hosting\4905925\html" }
 			});
 
@@ -84,7 +87,8 @@ RewriteRule . /index.php [L]");
 			Assert.AreEqual(expected, result);
 
 			url = new Uri("http://somesite.com/2007/10/start-of-something-big/");
-			context = CreateHttpContext(url).SetServerVariables(new Dictionary<string, string> {
+			context = HttpHelpers.MockHttpContext(url);
+			context.Request.SetServerVariables(new Dictionary<string, string> {
 				{ "REQUEST_FILENAME", @"D:\Hosting\4905925\html\2007\10\start-of-something-big\" }
 			});
 

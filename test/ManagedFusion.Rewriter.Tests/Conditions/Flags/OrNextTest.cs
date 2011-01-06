@@ -14,7 +14,8 @@ namespace ManagedFusion.Rewriter.Test.Conditions.Flags
 		public void OrNext_FirstMatched()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
-			var context = CreateHttpContext(url).SetServerVariables(new Dictionary<string, string> {
+			var context = HttpHelpers.MockHttpContext(url);
+			context.Request.SetServerVariables(new Dictionary<string, string> {
 				{"REQUEST_URI", url.GetComponents(UriComponents.PathAndQuery, UriFormat.SafeUnescaped)}
 			});
 			var target = CreateRuleSet(@"
@@ -35,7 +36,8 @@ RewriteRule ^/test.aspx$  /fail []");
 		public void OrNext_MiddleMatched()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
-			var context = CreateHttpContext(url).SetServerVariables(new Dictionary<string, string> {
+			var context = HttpHelpers.MockHttpContext(url);
+			context.Request.SetServerVariables(new Dictionary<string, string> {
 				{"REQUEST_URI", url.GetComponents(UriComponents.PathAndQuery, UriFormat.SafeUnescaped)}
 			});
 			var target = CreateRuleSet(@"
@@ -56,7 +58,8 @@ RewriteRule ^/test.aspx$  /fail []");
 		public void OrNext_LastMatched()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
-			var context = CreateHttpContext(url).SetServerVariables(new Dictionary<string, string> {
+			var context = HttpHelpers.MockHttpContext(url);
+			context.Request.SetServerVariables(new Dictionary<string, string> {
 				{"REQUEST_URI", url.GetComponents(UriComponents.PathAndQuery, UriFormat.SafeUnescaped)}
 			});
 			var target = CreateRuleSet(@"
@@ -77,7 +80,8 @@ RewriteRule ^/test.aspx$  /fail []");
 		public void OrNext_FinalMatched()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
-			var context = CreateHttpContext(url).SetServerVariables(new Dictionary<string, string> {
+			var context = HttpHelpers.MockHttpContext(url);
+			context.Request.SetServerVariables(new Dictionary<string, string> {
 				{"REQUEST_URI", url.GetComponents(UriComponents.PathAndQuery, UriFormat.SafeUnescaped)}
 			});
 			var target = CreateRuleSet(@"
@@ -98,7 +102,8 @@ RewriteRule ^/test.aspx$  /fail []");
 		public void OrNext_NotlMatched()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
-			var context = CreateHttpContext(url).SetServerVariables(new Dictionary<string, string> {
+			var context = HttpHelpers.MockHttpContext(url);
+			context.Request.SetServerVariables(new Dictionary<string, string> {
 				{"REQUEST_URI", url.GetComponents(UriComponents.PathAndQuery, UriFormat.SafeUnescaped)}
 			});
 			var target = CreateRuleSet(@"

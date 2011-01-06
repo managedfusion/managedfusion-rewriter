@@ -13,7 +13,7 @@ namespace ManagedFusion.Rewriter.Test.Rules.Flags
 		public void Next()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
-			var context = CreateHttpContext(url);
+			var context = HttpHelpers.MockHttpContext(url);
 			var target = CreateRuleSet(@"
 RewriteRule ^/fail$ /pass []
 RewriteRule ^/test.aspx$ /fail [N]");

@@ -55,7 +55,7 @@ namespace ManagedFusion.Rewriter
 		/// <param name="ruleSet">The rule set.</param>
 		/// <param name="requestedUrl">The requested URL.</param>
 		/// <param name="httpContext">The HTTP context.</param>
-		public RuleSetContext(RuleSet ruleSet, Uri requestedUrl, HttpContext httpContext)
+		public RuleSetContext(RuleSet ruleSet, Uri requestedUrl, HttpContextBase httpContext)
 		{
 			if (ruleSet == null)
 				throw new ArgumentNullException("ruleSet");
@@ -80,7 +80,7 @@ namespace ManagedFusion.Rewriter
 		/// <param name="ruleSet">The rule set.</param>
 		/// <param name="responseContent">The response content.</param>
 		/// <param name="httpContext">The HTTP context.</param>
-		public RuleSetContext(RuleSet ruleSet, byte[] responseContent, HttpContext httpContext)
+		public RuleSetContext(RuleSet ruleSet, byte[] responseContent, HttpContextBase httpContext)
 		{
 			if (ruleSet == null)
 				throw new ArgumentNullException("ruleSet");
@@ -148,6 +148,6 @@ namespace ManagedFusion.Rewriter
 		/// Gets or sets the HTTP context.
 		/// </summary>
 		/// <value>The HTTP context.</value>
-		public HttpContext HttpContext { get; private set; }
+		public HttpContextBase HttpContext { get; private set; }
 	}
 }

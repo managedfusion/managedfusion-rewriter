@@ -85,7 +85,7 @@ namespace ManagedFusion.Rewriter.Rules.Flags
 		{
 			var httpContext = context.HttpContext;
 
-			HttpCookie cookie = new HttpCookie(Name, Value);
+			var cookie = new HttpCookie(Name, Value);
 			cookie.Domain = Domain;
 
 			if (Expires.HasValue)

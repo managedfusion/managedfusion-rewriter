@@ -14,7 +14,8 @@ namespace ManagedFusion.Rewriter.Test.Conditions.Flags
 		public void NoCase_Enabled()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
-			var context = CreateHttpContext(url).SetServerVariables(new Dictionary<string, string> { 
+			var context = HttpHelpers.MockHttpContext(url);
+			context.Request.SetServerVariables(new Dictionary<string, string> { 
 				{ "HTTP_HOST", url.GetComponents(UriComponents.Host, UriFormat.SafeUnescaped) } 
 			});
 			var target = CreateRuleSet(@"
@@ -32,7 +33,8 @@ RewriteRule ^/test.aspx$ /fail []");
 		public void NoCase_Disabled()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
-			var context = CreateHttpContext(url).SetServerVariables(new Dictionary<string, string> { 
+			var context = HttpHelpers.MockHttpContext(url);
+			context.Request.SetServerVariables(new Dictionary<string, string> { 
 				{ "HTTP_HOST", url.GetComponents(UriComponents.Host, UriFormat.SafeUnescaped) } 
 			});
 			var target = CreateRuleSet(@"

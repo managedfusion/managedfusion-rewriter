@@ -13,7 +13,7 @@ namespace ManagedFusion.Rewriter.Test.Rules.Flags
 		public void Chain_FirstNotMatched()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
-			var context = CreateHttpContext(url);
+			var context = HttpHelpers.MockHttpContext(url);
 			var target = CreateRuleSet(@"
 RewriteRule ^/fail.aspx$ /fail?test=1 [C]
 RewriteRule ^(.*)$ /fail?test=2 [C]
@@ -31,7 +31,7 @@ RewriteRule ^/test.aspx$ /pass []");
 		public void Chain_MiddleNotMatched()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
-			var context = CreateHttpContext(url);
+			var context = HttpHelpers.MockHttpContext(url);
 			var target = CreateRuleSet(@"
 RewriteRule ^(.*)$ /fail?test=1 [C]
 RewriteRule ^/fail.aspx$ /fail?test=2 [C]
@@ -49,7 +49,7 @@ RewriteRule ^/test.aspx$ /pass []");
 		public void Chain_LastNotMatched()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
-			var context = CreateHttpContext(url);
+			var context = HttpHelpers.MockHttpContext(url);
 			var target = CreateRuleSet(@"
 RewriteRule ^(.*)$ /fail?test=1 [C]
 RewriteRule ^(.*)$ /fail?test=2 [C]
@@ -67,7 +67,7 @@ RewriteRule ^/test.aspx$ /pass []");
 		public void Chain_FinalNotMatched()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
-			var context = CreateHttpContext(url);
+			var context = HttpHelpers.MockHttpContext(url);
 			var target = CreateRuleSet(@"
 RewriteRule ^(.*)$ /fail?test=1 [C]
 RewriteRule ^(.*)$ /fail?test=2 [C]
@@ -85,7 +85,7 @@ RewriteRule ^/test.aspx$ /pass []");
 		public void Chain_Matched()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
-			var context = CreateHttpContext(url);
+			var context = HttpHelpers.MockHttpContext(url);
 			var target = CreateRuleSet(@"
 RewriteRule ^/test.aspx$ /pass/test1 [C]
 RewriteRule ^/pass(.*)$ /pass/test2$1 [C]

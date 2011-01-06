@@ -164,13 +164,13 @@ namespace ManagedFusion.Rewriter.Rules.Flags
 		{
 			if (StatusCode > 0U)
 			{
-				HttpResponse response = context.HttpContext.Response;
+				var response = context.HttpContext.Response;
 
 				response.StatusCode = (int)StatusCode;
 				response.SubStatusCode = (int)SubStatusCode;
 				response.StatusDescription = StatusReason ?? StatusDescription;
 
-				Manager.LogIf(context.LogLevel >= 2, "HTTP Status: " + response.StatusCode + "." + response.SubStatusCode + " " + response.StatusDescription, "Rewrite");
+				Manager.LogIf(context.LogLevel >= 2, String.Format("HTTP Status: {0}.{1} {2}", response.StatusCode, response.SubStatusCode, response.StatusDescription), "Rewrite");
 			}
 
 			return RuleFlagProcessorResponse.ContinueToNextFlag;

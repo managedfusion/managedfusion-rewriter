@@ -58,8 +58,11 @@ namespace ManagedFusion.Rewriter
 			_rules = new List<IRule>();
 			_outputRules = new List<IRule>();
 
-			// the defaults for hte properties
+			// the defaults for the properties
 			MaxInternalTransfers = 10;
+
+			// engine enabled by default
+			EngineEnabled = true;
 		}
 
 		/// <summary>
@@ -149,7 +152,7 @@ namespace ManagedFusion.Rewriter
 		/// <param name="rules">The rules.</param>
 		public void AddRules(IEnumerable<IRule> rules)
 		{
-			foreach (IRule rule in rules)
+			foreach (var rule in rules)
 				AddRule(rule);
 		}
 
@@ -159,7 +162,7 @@ namespace ManagedFusion.Rewriter
 		/// <param name="rules">The rules.</param>
 		public void AddOutputRules(IEnumerable<IRule> rules)
 		{
-			foreach (IRule rule in rules)
+			foreach (var rule in rules)
 				AddOutputRule(rule);
 		}
 
@@ -238,7 +241,7 @@ namespace ManagedFusion.Rewriter
 		/// <returns>
 		/// 	<see langword="true"/> if [is internal transfer] [the specified context]; otherwise, <see langword="false"/>.
 		/// </returns>
-		private bool IsInternalTransfer(HttpContext context)
+		private bool IsInternalTransfer(HttpContextBase context)
 		{
 			return !String.IsNullOrEmpty(context.Request.Headers["X-Rewriter-Transfer"]);
 		}
@@ -248,7 +251,7 @@ namespace ManagedFusion.Rewriter
 		/// </summary>
 		/// <param name="context">The context.</param>
 		/// <returns>Returns the count of internal transfers that have occured.</returns>
-		private int InternalTransferCount(HttpContext context)
+		private int InternalTransferCount(HttpContextBase context)
 		{
 			int transferCount;
 			string transferCountHeader = context.Request.Headers["X-Rewriter-Transfer"];
@@ -305,10 +308,10 @@ namespace ManagedFusion.Rewriter
 		/// <returns>
 		/// Returns a rewritten <see cref="System.Uri"/>, or a value of <see langword="null"/> if no rewriting was done to <paramref name="url"/>.
 		/// </returns>
-		public Uri RunRules(HttpContext httpContext, Uri url)
+		public Uri RunRules(HttpContextBase httpContext, Uri url)
 		{
-			RuleSetContext context = new RuleSetContext(this, url, httpContext);
-			Uri currentUrl = url;
+			var context = new RuleSetContext(this, url, httpContext);
+			var currentUrl = url;
 
 			if (!EngineEnabled)
 				Manager.LogIf(!EngineEnabled && LogLevel >= 9, "Rewrite Engine Is DISABLED", "Rewrite");
@@ -326,9 +329,9 @@ namespace ManagedFusion.Rewriter
 					throw new HttpException(500, message);
 				}
 
-				IRuleFlagProcessor temporyFlags = null;
-				bool skipNextChain = false;
-				Uri initialUrl = currentUrl;
+				var temporyFlags = (IRuleFlagProcessor)null;
+				var skipNextChain = false;
+				var initialUrl = currentUrl;
 
 				if (!String.IsNullOrEmpty(VirtualBase) && VirtualBase != "/")
 					currentUrl = RemoveBase(VirtualBase, currentUrl);
@@ -336,7 +339,7 @@ namespace ManagedFusion.Rewriter
 				// process rules according to their settings
 				for (int i = 0; i < _rules.Count; i++)
 				{
-					RuleContext ruleContext = new RuleContext(i, context, currentUrl, _rules[i]);
+					var ruleContext = new RuleContext(i, context, currentUrl, _rules[i]);
 					temporyFlags = _rules[i].Flags;
 
 					// continue if this rule shouldn't be processed because it doesn't allow internal transfer requests
@@ -428,9 +431,9 @@ namespace ManagedFusion.Rewriter
 		/// <param name="httpContext"></param>
 		/// <param name="content"></param>
 		/// <returns></returns>
-		public byte[] RunOutputRules(HttpContext httpContext, byte[] content)
+		public byte[] RunOutputRules(HttpContextBase httpContext, byte[] content)
 		{
-			RuleSetContext context = new RuleSetContext(this, content, httpContext);
+			var context = new RuleSetContext(this, content, httpContext);
 			byte[] currentContent = content;
 
 			if (!EngineEnabled)
@@ -441,14 +444,14 @@ namespace ManagedFusion.Rewriter
 				Manager.LogIf(LogLevel >= 1, "**********************************************************************************");
 				//Manager.LogIf(LogLevel >= 9, "Input: " + currentContent, "OutRewrite");
 
-				IRuleFlagProcessor temporyFlags = null;
+				var temporyFlags = (IRuleFlagProcessor)null;
 				bool skipNextChain = false;
 				byte[] initialContent = currentContent;
 
 				// process rules according to their settings
 				for (int i = 0; i < _outputRules.Count; i++)
 				{
-					RuleContext ruleContext = new RuleContext(i, context, currentContent, _outputRules[i]);
+					var ruleContext = new RuleContext(i, context, currentContent, _outputRules[i]);
 					temporyFlags = _outputRules[i].Flags;
 
 					bool containsChain = RuleFlagsProcessor.HasChain(_outputRules[i].Flags);

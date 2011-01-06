@@ -75,7 +75,7 @@ namespace ManagedFusion.Rewriter.Engines
 		/// </summary>
 		/// <param name="context">The context.</param>
 		/// <returns></returns>
-		public Uri RunRules(HttpContext context)
+		public Uri RunRules(HttpContextBase context)
 		{
 			Uri url = new Uri(context.Request.Url, context.Request.RawUrl);
 			Uri rewritenUrl = _ruleSet.RunRules(context, url);
@@ -87,7 +87,7 @@ namespace ManagedFusion.Rewriter.Engines
 		/// 
 		/// </summary>
 		/// <param name="context"></param>
-		public void RunOutputRules(HttpContext context)
+		public void RunOutputRules(HttpContextBase context)
 		{
 			if (_ruleSet.OutputRuleCount > 0)
 				context.Response.Filter = new RuleSetOutputFilter(context.Response.Filter, context, _ruleSet);

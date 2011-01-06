@@ -36,21 +36,6 @@ namespace ManagedFusion.Rewriter.Test
 		}
 
 		/// <summary>
-		/// Creates the HTTP context.
-		/// </summary>
-		/// <param name="url">The URL.</param>
-		/// <returns></returns>
-		public HttpContext CreateHttpContext(Uri url)
-		{
-			HttpContext.Current = new HttpContext(
-				new HttpRequest(url.OriginalString, url.GetLeftPart(UriPartial.Path), url.Query),
-				new HttpResponse(new StringWriter())
-			);
-
-			return HttpContext.Current;
-		}
-
-		/// <summary>
 		/// 
 		/// </summary>
 		/// <param name="conditions"></param>
@@ -119,7 +104,7 @@ namespace ManagedFusion.Rewriter.Test
 		/// <returns></returns>
 		public RuleContext CreateOutputRuleContext(Uri requestedUrl, byte[] responseContent)
 		{
-			var httpContext = CreateHttpContext(requestedUrl);
+			var httpContext = HttpHelpers.MockHttpContext(requestedUrl);
 			return CreateOutputRuleContext(responseContent, httpContext);
 		}
 
@@ -129,7 +114,7 @@ namespace ManagedFusion.Rewriter.Test
 		/// <param name="responseContent"></param>
 		/// <param name="httpContext"></param>
 		/// <returns></returns>
-		public RuleContext CreateOutputRuleContext(byte[] responseContent, HttpContext httpContext)
+		public RuleContext CreateOutputRuleContext(byte[] responseContent, HttpContextBase httpContext)
 		{
 			var rule = MockRule(null, null, null);
 
@@ -143,7 +128,7 @@ namespace ManagedFusion.Rewriter.Test
 		/// <param name="httpContext"></param>
 		/// <param name="rule"></param>
 		/// <returns></returns>
-		public RuleContext CreateOutputRuleContext(byte[] responseContent, HttpContext httpContext, IRule rule)
+		public RuleContext CreateOutputRuleContext(byte[] responseContent, HttpContextBase httpContext, IRule rule)
 		{
 			var ruleSet = CreateRuleSet(String.Empty);
 
@@ -162,7 +147,7 @@ namespace ManagedFusion.Rewriter.Test
 		/// <returns></returns>
 		public RuleContext CreateRuleContext(Uri requestedUrl)
 		{
-			var httpContext = CreateHttpContext(requestedUrl);
+			var httpContext = HttpHelpers.MockHttpContext(requestedUrl);
 			return CreateRuleContext(requestedUrl, httpContext);
 		}
 
@@ -172,7 +157,7 @@ namespace ManagedFusion.Rewriter.Test
 		/// <param name="requestedUrl"></param>
 		/// <param name="httpContext"></param>
 		/// <returns></returns>
-		public RuleContext CreateRuleContext(Uri requestedUrl, HttpContext httpContext)
+		public RuleContext CreateRuleContext(Uri requestedUrl, HttpContextBase httpContext)
 		{
 			var rule = MockRule(null, null, null);
 
@@ -187,7 +172,7 @@ namespace ManagedFusion.Rewriter.Test
 		/// <param name="httpContext"></param>
 		/// <param name="rule"></param>
 		/// <returns></returns>
-		public RuleContext CreateRuleContext(Uri requestedUrl, HttpContext httpContext, IRule rule)
+		public RuleContext CreateRuleContext(Uri requestedUrl, HttpContextBase httpContext, IRule rule)
 		{
 			var ruleSet = CreateRuleSet(String.Empty);
 

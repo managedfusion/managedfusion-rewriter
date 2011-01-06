@@ -13,7 +13,7 @@ namespace ManagedFusion.Rewriter.Test.Rules.Flags
 		public void Last_First()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
-			var context = CreateHttpContext(url);
+			var context = HttpHelpers.MockHttpContext(url);
 			var target = CreateRuleSet(@"
 RewriteRule ^(.*)$ /pass [L]
 RewriteRule ^(.*)$ /fail [L]
@@ -29,7 +29,7 @@ RewriteRule ^(.*)$ /fail [L]");
 		public void Last_Middle()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
-			var context = CreateHttpContext(url);
+			var context = HttpHelpers.MockHttpContext(url);
 			var target = CreateRuleSet(@"
 RewriteRule ^(.*)$ /fail
 RewriteRule ^(.*)$ /pass [L]
@@ -45,7 +45,7 @@ RewriteRule ^(.*)$ /fail [L]");
 		public void Last_Final()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
-			var context = CreateHttpContext(url);
+			var context = HttpHelpers.MockHttpContext(url);
 			var target = CreateRuleSet(@"
 RewriteRule ^(.*)$ /fail
 RewriteRule ^(.*)$ /fail

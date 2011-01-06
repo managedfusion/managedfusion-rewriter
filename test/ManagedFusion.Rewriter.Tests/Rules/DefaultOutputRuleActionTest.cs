@@ -17,7 +17,7 @@ namespace ManagedFusion.Rewriter.Rules.Test
 			var pattern = new Pattern("/([a-z]+)/index.aspx", RegexOptions.IgnoreCase | RegexOptions.Singleline);
 			var target = new DefaultOutputRuleAction(pattern, text);
 
-			var httpContext = CreateHttpContext(new Uri("http://www.somesite.com/success/index.aspx"));
+			var httpContext = HttpHelpers.MockHttpContext(new Uri("http://www.somesite.com/success/index.aspx"));
 			string content = CreateHtmlContent(@"<a href=""http://www.somesite.com/success/index.aspx"" target=""_blank"">Link</a>");
 			var rule = MockRule(null, target, null);
 
@@ -37,7 +37,8 @@ namespace ManagedFusion.Rewriter.Rules.Test
 			var pattern = new Pattern("/([a-z]+)/index.aspx", RegexOptions.IgnoreCase | RegexOptions.Singleline);
 			var target = new DefaultOutputRuleAction(pattern, text);
 
-			var httpContext = CreateHttpContext(new Uri("http://www.managedfusion.com/success/index.aspx")).SetServerVariables(new Dictionary<string, string> { 
+			var httpContext = HttpHelpers.MockHttpContext(new Uri("http://www.managedfusion.com/success/index.aspx"));
+			httpContext.Request.SetServerVariables(new Dictionary<string, string> { 
 				{ "HTTP_HOST", "www.managedfusion.com" } 
 			});
 			string content = CreateHtmlContent(@"<a href=""/success/index.aspx"" target=""_blank"">Link</a>");
@@ -63,7 +64,8 @@ namespace ManagedFusion.Rewriter.Rules.Test
 			var condPattern = new Pattern(".*", RegexOptions.IgnoreCase | RegexOptions.Singleline);
 			var cond = MockCond(condPattern, condTest, null);
 
-			var httpContext = CreateHttpContext(new Uri("http://www.managedfusion.com/success/index.aspx")).SetServerVariables(new Dictionary<string, string> { 
+			var httpContext = HttpHelpers.MockHttpContext(new Uri("http://www.managedfusion.com/success/index.aspx"));
+			httpContext.Request.SetServerVariables(new Dictionary<string, string> { 
 				{ "HTTP_HOST", "www.managedfusion.com" } 
 			});
 			string content = CreateHtmlContent(@"<a href=""/success/index.aspx"" target=""_blank"">Link</a>");
@@ -89,7 +91,8 @@ namespace ManagedFusion.Rewriter.Rules.Test
 			var condPattern = new Pattern(@"(www)\.(.*)", RegexOptions.IgnoreCase | RegexOptions.Singleline);
 			var cond = MockCond(condPattern, condTest, null);
 
-			var httpContext = CreateHttpContext(new Uri("http://www.managedfusion.com/success/index.aspx")).SetServerVariables(new Dictionary<string, string> { 
+			var httpContext = HttpHelpers.MockHttpContext(new Uri("http://www.managedfusion.com/success/index.aspx"));
+			httpContext.Request.SetServerVariables(new Dictionary<string, string> { 
 				{ "HTTP_HOST", "www.managedfusion.com" } 
 			});
 			string content = CreateHtmlContent(@"<a href=""/success/index.aspx"" target=""_blank"">Link</a>");
@@ -119,7 +122,8 @@ namespace ManagedFusion.Rewriter.Rules.Test
 			var condPattern2 = new Pattern(@"goto-([0-9]{3,4}).aspx", RegexOptions.IgnoreCase | RegexOptions.Singleline);
 			var cond2 = MockCond(condPattern2, condTest2, null);
 
-			var httpContext = CreateHttpContext(new Uri("http://www.managedfusion.com/success/index.aspx")).SetServerVariables(new Dictionary<string, string> { 
+			var httpContext = HttpHelpers.MockHttpContext(new Uri("http://www.managedfusion.com/success/index.aspx"));
+			httpContext.Request.SetServerVariables(new Dictionary<string, string> { 
 				{ "HTTP_HOST", "www.managedfusion.com" },
 				{ "SERVER_PORT", "1234" }
 			});

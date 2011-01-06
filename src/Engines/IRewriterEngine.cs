@@ -45,12 +45,12 @@ namespace ManagedFusion.Rewriter.Engines
 		/// </summary>
 		/// <param name="context">The context.</param>
 		/// <returns></returns>
-		Uri RunRules(HttpContext context);
+		Uri RunRules(HttpContextBase context);
 
 		/// <summary>
 		/// Runs the output rules.
 		/// </summary>
 		/// <param name="context">The context.</param>
-		void RunOutputRules(HttpContext context);
+		void RunOutputRules(HttpContextBase context);
 	}
 }

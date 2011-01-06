@@ -13,7 +13,7 @@ namespace ManagedFusion.Rewriter.Test.Rules.Flags
 		public void Redirect_Plain()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
-			var context = CreateHttpContext(url);
+			var context = HttpHelpers.MockHttpContext(url);
 			var target = CreateRuleSet(@"
 RewriteRule ^/test.aspx$   /pass   [R]");
 
@@ -33,7 +33,7 @@ RewriteRule ^/test.aspx$   /pass   [R]");
 		public void Redirect_301()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
-			var context = CreateHttpContext(url);
+			var context = HttpHelpers.MockHttpContext(url);
 			var target = CreateRuleSet(@"
 RewriteRule ^/test.aspx$   /pass   [R=301]");
 
@@ -53,7 +53,7 @@ RewriteRule ^/test.aspx$   /pass   [R=301]");
 		public void Redirect_302()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
-			var context = CreateHttpContext(url);
+			var context = HttpHelpers.MockHttpContext(url);
 			var target = CreateRuleSet(@"
 RewriteRule ^/test.aspx$   /pass   [R=302]");
 
@@ -73,7 +73,7 @@ RewriteRule ^/test.aspx$   /pass   [R=302]");
 		public void Redirect_303()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
-			var context = CreateHttpContext(url);
+			var context = HttpHelpers.MockHttpContext(url);
 			var target = CreateRuleSet(@"
 RewriteRule ^/test.aspx$   /pass   [R=303]");
 
@@ -93,7 +93,7 @@ RewriteRule ^/test.aspx$   /pass   [R=303]");
 		public void Redirect_307()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
-			var context = CreateHttpContext(url);
+			var context = HttpHelpers.MockHttpContext(url);
 			var target = CreateRuleSet(@"
 RewriteRule ^/test.aspx$   /pass   [R=307]");
 
@@ -113,7 +113,7 @@ RewriteRule ^/test.aspx$   /pass   [R=307]");
 		public void Redirect_Permanent()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
-			var context = CreateHttpContext(url);
+			var context = HttpHelpers.MockHttpContext(url);
 			var target = CreateRuleSet(@"
 RewriteRule ^/test.aspx$   /pass   [R=permanent]");
 
@@ -133,7 +133,7 @@ RewriteRule ^/test.aspx$   /pass   [R=permanent]");
 		public void Redirect_Found()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
-			var context = CreateHttpContext(url);
+			var context = HttpHelpers.MockHttpContext(url);
 			var target = CreateRuleSet(@"
 RewriteRule ^/test.aspx$   /pass   [R=found]");
 
@@ -153,7 +153,7 @@ RewriteRule ^/test.aspx$   /pass   [R=found]");
 		public void Redirect_SeeOther()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
-			var context = CreateHttpContext(url);
+			var context = HttpHelpers.MockHttpContext(url);
 			var target = CreateRuleSet(@"
 RewriteRule ^/test.aspx$   /pass   [R=seeother]");
 
@@ -173,7 +173,7 @@ RewriteRule ^/test.aspx$   /pass   [R=seeother]");
 		public void Redirect_Temp()
 		{
 			var url = new Uri("http://www.somesite.com/test.aspx");
-			var context = CreateHttpContext(url);
+			var context = HttpHelpers.MockHttpContext(url);
 			var target = CreateRuleSet(@"
 RewriteRule ^/test.aspx$   /pass   [R=temp]");
 

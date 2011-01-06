@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
-using NUnit.Framework;
 using ManagedFusion.Rewriter.Test;
 using ManagedFusion.Rewriter.Conditions;
 using NUnit.Framework;
@@ -19,7 +18,7 @@ namespace ManagedFusion.Rewriter.Rules.Test
 			var target = new DefaultRuleAction(pattern, text);
 
 			Uri url = new Uri("http://www.somesite.com/success/index.aspx");
-			var httpContext = CreateHttpContext(url);
+			var httpContext = HttpHelpers.MockHttpContext(url);
 			var rule = MockRule(null, target, null);
 
 			RuleContext context = CreateRuleContext(url, httpContext, rule);
@@ -39,7 +38,8 @@ namespace ManagedFusion.Rewriter.Rules.Test
 			var target = new DefaultRuleAction(pattern, text);
 
 			Uri url = new Uri("http://www.managedfusion.com/success/index.aspx");
-			var httpContext = CreateHttpContext(url).SetServerVariables(new Dictionary<string, string> { 
+			var httpContext = HttpHelpers.MockHttpContext(url);
+			httpContext.Request.SetServerVariables(new Dictionary<string, string> { 
 				{ "HTTP_HOST", "www.managedfusion.com" } 
 			});
 			var rule = MockRule(null, target, null);
@@ -65,7 +65,8 @@ namespace ManagedFusion.Rewriter.Rules.Test
 			var cond = MockCond(condPattern, condTest, null);
 
 			Uri url = new Uri("http://www.managedfusion.com/success/index.aspx");
-			var httpContext = CreateHttpContext(url).SetServerVariables(new Dictionary<string, string> { 
+			var httpContext = HttpHelpers.MockHttpContext(url);
+			httpContext.Request.SetServerVariables(new Dictionary<string, string> { 
 				{ "HTTP_HOST", "www.managedfusion.com" } 
 			});
 			var rule = MockRule(new List<ICondition> { cond }, target, null);
@@ -91,7 +92,8 @@ namespace ManagedFusion.Rewriter.Rules.Test
 			var cond = MockCond(condPattern, condTest, null);
 
 			Uri url = new Uri("http://www.managedfusion.com/success/index.aspx");
-			var httpContext = CreateHttpContext(url).SetServerVariables(new Dictionary<string, string> { 
+			var httpContext = HttpHelpers.MockHttpContext(url);
+			httpContext.Request.SetServerVariables(new Dictionary<string, string> { 
 				{ "HTTP_HOST", "www.managedfusion.com" } 
 			});
 			var rule = MockRule(new List<ICondition> { cond }, target, null);
@@ -121,7 +123,8 @@ namespace ManagedFusion.Rewriter.Rules.Test
 			var cond2 = MockCond(condPattern2, condTest2, null);
 
 			Uri url = new Uri("http://www.managedfusion.com/success/index.aspx");
-			var httpContext = CreateHttpContext(url).SetServerVariables(new Dictionary<string, string> { 
+			var httpContext = HttpHelpers.MockHttpContext(url);
+			httpContext.Request.SetServerVariables(new Dictionary<string, string> { 
 				{ "HTTP_HOST", "www.managedfusion.com" },
 				{ "SERVER_PORT", "1234" }
 			});

@@ -272,7 +272,7 @@ namespace ManagedFusion.Rewriter
 		/// </summary>
 		/// <param name="context">The context.</param>
 		/// <returns></returns>
-		public static Uri RunRules(HttpContext context)
+		public static Uri RunRules(HttpContextBase context)
 		{
 			Uri url = _applicationEngine.RunRules(context);
 
@@ -286,7 +286,7 @@ namespace ManagedFusion.Rewriter
 		/// Runs the output rules.
 		/// </summary>
 		/// <param name="context">The context.</param>
-		public static void RunOutputRules(HttpContext context)
+		public static void RunOutputRules(HttpContextBase context)
 		{
 			_applicationEngine.RunOutputRules(context);
 			_rewriterEngine.RunOutputRules(context);
@@ -300,7 +300,7 @@ namespace ManagedFusion.Rewriter
 		/// <param name="context">The context.</param>
 		/// <param name="name">The name.</param>
 		/// <param name="value">The value.</param>
-		public static void AddResponseHeader(HttpContext context, string name, string value)
+		public static void AddResponseHeader(HttpContextBase context, string name, string value)
 		{
 			context.Response.AppendHeader(name, value);
 		}
@@ -314,7 +314,7 @@ namespace ManagedFusion.Rewriter
 		/// <remarks>This was added to protect against the <c>Server cannot append header after HTTP headers have been sent.</c> exception that occurs occationally 
 		/// when a module before the rewriter preforms a <see cref="HttpResponse.Flush"/> forcing all the headers to be written before other modules have had a chance.</remarks>
 		/// <returns></returns>
-		public static bool TryAddResponseHeader(HttpContext context, string name, string value)
+		public static bool TryAddResponseHeader(HttpContextBase context, string name, string value)
 		{
 			try
 			{
@@ -334,7 +334,7 @@ namespace ManagedFusion.Rewriter
 		/// <param name="context">The context.</param>
 		/// <param name="name">The header name.</param>
 		/// <param name="value">The value.</param>
-		public static void AddRequestHeader(HttpContext context, string name, string value)
+		public static void AddRequestHeader(HttpContextBase context, string name, string value)
 		{
 			// also store header in context
 			context.Items[name] = value;
@@ -380,7 +380,7 @@ namespace ManagedFusion.Rewriter
 		/// <param name="context">The context.</param>
 		/// <param name="name">The server variable name.</param>
 		/// <param name="value">The value.</param>
-		public static void SetServerVariable(HttpContext context, string name, string value, bool replace)
+		public static void SetServerVariable(HttpContextBase context, string name, string value, bool replace)
 		{
 			if (Configuration.Rewriter.AllowServerVariableSetting)
 			{
@@ -425,7 +425,7 @@ namespace ManagedFusion.Rewriter
 		/// Tries to add X rewrite URL header.
 		/// </summary>
 		/// <param name="context">The context.</param>
-		public static void TryToAddXRewriteUrlHeader(HttpContext context)
+		public static void TryToAddXRewriteUrlHeader(HttpContextBase context)
 		{
 			// add the X-Rewrite-Url to the context items because it is needed
 			// for other services offered by this rewriter, it just won't be 
@@ -441,7 +441,7 @@ namespace ManagedFusion.Rewriter
 		/// Tries to add vanity header.
 		/// </summary>
 		/// <param name="context">The context.</param>
-		public static void TryToAddVanityHeader(HttpContext context)
+		public static void TryToAddVanityHeader(HttpContextBase context)
 		{
 			// add the vanity url to the header
 			if (Configuration.Rewriter.AllowVanityHeader)
@@ -462,7 +462,7 @@ namespace ManagedFusion.Rewriter
 		/// Configure IIS7 Worker Request for rewriting.
 		/// </summary>
 		/// <param name="context">The context.</param>
-		public static void ModifyIIS7WorkerRequest(HttpContext context)
+		public static void ModifyIIS7WorkerRequest(HttpContextBase context)
 		{
 			if (Configuration.Rewriter.ModifyIIS7WorkerRequest && HttpRuntime.UsingIntegratedPipeline)
 			{
@@ -494,7 +494,7 @@ namespace ManagedFusion.Rewriter
 		/// <param name="context">The context.</param>
 		/// <param name="type">The type.</param>
 		/// <param name="url">The URL.</param>
-		public static void Redirect(HttpContext context, string type, Uri url)
+		public static void Redirect(HttpContextBase context, string type, Uri url)
 		{
 			Log(type + " redirect occured", "Response");
 

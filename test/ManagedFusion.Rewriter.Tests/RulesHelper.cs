@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Moq;
 
 namespace ManagedFusion.Rewriter.Test
 {
-	public static class MockExtensions
+	public static class RulesHelper
 	{
 		public static ConditionContext CreateConditionContext(this RuleContext ruleContext)
 		{

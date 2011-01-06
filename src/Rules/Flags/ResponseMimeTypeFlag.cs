@@ -63,7 +63,7 @@ namespace ManagedFusion.Rewriter.Rules.Flags
 		/// </summary>
 		/// <param name="context">The context.</param>
 		/// <param name="type">The type.</param>
-		private void SetMimeType(HttpContext context, string type)
+		private void SetMimeType(HttpContextBase context, string type)
 		{
 			context.Response.ContentType = type;
 		}
