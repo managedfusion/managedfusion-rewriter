@@ -5,13 +5,20 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		example - ManagedFusion.Rewriter.txt = example - ManagedFusion.Rewriter.txt
 		ms-pl.html = ms-pl.html
-		Read Me.txt = Read Me.txt
+		README.txt = README.txt
 		rewrite_schema.xml = rewrite_schema.xml
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagedFusion.Rewriter", "src\ManagedFusion.Rewriter.csproj", "{4C655AE4-83F4-4A0F-BFC0-95689A50BCDD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagedFusion.Rewriter.Test", "test\ManagedFusion.Rewriter.Tests\ManagedFusion.Rewriter.Tests.csproj", "{1FFC4726-A607-41AE-8EC9-6349A0432DBE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagedFusion.Rewriter.Tests", "test\ManagedFusion.Rewriter.Tests\ManagedFusion.Rewriter.Tests.csproj", "{1FFC4726-A607-41AE-8EC9-6349A0432DBE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuSpec", "NuSpec", "{B249827E-F6A2-40A2-AA81-C53121CBEBA5}"
+	ProjectSection(SolutionItems) = preProject
+		nuspec\ManagedFusion.Rewriter.nuspec = nuspec\ManagedFusion.Rewriter.nuspec
+		nuspec\content\ManagedFusion.Rewriter.txt = nuspec\content\ManagedFusion.Rewriter.txt
+		nuspec\content\web.config.transform = nuspec\content\web.config.transform
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

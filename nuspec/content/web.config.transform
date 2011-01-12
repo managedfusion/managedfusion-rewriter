@@ -1,0 +1,28 @@
+<configuration>
+	<configSections>
+		<section name="managedFusion.rewriter" type="ManagedFusion.Rewriter.Configuration.ManagedFusionRewriterSectionGroup"/>
+	</configSections>
+
+	<managedFusion.rewriter xmlns="http://managedfusion.com/xsd/managedFusion/rewriter">
+		<rules engine="Apache" />
+	</managedFusion.rewriter>
+
+	<system.web>
+		<httpModules>
+			<add name="RewriterModule" type="ManagedFusion.Rewriter.RewriterModule, ManagedFusion.Rewriter"/>
+		</httpModules>
+	</system.web>
+
+	<system.net>
+		<!-- defaultProxy enabled="true">
+			<proxy proxyaddress="http://127.0.0.1:8888" />
+		</defaultProxy -->
+	</system.net>
+
+	<system.webServer>
+		<validation validateIntegratedModeConfiguration="false" />
+		<modules runAllManagedModulesForAllRequests="true">
+			<add name="RewriterModule" type="ManagedFusion.Rewriter.RewriterModule, ManagedFusion.Rewriter" preCondition="" />
+		</modules>
+	</system.webServer>
+</configuration>

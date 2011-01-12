@@ -1,0 +1,16 @@
+RewriteEngine On
+#RewriteLog "log.txt"
+#RewriteLogLevel 9
+
+# You can find the rewrite commands and rules here http://httpd.apache.org/docs/2.0/mod/mod_rewrite.html
+# You can also read more about the setup process here https://github.com/managedfusion/managedfusion-rewriter/blob/master/README.txt
+# The following rules are just examples and can be deleted if you already know what you are doing
+
+# test the reverse proxy
+#RewriteRule ^/proxy/(.*)   http://$1 [P]
+
+# test redirect
+#RewriteRule ^(/redirect/me1.html)	 /default.aspx?r=$1 [R,NC]
+
+# rewrite test
+#RewriteRule ^/not-a-directory/(.*)	 /SubFolder/default.aspx [NC,L]

@@ -1,10 +1,10 @@
 ****************************************************************************
-                      MANAGED FUSION URL REWRITER
+					  MANAGED FUSION URL REWRITER
 ****************************************************************************
 
 1. Getting Started
 2. Available Rules
-3. Enabling wildcards in IIS 5/6
+3. Enabling wildcards in IIS 6
 4. Support
 
 ****************************************************************************
@@ -36,7 +36,7 @@
 		-->
 	</managedFusion.rewriter>
 	
-	For IIS 5/6:
+	For IIS 6:
 	
 	<!-- Integrate the following in to the <system.web>/<httpModules> tag -->
 	<system.web>
@@ -49,19 +49,14 @@
 	
 	<!-- Integrate the following in to the <system.webServer> tag -->
 	<system.webServer>
-		<validation validateIntegratedModeConfiguration="false"/>
 		<modules runAllManagedModulesForAllRequests="true">
 			<add name="RewriterModule" type="ManagedFusion.Rewriter.RewriterModule, ManagedFusion.Rewriter"/>
 		</modules>
-		<handlers>
-			<add name="RewriterProxyHandler" preCondition="integratedMode" verb="*" path="RewriterProxy.axd" type="System.Web.HttpForbiddenHandler, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
-		</handlers>
 	</system.webServer>
 	
 2. And add the following files to the /bin directory in your web application.
 
-   a. ManagedFusion.Rewriter.dll
-   b. ManagedFusion.Rewriter.pdb
+   * ManagedFusion.Rewriter.dll
   
 3. And create a rules file named 'ManagedFusion.Rewriter.txt' (which is just a plain text file that can be done 
    with Notepad)  To get the file started add the following as a test or see some of the sample applications:
@@ -89,26 +84,15 @@ All the following rules defined at http://httpd.apache.org/docs/2.0/mod/mod_rewr
 6. RewriteLogLevel
 
 ****************************************************************************
- 3. Enabling wildcards in IIS 5/6
+ 3. Enabling wildcards in IIS 6
 ****************************************************************************
 
-If you are using IIS 5 or 6 then you will want to enable wildcards to gain the full functionality of the 
+If you are using IIS 6 then you will want to enable wildcards to gain the full functionality of the 
 Managed Fusion Url Rewriter, you can do so by adding a new application mapping to your websites IIS settings.  
 You should note that if you use the server built in to Visual Studio or you use IIS 7 you do not need to follow 
 these directions.
 
 ** This solution works only if your website is using ASP.NET server pages and not mixing with other dynamic server pages such as ASP and PHP.
-
-The following instructions apply for IIS 5.
-
-1. Open IIS and right-click on the website and select 'properties'.
-2. Click the 'Configuration' button under Application Settings section
-3. Click the 'Add' button to create a new application mapping
-4. Set the executable textbox to aspnet_isapi.dll file location.
-    for .net 2.0, 3.0, 3.5: C:\Windows\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll
-5. Set the extension textbox to .*  to map extension-less URLs and custom extensions to the ASP.NET ISAPI Process.
-6. Make sure the checkbox 'Check that file exists' is not checked.
-7. Press 'OK' to confirm and close all the windows. 
 
 The following instructions apply for IIS 6.
 
@@ -116,7 +100,7 @@ The following instructions apply for IIS 6.
 2. Click the 'Configuration' button under Application Settings section
 3. Click the 'Insert...' button to create a new wildcard mapping
 4. Set the executable textbox to aspnet_isapi.dll file location.
-    for .net 2.0, 3.0, 3.5: C:\Windows\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll
+	for .net 2.0, 3.0, 3.5: C:\Windows\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll
 5. Make sure the checkbox 'Verify that file exists' is not checked.
 6. Press 'OK' to confirm and close all the windows. 
 
