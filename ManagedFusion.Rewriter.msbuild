@@ -15,9 +15,11 @@
 		<PackagePath>nuget</PackagePath>
 		<PackageSpec>$(PackagePath)\ManagedFusion.Rewriter.nuspec</PackageSpec>
 		<PackageBuildPath>build</PackageBuildPath>
-		<build_number>1.0.0.0</build_number>
+		<PackageId>ManagedFusion.Rewriter</PackageId>
+		<NuGetExe>lib/nuget.exe</NuGetExe>
+		<NuPackage>$(PackageBuildPath)/$(PackageId).$(build_number).nupkg</NuPackage>
 	</PropertyGroup>
-
+	
 	<Target Name="CleanPackage">
 		<RemoveDir Directories="$(PackageBuildPath)" Condition="Exists($(PackageBuildPath))"/>
 	</Target>
@@ -59,7 +61,7 @@
 		<TeamCityProgressMessage Text="Packaging NuGet" />
 
 		<ItemGroup>
-			<AssembliesToPackage Include="src\**\*.dll" />
+			<AssembliesToPackage Include="src\bin\**\*.dll" />
 		</ItemGroup>
 
 		<RemoveDir Directories="$(PackagePath)\lib" />
@@ -70,6 +72,6 @@
 	</Target>
 
 	<Target Name="Deploy" DependsOnTargets="Package">
-
+		<Exec Command="$(NuGetExe) push $(NuPackage) $(package_key)" />
 	</Target>
 </Project>
