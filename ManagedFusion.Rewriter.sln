@@ -4,6 +4,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7DF4E22B-3D00-44F6-BD18-E68C585068C8}"
 	ProjectSection(SolutionItems) = preProject
 		example - ManagedFusion.Rewriter.txt = example - ManagedFusion.Rewriter.txt
+		ManagedFusion.Rewriter.msbuild = ManagedFusion.Rewriter.msbuild
 		ms-pl.html = ms-pl.html
 		README.txt = README.txt
 		rewrite_schema.xml = rewrite_schema.xml
@@ -13,11 +14,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagedFusion.Rewriter", "s
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagedFusion.Rewriter.Tests", "test\ManagedFusion.Rewriter.Tests\ManagedFusion.Rewriter.Tests.csproj", "{1FFC4726-A607-41AE-8EC9-6349A0432DBE}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuSpec", "NuSpec", "{B249827E-F6A2-40A2-AA81-C53121CBEBA5}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{B249827E-F6A2-40A2-AA81-C53121CBEBA5}"
 	ProjectSection(SolutionItems) = preProject
-		nuspec\ManagedFusion.Rewriter.nuspec = nuspec\ManagedFusion.Rewriter.nuspec
-		nuspec\content\ManagedFusion.Rewriter.txt = nuspec\content\ManagedFusion.Rewriter.txt
-		nuspec\content\web.config.transform = nuspec\content\web.config.transform
+		nuget\ManagedFusion.Rewriter.nuspec = nuget\ManagedFusion.Rewriter.nuspec
+		nuget\content\ManagedFusion.Rewriter.txt = nuget\content\ManagedFusion.Rewriter.txt
+		nuget\content\web.config.transform = nuget\content\web.config.transform
 	EndProjectSection
 EndProject
 Global
