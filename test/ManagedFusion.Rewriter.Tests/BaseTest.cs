@@ -89,9 +89,9 @@ namespace ManagedFusion.Rewriter.Test
 				flags = new Mock<IConditionFlagProcessor>().Object;
 
 			var condMock = new Mock<ICondition>();
-			condMock.ExpectGet(c => c.Pattern).Returns(pattern);
-			condMock.ExpectGet(c => c.Test).Returns(test);
-			condMock.ExpectGet(c => c.Flags).Returns(flags);
+			condMock.SetupGet(c => c.Pattern).Returns(pattern);
+			condMock.SetupGet(c => c.Test).Returns(test);
+			condMock.SetupGet(c => c.Flags).Returns(flags);
 			var cond = condMock.Object;
 
 			return cond;
@@ -214,13 +214,13 @@ namespace ManagedFusion.Rewriter.Test
 
 			// mock conditions count
 			var conditionsMock = Mock.Get(conditionContext.Conditions);
-			conditionsMock.ExpectGet(c => c.Count).Returns(conditionValues.Length);
+			conditionsMock.SetupGet(c => c.Count).Returns(conditionValues.Length);
 
 			// mock object
 			var mock = new Mock<ConditionContext>(MockBehavior.Strict, 0, (RuleContext)conditionContext, conditionContext.CurrentCondition);
 			int maxIndex = conditionValues.Length - 1;
-			mock.ExpectGet(c => c.Conditions).Returns(conditionsMock.Object);
-			mock.ExpectGet(c => c.LogLevel).Returns(1);
+			mock.SetupGet(c => c.Conditions).Returns(conditionsMock.Object);
+			mock.SetupGet(c => c.LogLevel).Returns(1);
 			mock.Expect(c => c.GetConditionValue(It.IsInRange(0, maxIndex, Range.Inclusive))).Returns((int i) => conditionValues[i]);
 
 			// create object
@@ -257,13 +257,13 @@ namespace ManagedFusion.Rewriter.Test
 
 			// mock conditions count
 			var conditionsMock = Mock.Get(conditionContext.Conditions);
-			conditionsMock.ExpectGet(c => c.Count).Returns(conditionValues.Length);
+			conditionsMock.SetupGet(c => c.Count).Returns(conditionValues.Length);
 			
 			// mock object
 			var mock = new Mock<ConditionContext>(MockBehavior.Strict, 0, (RuleContext)conditionContext, conditionContext.CurrentCondition);
 			int maxIndex = conditionValues.Length - 1;
-			mock.ExpectGet(c => c.Conditions).Returns(conditionsMock.Object);
-			mock.ExpectGet(c => c.LogLevel).Returns(1);
+			mock.SetupGet(c => c.Conditions).Returns(conditionsMock.Object);
+			mock.SetupGet(c => c.LogLevel).Returns(1);
 			mock.Expect(c => c.GetConditionValue(It.IsInRange(0, maxIndex, Range.Inclusive))).Returns((int i) => conditionValues[i]);
 
 			// create object
