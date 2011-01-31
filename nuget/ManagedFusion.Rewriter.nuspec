@@ -10,6 +10,7 @@
 		<summary>Managed Fusion URL Rewriter and Reverse Proxy is a powerful URL manipulation engine based on the Apache mod_rewrite extension.</summary>
 		<language>en-US</language>
 		<projectUrl>http://urlrewriter.codeplex.com/</projectUrl>
+		<iconUrl>https://github.com/managedfusion/managedfusion-rewriter/raw/master/nuget/ManagedFusion.Logo.png</iconUrl>
 		<licenseUrl>http://urlrewriter.codeplex.com/license</licenseUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<tags>managedfusion url rewriter reverse proxy iis6 iis7 .net35 .net40</tags>
