@@ -64,6 +64,7 @@
 
 		<RemoveDir Directories="$(PackagePath)\lib" />
 		<Copy SourceFiles="@(AssembliesToPackage)" DestinationFolder="$(PackagePath)\lib\net35\" />
+		<Copy SourceFiles="@(AssembliesToPackage)" DestinationFolder="$(PackageBuildPath)" />
 		
 		<NuGet SpecFile="$(PackageSpec)" PackageDir="$(PackageBuildPath)" />
 	</Target>
