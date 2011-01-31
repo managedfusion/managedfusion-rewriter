@@ -3,18 +3,19 @@
 	<Import Project="$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets"/>
 	<UsingTask TaskName="NUnitTeamCity" AssemblyFile="$(teamcity_dotnet_nunitlauncher_msbuild_task)" />
 	<UsingTask AssemblyFile="$(MSBuildExtensionsPath)\NuGet\NuGet.MSBuild.dll" TaskName="NuGet.MSBuild.NuGet" />
-	
+
 	<ItemGroup>
 		<MainProjects Include="src\**\*.csproj" />
 		<TestProjects Include="test\**\*.csproj" />
-		<AssembliesInfo Include="**\AssemblyInfo.cs" />
 		<AllProjects Include="@(MainProjects);@(TestProjects)" />
 	</ItemGroup>
 
 	<PropertyGroup>
+		<AssembliesInfo>src\Properties\AssemblyInfo.cs</AssembliesInfo>
 		<PackagePath>nuget</PackagePath>
 		<PackageSpec>$(PackagePath)\ManagedFusion.Rewriter.nuspec</PackageSpec>
 		<PackageBuildPath>build</PackageBuildPath>
+		<build_number>1.0.0.0</build_number>
 	</PropertyGroup>
 
 	<Target Name="CleanPackage">
@@ -25,17 +26,17 @@
 		<TeamCityProgressMessage Text="Cleaning Projects" />
 		<MSBuild Projects="@(AllProjects)" Targets="Clean"/>
 	</Target>
-	
+
 	<Target Name="SetVersion" DependsOnTargets="Clean">
 		<TeamCityProgressMessage Text="Update Version" />
-		<FileUpdate 
-			Files="@(AssembliesInfo)" 
-			Regex="\[assembly: (Assembly(File)?Version)\(&quot(?'version'[0-9\.\*]+)&quot\)\]" 
-			ReplacementText="[assembly: $1(&quot$(build_number)&quot)]" />
-		
-		<XmlUpdate 
-			XmlFileName="$(PackageSpec)" 
-			XPath="/package/metadata/version" 
+		<FileUpdate
+			Files="$(AssembliesInfo)"
+			Regex='\[assembly: (Assembly(File)?Version)\("([0-9\.\*]+)"\)\]'
+			ReplacementText='[assembly: $1("$(build_number)")]' />
+
+		<XmlUpdate
+			XmlFileName="$(PackageSpec)"
+			XPath="/package/metadata/version"
 			Value="$(build_number)"/>
 	</Target>
 
@@ -54,12 +55,12 @@
 		<MSBuild Projects="@(MainProjects)" Targets="Rebuild" />
 	</Target>
 
-	<Target Name="Package" DependsOnTargets="Test">	
+	<Target Name="Package" DependsOnTargets="Test">
 		<TeamCityProgressMessage Text="Packaging NuGet" />
 		<NuGet PackageDir="$(PackagePath)" SpecFile="$(PackageSpec)" />
 	</Target>
 
 	<Target Name="Deploy" DependsOnTargets="Package">
-		
+
 	</Target>
 </Project>
