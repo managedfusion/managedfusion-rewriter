@@ -16,8 +16,8 @@
 		<PackageSpec>$(PackagePath)\ManagedFusion.Rewriter.nuspec</PackageSpec>
 		<PackageBuildPath>build</PackageBuildPath>
 		<PackageId>ManagedFusion.Rewriter</PackageId>
-		<NuGetExe>lib/nuget.exe</NuGetExe>
-		<NuPackage>$(PackageBuildPath)/$(PackageId).$(build_number).nupkg</NuPackage>
+		<NuGetExe>\lib\nuget.exe</NuGetExe>
+		<NuPackage>$(PackageBuildPath)\$(PackageId).$(build_number).nupkg</NuPackage>
 	</PropertyGroup>
 	
 	<Target Name="CleanPackage">
@@ -74,6 +74,6 @@
 	<Target Name="Deploy" DependsOnTargets="Package">
 		<TeamCityProgressMessage Text="Deploying NuGet" />
 
-		<Exec Command="$(NuGetExe) push $(NuPackage) $(package_key)" WorkingDirectory="$(teamcity_build_checkoutDir)" />
+		<Exec Command="$(NuGetExe) push $(NuPackage) $(package_key)" />
 	</Target>
 </Project>
