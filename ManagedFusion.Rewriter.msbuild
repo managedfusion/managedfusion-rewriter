@@ -57,7 +57,15 @@
 
 	<Target Name="Package" DependsOnTargets="Test">
 		<TeamCityProgressMessage Text="Packaging NuGet" />
-		<NuGet PackageDir="$(PackagePath)" SpecFile="$(PackageSpec)" />
+
+		<ItemGroup>
+			<AssembliesToPackage Include="src\**\*.dll" />
+		</ItemGroup>
+
+		<RemoveDir Directories="$(PackagePath)\lib" />
+		<Copy SourceFiles="@(AssembliesToPackage)" DestinationFolder="$(PackagePath)\lib\net35\" />
+		
+		<NuGet SpecFile="$(PackageSpec)" PackageDir="$(PackageBuildPath)" />
 	</Target>
 
 	<Target Name="Deploy" DependsOnTargets="Package">
