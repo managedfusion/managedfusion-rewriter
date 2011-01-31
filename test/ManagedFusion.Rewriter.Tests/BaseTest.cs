@@ -61,9 +61,9 @@ namespace ManagedFusion.Rewriter.Test
 			}
 
 			var ruleMock = new Mock<IRule>();
-			ruleMock.ExpectGet(r => r.Conditions).Returns(conditions);
-			ruleMock.ExpectGet(r => r.Action).Returns(action);
-			ruleMock.ExpectGet(r => r.Flags).Returns(flags);
+			ruleMock.SetupGet(r => r.Conditions).Returns(conditions);
+			ruleMock.SetupGet(r => r.Action).Returns(action);
+			ruleMock.SetupGet(r => r.Flags).Returns(flags);
 			var rule = ruleMock.Object;
 
 			return rule;

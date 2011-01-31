@@ -16,7 +16,7 @@
 		<PackageSpec>$(PackagePath)\ManagedFusion.Rewriter.nuspec</PackageSpec>
 		<PackageBuildPath>build</PackageBuildPath>
 		<PackageId>ManagedFusion.Rewriter</PackageId>
-		<NuGetExe>\lib\nuget.exe</NuGetExe>
+		<NuGetExe>lib\nuget.exe</NuGetExe>
 		<NuPackage>$(PackageBuildPath)\$(PackageId).$(build_number).nupkg</NuPackage>
 	</PropertyGroup>
 	
