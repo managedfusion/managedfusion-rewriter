@@ -74,6 +74,7 @@
 	<Target Name="Deploy" DependsOnTargets="Package">
 		<TeamCityProgressMessage Text="Deploying NuGet" />
 
+		<Exec Command="$(NuGetExe) update" />nu
 		<Exec Command="$(NuGetExe) push $(NuPackage) $(package_key)" />
 	</Target>
 </Project>
