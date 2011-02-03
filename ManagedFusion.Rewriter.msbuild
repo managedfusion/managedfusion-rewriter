@@ -12,6 +12,7 @@
 
 	<PropertyGroup>
 		<AssemblyName>ManagedFusion.Rewriter</AssemblyName>
+		<AssemblyNetVersion>net35</AssemblyNetVersion>
 		<AssemblyInfo>src\Properties\AssemblyInfo.cs</AssemblyInfo>
 		<PackagePath>nuget</PackagePath>
 		<PackageSpec>$(PackagePath)\$(AssemblyName).nuspec</PackageSpec>
@@ -66,16 +67,16 @@
 		</ItemGroup>
 
 		<RemoveDir Directories="$(PackagePath)\lib" />
-		<Copy SourceFiles="@(AssembliesToPackage)" DestinationFolder="$(PackagePath)\lib\net35\" />
+		<Copy SourceFiles="@(AssembliesToPackage)" DestinationFolder="$(PackagePath)\lib\$(AssemblyNetVersion)\" />
 		<Copy SourceFiles="@(AssembliesToPackage)" DestinationFolder="$(PackageBuildPath)" />
 
-		<NuGet SpecFile="$(PackageSpec)" PackageDir="$(PackageBuildPath)" />
+		<Exec Command="$(NuGetExe) update" />
+		<Exec Command="$(NuGetExe) pack $(PackageSpec) -o $(PackageBuildPath)" />
 	</Target>
 
 	<Target Name="Deploy" DependsOnTargets="Package">
 		<TeamCityProgressMessage Text="Deploying NuGet" />
 
-		<Exec Command="$(NuGetExe) update" />
 		<Exec Command="$(NuGetExe) push $(NuPackage) $(package_key)" />
 	</Target>
 </Project>
