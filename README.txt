@@ -1,21 +1,22 @@
 ****************************************************************************
-					  MANAGED FUSION URL REWRITER
+                      MANAGED FUSION URL REWRITER
 ****************************************************************************
 
-1. Getting Started
-2. Available Rules
-3. Enabling wildcards in IIS 6
-4. Support
+1. Requirements
+2. Getting Started
+3. Available Rules
+4. Enabling wildcards in IIS 6
+5. Support
 
 ****************************************************************************
- REQUIREMENTS
+ 1. Requirements
 ****************************************************************************
 
 1. This has been tested under Windows 2003 and Windows 2008, all others are untested.
-2. .NET 2.0 SP1 or greater be installed on the machine.
+2. .NET 3.5 or Mono 2.8 or greater must be installed on the machine.
 
 ****************************************************************************
- 1. Getting Started
+ 2. Getting Started
 ****************************************************************************
 
 1. To get started with Managed Fusion Url Rewriter you need to integrate the following configuration settings
@@ -71,7 +72,7 @@
    you are using IIS 6 and you forget to do it, nothing will work.
 
 ****************************************************************************
- 2. Available Rules
+ 3. Available Rules
 ****************************************************************************
 
 All the following rules defined at http://httpd.apache.org/docs/2.0/mod/mod_rewrite.html are supported.
@@ -84,7 +85,7 @@ All the following rules defined at http://httpd.apache.org/docs/2.0/mod/mod_rewr
 6. RewriteLogLevel
 
 ****************************************************************************
- 3. Enabling wildcards in IIS 6
+ 4. Enabling wildcards in IIS 6
 ****************************************************************************
 
 If you are using IIS 6 then you will want to enable wildcards to gain the full functionality of the 
@@ -105,7 +106,7 @@ The following instructions apply for IIS 6.
 6. Press 'OK' to confirm and close all the windows. 
 
 ****************************************************************************
- 4. Support
+ 5. Support
 ****************************************************************************
 
 If you have any questions or comments please e-mail them to support@managedfusion.com, but before you do so please

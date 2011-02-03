@@ -2,10 +2,10 @@
 <package>
 	<metadata>
 		<id>ManagedFusion.Rewriter</id>
-		<version>3.5.7</version>
+		<version>1.0.0</version>
 		<title>Managed Fusion URL Rewriter and Reverse Proxy</title>
 		<authors>Nick Berardi</authors>
-		<owners>Managed Fusion, LLC</owners>
+		<owners>nberardi</owners>
 		<description>Managed Fusion URL Rewriter and Reverse Proxy is a powerful URL manipulation engine based on the Apache mod_rewrite extension. It is designed, from the ground up to bring all the features of Apache mod_rewrite to IIS 6.0 and IIS 7.0. Managed Fusion Url Rewriter works with ASP.NET on Microsoft's Internet Information Server (IIS) 6.0 and Mono XPS Server and is fully supported, for all languages, in IIS 7.0, including ASP.NET and PHP. Managed Fusion Url Rewriter gives you the freedom to go beyond the standard URL schemes and develop your own scheme.  URL Rewriter provides web site owners with the ability to replace URL paths and querystring into links that your users can easily remember without the need for bookmarks. As an added benefit your web site becomes search engine friendly, which means higher page ranking from the search engines, and should result in better lead generation.</description>
 		<summary>Managed Fusion URL Rewriter and Reverse Proxy is a powerful URL manipulation engine based on the Apache mod_rewrite extension.</summary>
 		<language>en-US</language>

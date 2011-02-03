@@ -11,15 +11,16 @@
 	</ItemGroup>
 
 	<PropertyGroup>
-		<AssembliesInfo>src\Properties\AssemblyInfo.cs</AssembliesInfo>
+		<AssemblyName>ManagedFusion.Rewriter</AssemblyName>
+		<AssemblyInfo>src\Properties\AssemblyInfo.cs</AssemblyInfo>
 		<PackagePath>nuget</PackagePath>
-		<PackageSpec>$(PackagePath)\ManagedFusion.Rewriter.nuspec</PackageSpec>
+		<PackageSpec>$(PackagePath)\$(AssemblyName).nuspec</PackageSpec>
 		<PackageBuildPath>build</PackageBuildPath>
-		<PackageId>ManagedFusion.Rewriter</PackageId>
+		<PackageId>$(AssemblyName)</PackageId>
 		<NuGetExe>lib\nuget.exe</NuGetExe>
 		<NuPackage>$(PackageBuildPath)\$(PackageId).$(build_number).nupkg</NuPackage>
 	</PropertyGroup>
-	
+
 	<Target Name="CleanPackage">
 		<RemoveDir Directories="$(PackageBuildPath)" Condition="Exists($(PackageBuildPath))"/>
 	</Target>
@@ -32,7 +33,7 @@
 	<Target Name="SetVersion" DependsOnTargets="Clean">
 		<TeamCityProgressMessage Text="Update Version" />
 		<FileUpdate
-			Files="$(AssembliesInfo)"
+			Files="$(AssemblyInfo)"
 			Regex='\[assembly: (Assembly(File)?Version)\("([0-9\.\*]+)"\)\]'
 			ReplacementText='[assembly: $1("$(build_number)")]' />
 
@@ -61,13 +62,13 @@
 		<TeamCityProgressMessage Text="Packaging NuGet" />
 
 		<ItemGroup>
-			<AssembliesToPackage Include="src\bin\**\*.dll" />
+			<AssembliesToPackage Include="src\bin\**\$(AssemblyName).dll" />
 		</ItemGroup>
 
 		<RemoveDir Directories="$(PackagePath)\lib" />
 		<Copy SourceFiles="@(AssembliesToPackage)" DestinationFolder="$(PackagePath)\lib\net35\" />
 		<Copy SourceFiles="@(AssembliesToPackage)" DestinationFolder="$(PackageBuildPath)" />
-		
+
 		<NuGet SpecFile="$(PackageSpec)" PackageDir="$(PackageBuildPath)" />
 	</Target>
 
