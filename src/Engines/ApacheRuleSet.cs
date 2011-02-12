@@ -133,7 +133,7 @@ namespace ManagedFusion.Rewriter.Engines
 		/// </summary>
 		/// <param name="flags">The flags.</param>
 		/// <returns></returns>
-		private IConditionFlagProcessor SplitConditionFlags(string flags)
+		protected IConditionFlagProcessor SplitConditionFlags(string flags)
 		{
 			IConditionFlagProcessor dictionary = new ConditionFlagProcessor();
 
@@ -243,7 +243,7 @@ namespace ManagedFusion.Rewriter.Engines
 		/// </summary>
 		/// <param name="flags">The flags.</param>
 		/// <returns></returns>
-		private IRuleFlagProcessor SplitRuleFlags(string flags)
+		protected IRuleFlagProcessor SplitRuleFlags(string flags)
 		{
 			RuleFlagProcessor dictionary = new RuleFlagProcessor();
 			List<string> temporaryHolding = new List<string>();
