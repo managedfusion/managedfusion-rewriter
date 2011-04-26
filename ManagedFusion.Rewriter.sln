@@ -15,7 +15,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagedFusion.Rewriter.Test
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{B249827E-F6A2-40A2-AA81-C53121CBEBA5}"
 	ProjectSection(SolutionItems) = preProject
-		nuget\ManagedFusion.Rewriter.nuspec = nuget\ManagedFusion.Rewriter.nuspec
 		nuget\content\ManagedFusion.Rewriter.txt = nuget\content\ManagedFusion.Rewriter.txt
 		nuget\content\web.config.transform = nuget\content\web.config.transform
 	EndProjectSection
