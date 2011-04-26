@@ -144,7 +144,9 @@
     <None Include="Configuration\ManagedFusionRewriterConfiguration.csd.xsd">
       <DependentUpon>ManagedFusionRewriterConfiguration.csd</DependentUpon>
     </None>
-    <None Include="ManagedFusion.Rewriter.nuspec" />
+    <None Include="ManagedFusion.Rewriter.nuspec">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="ManagedFusion.snk" />
   </ItemGroup>
   <ItemGroup>
