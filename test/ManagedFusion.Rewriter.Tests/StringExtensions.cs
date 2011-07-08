@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace ManagedFusion.Rewriter.Test
+namespace ManagedFusion.Rewriter.Tests
 {
 	public static class StringExtensions
 	{

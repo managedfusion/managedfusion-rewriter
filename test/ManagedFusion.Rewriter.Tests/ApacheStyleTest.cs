@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using NUnit.Framework;
 
-namespace ManagedFusion.Rewriter.Test
+namespace ManagedFusion.Rewriter.Tests
 {
 	[TestFixture]
 	public class ApacheStyleTest : BaseTest
@@ -84,6 +84,24 @@ RewriteCond %{HTTP:Accept} ^text.*$ [NC]
 RewriteRule ^/([a-z]+)\.aspx  /$1.txt []");
 
 			Uri expected = new Uri("http://www.somesite.com/test.txt");
+			Uri result = target.RunRules(context, url);
+
+			Assert.AreEqual(expected, result);
+		}
+
+		[Test]
+		public void SimpleRule_WithNoSubstituion()
+		{
+			var target = CreateRuleSet(@"
+RewriteRule ^.* - [F,L]");
+
+			var url = new Uri("http://www.somesite.com/test.aspx");
+			var context = HttpHelpers.MockHttpContext(url);
+			context.Request.SetServerVariables(new Dictionary<string, string> { 
+				{ "REQUEST_URI", url.GetComponents(UriComponents.PathAndQuery, UriFormat.SafeUnescaped) } 
+			});
+
+			Uri expected = null; // no change
 			Uri result = target.RunRules(context, url);
 
 			Assert.AreEqual(expected, result);

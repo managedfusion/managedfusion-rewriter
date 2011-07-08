@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ManagedFusion.Rewriter.Test
+namespace ManagedFusion.Rewriter.Tests
 {
 	public class TestRuleAction : IRuleAction
 	{

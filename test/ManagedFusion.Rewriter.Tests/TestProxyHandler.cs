@@ -5,7 +5,7 @@ using System.Text;
 using System.Web;
 using System.Net;
 
-namespace ManagedFusion.Rewriter.Test
+namespace ManagedFusion.Rewriter.Tests
 {
 	public class TestProxyHandler : ProxyHandler
 	{

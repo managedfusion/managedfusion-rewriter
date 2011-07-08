@@ -117,6 +117,12 @@ namespace ManagedFusion.Rewriter.Rules
 		/// <returns></returns>
 		public virtual void Execute(RuleContext context)
 		{
+			if (_substitution == "-")
+			{
+				Manager.LogIf(context.LogLevel >= 2, "Output: " + context.CurrentUrl, context.LogCategory);
+				return;
+			}
+
 			string inputUrl = context.CurrentUrl.AbsolutePath;
 			string substituedUrl = Pattern.Replace(inputUrl, _substitution, context);
 

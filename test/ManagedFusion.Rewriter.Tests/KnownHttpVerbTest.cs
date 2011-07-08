@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
 
-namespace ManagedFusion.Rewriter.Test
+namespace ManagedFusion.Rewriter.Tests
 {
 	/// <summary>
 	/// Summary description for KnownHttpVerbTest

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using NUnit.Framework;
 
-namespace ManagedFusion.Rewriter.Test
+namespace ManagedFusion.Rewriter.Tests
 {
 	[TestFixture]
 	public class ProxyTest : BaseTest

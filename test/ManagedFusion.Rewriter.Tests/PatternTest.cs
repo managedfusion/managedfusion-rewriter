@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using NUnit.Framework;
 using System.Text.RegularExpressions;
 
-namespace ManagedFusion.Rewriter.Test
+namespace ManagedFusion.Rewriter.Tests
 {
 	[TestFixture]
 	public class PatternTest : BaseTest

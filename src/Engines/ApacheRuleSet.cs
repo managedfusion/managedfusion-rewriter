@@ -427,7 +427,13 @@ namespace ManagedFusion.Rewriter.Engines
 								{
 									switch (parts[0])
 									{
+										case "inherit":
+											break;
+
+										// obsolete in 2.1 mod_rewrite
 										case "MaxRedirects":
+											Manager.LogIf(tempLogLevel >= 1, "MaxRedirects is obsolete", "Obsolete");
+
 											int maxInternalTransfers;
 											if (Int32.TryParse(parts[1], out maxInternalTransfers))
 											{

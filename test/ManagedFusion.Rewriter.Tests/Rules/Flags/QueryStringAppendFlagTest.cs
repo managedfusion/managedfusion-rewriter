@@ -1,7 +1,7 @@
 ﻿using System;
 using NUnit.Framework;
 
-namespace ManagedFusion.Rewriter.Test.Rules.Flags
+namespace ManagedFusion.Rewriter.Tests.Rules.Flags
 {
 	[TestFixture]
 	public class QueryStringAppendFlagTest : BaseTest

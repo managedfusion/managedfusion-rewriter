@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using NUnit.Framework;
 
-namespace ManagedFusion.Rewriter.Test
+namespace ManagedFusion.Rewriter.Tests
 {
 	[TestFixture]
 	public class CommonUseTest : BaseTest

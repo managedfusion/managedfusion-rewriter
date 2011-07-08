@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using NUnit.Framework;
-using ManagedFusion.Rewriter.Test;
 using ManagedFusion.Rewriter.Conditions;
+using ManagedFusion.Rewriter.Rules;
 
-namespace ManagedFusion.Rewriter.Rules.Test
+namespace ManagedFusion.Rewriter.Tests.Rules
 {
 	[TestFixture]
 	public class DefaultOutputRuleActionTest : BaseTest

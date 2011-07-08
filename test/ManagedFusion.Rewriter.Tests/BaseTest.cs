@@ -7,7 +7,7 @@ using NUnit.Framework;
 using ManagedFusion.Rewriter.Engines;
 using System.Text.RegularExpressions;
 
-namespace ManagedFusion.Rewriter.Test
+namespace ManagedFusion.Rewriter.Tests
 {
 	public class BaseTest
 	{

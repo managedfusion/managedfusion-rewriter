@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using NUnit.Framework;
 
-namespace ManagedFusion.Rewriter.Test.Conditions.Flags
+namespace ManagedFusion.Rewriter.Tests.Conditions.Flags
 {
 	/// <summary>
 	/// Summary description for OrNextTest

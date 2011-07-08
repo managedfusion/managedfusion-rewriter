@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Collections;
 using System.IO;
 
-namespace ManagedFusion.Rewriter.Test
+namespace ManagedFusion.Rewriter.Tests
 {
 	public static class HttpHelpers
 	{

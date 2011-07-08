@@ -1,7 +1,7 @@
 ﻿using System;
 using Moq;
 
-namespace ManagedFusion.Rewriter.Test
+namespace ManagedFusion.Rewriter.Tests
 {
 	public static class RulesHelper
 	{

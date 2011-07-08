@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
-using ManagedFusion.Rewriter.Test;
 using ManagedFusion.Rewriter.Conditions;
 using NUnit.Framework;
+using ManagedFusion.Rewriter.Rules;
 
-namespace ManagedFusion.Rewriter.Rules.Test
+namespace ManagedFusion.Rewriter.Tests.Rules
 {
 	[TestFixture]
 	public class DefaultRuleActionTest : BaseTest
