@@ -68,13 +68,12 @@ Setup
 Requirements
 ---------------------------------------
 
-1. This has been tested under Windows 2003 and Windows 2008, all others are untested.
-2. .NET 3.5 or Mono 2.8 or greater must be installed on the machine.
+This has been tested under Windows 2003 and Windows 2008, all others are untested. To function property .NET 3.5 or Mono 2.8 or greater must be installed on the machine.
 
 Getting Started
 ----------------------------------------------
 
-1. To get started with Managed Fusion Url Rewriter you need to integrate the following configuration settings in to your web.config file.
+To get started with Managed Fusion Url Rewriter you need to integrate the following configuration settings in to your web.config file.
 
 **Create web.config**
 
@@ -111,18 +110,18 @@ Getting Started
         </modules>
     </system.webServer>
 	
-2. And add the following files to the /bin directory in your web application.
+And add the following files to the /bin directory in your web application.
 
    * ManagedFusion.Rewriter.dll
   
-3. And create a rules file named 'ManagedFusion.Rewriter.txt' (which is just a plain text file that can be done with Notepad)  To get the file started add the following as a test or see some of the sample applications:
+And create a rules file named 'ManagedFusion.Rewriter.txt' (which is just a plain text file that can be done with Notepad)  To get the file started add the following as a test or see some of the sample applications:
 
     RewriteEngine On
     RewriteRule ^/(.*)      http://google.com [R=302]
 
 *If you are converting your Apache rules over from .htaccess then you just need to copy everything between the <IfModule mod_rewrite.c> ... </IfModule> tags in your .htaccess file.*
    
-4. If you are using IIS 6 please make sure you read the instructions in Part 3.  This step is very important, and if you are using IIS 6 and you forget to do it, nothing will work.
+If you are using IIS 6 please make sure you read the instructions in Part 3.  This step is very important, and if you are using IIS 6 and you forget to do it, nothing will work.
 
 Available Rules
 --------------------------------------
@@ -144,7 +143,7 @@ Managed Fusion Url Rewriter, you can do so by adding a new application mapping t
 You should note that if you use the server built in to Visual Studio or you use IIS 7 you do not need to follow 
 these directions.
 
-** This solution works only if your website is using ASP.NET server pages and not mixing with other dynamic server pages such as ASP and PHP.
+*This solution works only if your website is using ASP.NET server pages and not mixing with other dynamic server pages such as ASP and PHP.*
 
 The following instructions apply for IIS 6.
 
@@ -152,7 +151,8 @@ The following instructions apply for IIS 6.
 2. Click the 'Configuration' button under Application Settings section
 3. Click the 'Insert...' button to create a new wildcard mapping
 4. Set the executable textbox to aspnet_isapi.dll file location.
-	for .net 2.0, 3.0, 3.5: C:\Windows\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll
+ * for .net 2.0, 3.0, 3.5: C:\Windows\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll
+ * for .net 4.0 C:\Windows\Microsoft.NET\Framework\v4.0.30319
 5. Make sure the checkbox 'Verify that file exists' is not checked.
 6. Press 'OK' to confirm and close all the windows. 
 
