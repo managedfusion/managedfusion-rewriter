@@ -5,7 +5,7 @@ Managed Fusion URL Rewriter and Reverse Proxy
 * **Source:** https://github.com/managedfusion/managedfusion-rewriter
 * **Documentation:** https://github.com/managedfusion/managedfusion-rewriter/wiki
 * **Discussion:** http://urlrewriter.codeplex.com/discussions
-* **Issues:** https://github.com/managedfusion/managedfusion-rewriter-proxy/issues
+* **Issues:** https://github.com/managedfusion/managedfusion-rewriter/issues
 * **Contrib Project:** https://github.com/managedfusion/managedfusion-rewriter-contrib
 
 If you find some value in this project, and it has saved you time or money (lets be honest time is money), please consider donating a fraction of what you have saved to help fund the free development put forth by our developers. You can donate by sending money via PayPal to nberardi@gmail.com
@@ -50,7 +50,7 @@ The result is a friendly and clean URL that completely masks your file structure
 Featured at PDC 2008
 ====================================
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/38Bt_0ufH1E" frameborder="0" allowfullscreen></iframe>
+<video width="640"  height="360" src="https://www.youtube.com/embed/38Bt_0ufH1E" controls autobuffer>
 
 ****************************************************************************
 
