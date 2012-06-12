@@ -2,7 +2,7 @@
 <package>
 	<metadata>
 		<id>ManagedFusion.Rewriter</id>
-		<version>$version$</version>
+		<version>3.6.0</version>
 		<title>Managed Fusion URL Rewriter and Reverse Proxy</title>
 		<authors>Nick Berardi</authors>
 		<owners>Managed Fusion, LLC</owners>
@@ -15,7 +15,7 @@
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<tags>managedfusion url rewriter reverse proxy iis6 iis7 .net35 .net40</tags>
 		<frameworkAssemblies>
-			<frameworkAssembly assemblyName="System.Web" targetFramework="net40" />
+			<frameworkAssembly assemblyName="System.Web" />
 		</frameworkAssemblies>
 	</metadata>
 	<files>
