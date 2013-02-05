@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "AzureWebRole", "AzureWebRole\AzureWebRole.ccproj", "{487C51B7-81F4-49CB-BDFA-F7B54E1B96B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebRole", "WebRole\WebRole.csproj", "{06ADC8B1-24AB-46D8-8AC0-D015286E226B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagedFusion.Rewriter", "..\..\src\ManagedFusion.Rewriter.csproj", "{4C655AE4-83F4-4A0F-BFC0-95689A50BCDD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{487C51B7-81F4-49CB-BDFA-F7B54E1B96B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{487C51B7-81F4-49CB-BDFA-F7B54E1B96B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{487C51B7-81F4-49CB-BDFA-F7B54E1B96B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{487C51B7-81F4-49CB-BDFA-F7B54E1B96B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06ADC8B1-24AB-46D8-8AC0-D015286E226B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06ADC8B1-24AB-46D8-8AC0-D015286E226B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06ADC8B1-24AB-46D8-8AC0-D015286E226B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06ADC8B1-24AB-46D8-8AC0-D015286E226B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C655AE4-83F4-4A0F-BFC0-95689A50BCDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C655AE4-83F4-4A0F-BFC0-95689A50BCDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C655AE4-83F4-4A0F-BFC0-95689A50BCDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C655AE4-83F4-4A0F-BFC0-95689A50BCDD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

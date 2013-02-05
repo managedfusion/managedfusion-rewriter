@@ -1,0 +1,6 @@
+RewriteEngine On
+#RewriteLog "log.txt"
+#RewriteLogLevel 9
+
+# test the reverse proxy
+RewriteRule ^/proxy/(.*)   http://$1 [P]

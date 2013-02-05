@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7DF4E22B-3D00-44F6-BD18-E68C585068C8}"
 	ProjectSection(SolutionItems) = preProject
 		example - ManagedFusion.Rewriter.txt = example - ManagedFusion.Rewriter.txt
@@ -17,6 +17,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{B249827E
 	ProjectSection(SolutionItems) = preProject
 		nuget\content\ManagedFusion.Rewriter.txt = nuget\content\ManagedFusion.Rewriter.txt
 		nuget\content\web.config.transform = nuget\content\web.config.transform
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{21FDE4BA-5339-4B25-B16A-7ECFA3B89049}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
 Global
