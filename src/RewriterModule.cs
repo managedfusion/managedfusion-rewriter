@@ -21,6 +21,7 @@
  */
 
 using System;
+using System.Globalization;
 using System.Security.Permissions;
 using System.Web;
 using System.Collections.Specialized;
@@ -135,7 +136,7 @@ namespace ManagedFusion.Rewriter
 					if (!String.IsNullOrEmpty(transferCountHeader) && Int32.TryParse(transferCountHeader, out transferCount))
 						transferCount++;
 
-					headers["X-Rewriter-Transfer"] = transferCount.ToString(); 
+					headers["X-Rewriter-Transfer"] = transferCount.ToString(CultureInfo.InvariantCulture); 
 
 					context.Server.TransferRequest(
 						rewrittenUrlPath,
@@ -146,9 +147,6 @@ namespace ManagedFusion.Rewriter
 				}
 				else
 					context.RewritePath(rewrittenUrlPath, Manager.Configuration.Rewriter.RebaseClientPath);
-
-				// set the server variables to the correct header based on the rawUrl
-				//Manager.SetServerVariable(context, "URL", rawUrl);
 			}
 		}
 

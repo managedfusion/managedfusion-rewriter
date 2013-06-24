@@ -49,14 +49,10 @@ namespace ManagedFusion.Rewriter.Engines
 			PhysicalApplicationPath = Manager.Configuration.Rules.Apache.DefaultPhysicalApplicationPath;
 
 			// if there is no physical application path set then get it from the request
-			if (String.IsNullOrEmpty(PhysicalApplicationPath))
-			{
-				try
-				{
+			if (String.IsNullOrEmpty(PhysicalApplicationPath)) {
+				try {
 					PhysicalApplicationPath = HostingEnvironment.ApplicationPhysicalPath;
-				}
-				finally
-				{
+				} finally {
 					if (String.IsNullOrEmpty(PhysicalApplicationPath))
 						PhysicalApplicationPath = Environment.CurrentDirectory;
 				}
@@ -93,8 +89,7 @@ namespace ManagedFusion.Rewriter.Engines
 			// normalize the path before processing
 			relativePath = relativePath.Replace('\\', '/');
 
-			do
-			{
+			do {
 				// make sure the relative path is at least the root
 				if (String.IsNullOrEmpty(relativePath))
 					relativePath = "/";
@@ -104,7 +99,6 @@ namespace ManagedFusion.Rewriter.Engines
 				// if not found then go to the parent directory of the current relative path
 				if (!found)
 					relativePath = relativePath.Substring(0, relativePath.LastIndexOf('/'));
-
 			} while (!found && relativePath != "/");
 
 			if (!found)
@@ -128,13 +122,11 @@ namespace ManagedFusion.Rewriter.Engines
 			if (file.Exists)
 				Add(GetRelativePath(file), file);
 
-			try
-			{
+			try {
 				// scan all sub directories
 				foreach (DirectoryInfo dir in refreshDir.GetDirectories())
 					ScanDirectoriesForRules(dir);
-			}
-			catch (UnauthorizedAccessException) { }
+			} catch (UnauthorizedAccessException) {}
 		}
 
 		/// <summary>
@@ -173,11 +165,10 @@ namespace ManagedFusion.Rewriter.Engines
 		/// </summary>
 		private void UseDefinedRules()
 		{
-			for (int i = 0; i < Manager.Configuration.Rules.Apache.Count; i++)
-			{
+			for (int i = 0; i < Manager.Configuration.Rules.Apache.Count; i++) {
 				ApacheRuleSetItem item = Manager.Configuration.Rules.Apache[i];
 				FileInfo file = new FileInfo(item.ConfigPath);
-		
+
 				if (!item.ApplicationPath.StartsWith("/"))
 					throw new RewriterEngineException("Your ApplicationPath, " + item.ApplicationPath + ", in the config file must start with \"/\".");
 
@@ -226,7 +217,7 @@ namespace ManagedFusion.Rewriter.Engines
 				Cache.NoSlidingExpiration,
 				CacheItemPriority.NotRemovable,
 				RuleSetExpired
-			);
+				);
 		}
 
 		#endregion
@@ -281,7 +272,7 @@ namespace ManagedFusion.Rewriter.Engines
 		/// <returns></returns>
 		public virtual Uri RunRules(HttpContextBase context)
 		{
-			var url = new Uri(context.Request.Url, context.Request.RawUrl);
+			var url = context.Request.Url;
 			string path = context.Request.ApplicationPath;
 
 			// get the ruleset to execute

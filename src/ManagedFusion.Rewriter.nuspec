@@ -2,7 +2,7 @@
 <package>
 	<metadata>
 		<id>ManagedFusion.Rewriter</id>
-		<version>3.6.0</version>
+		<version>$version$</version>
 		<title>Managed Fusion URL Rewriter and Reverse Proxy</title>
 		<authors>Nick Berardi</authors>
 		<owners>Managed Fusion, LLC</owners>

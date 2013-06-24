@@ -15,7 +15,7 @@ using System.Security;
 [assembly: AssemblyDescription("Managed Fusion URL Rewriter and Reverse Proxy is a powerful URL manipulation engine based on the Apache mod_rewrite extension.")]
 [assembly: AssemblyProduct("ManagedFusion.Rewriter")]
 [assembly: AssemblyCompany("Managed Fusion, LLC")]
-[assembly: AssemblyCopyright("Copyright © Nick Berardi, Managed Fusion, LLC 2011")]
+[assembly: AssemblyCopyright("Copyright © Nick Berardi, Managed Fusion, LLC 2013")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -42,6 +42,6 @@ using System.Security;
 //
 // You can specify all the values or you can default the Revision and Build Numbers 
 // by using the '*' as shown below:
-[assembly: AssemblyVersion("3.5.7.*")]
-[assembly: AssemblyFileVersion("3.5.7.0")]
-[assembly: AssemblyInformationalVersion("3.5")]
+[assembly: AssemblyVersion("3.7.0.*")]
+[assembly: AssemblyFileVersion("3.7.0")]
+[assembly: AssemblyInformationalVersion("3.7")]

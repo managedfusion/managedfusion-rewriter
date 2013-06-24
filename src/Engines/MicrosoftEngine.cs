@@ -77,7 +77,7 @@ namespace ManagedFusion.Rewriter.Engines
 		/// <returns></returns>
 		public Uri RunRules(HttpContextBase context)
 		{
-			Uri url = new Uri(context.Request.Url, context.Request.RawUrl);
+			var url = context.Request.Url;
 			Uri rewritenUrl = _ruleSet.RunRules(context, url);
 
 			return rewritenUrl;
