@@ -5,7 +5,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		example - ManagedFusion.Rewriter.txt = example - ManagedFusion.Rewriter.txt
 		ManagedFusion.Rewriter.msbuild = ManagedFusion.Rewriter.msbuild
-		README.txt = README.txt
 		rewrite_schema.xml = rewrite_schema.xml
 	EndProjectSection
 EndProject

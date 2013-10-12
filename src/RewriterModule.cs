@@ -160,8 +160,11 @@ namespace ManagedFusion.Rewriter
 			var context = new HttpContextWrapper(((HttpApplication)sender).Context);
 
 			// check to see if this is a proxy request
-			if (context.Items.Contains(Manager.ProxyHandlerStorageName))
-				context.RewritePath("~/RewriterProxy.axd");
+            if (context.Items.Contains(Manager.ProxyHandlerStorageName))
+            {
+                var proxyHandler = context.Items[Manager.ProxyHandlerStorageName] as IHttpHandler;
+                context.RemapHandler(proxyHandler);
+            }
 		}
 
 		/// <summary>
