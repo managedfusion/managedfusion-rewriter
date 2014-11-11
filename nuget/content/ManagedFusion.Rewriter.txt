@@ -3,7 +3,7 @@ RewriteEngine On
 #RewriteLogLevel 9
 
 # You can find the rewrite commands and rules here http://httpd.apache.org/docs/2.0/mod/mod_rewrite.html
-# You can also read more about the setup process here https://github.com/managedfusion/managedfusion-rewriter/blob/master/README.txt
+# You can also read more about the setup process here https://github.com/managedfusion/managedfusion-rewriter/blob/master/README.md
 # The following rules are just examples and can be deleted if you already know what you are doing
 
 # test the reverse proxy
